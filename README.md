@@ -9,7 +9,7 @@ A proposta é simplificar o processo de busca por oportunidades, oferecendo uma 
 
 ### 🔹 Back-end
 - **Python 3.11+**
-- **Flask / FastAPI / Django** (dependendo da escolha final)
+- **Django** (dependendo da escolha final)
 - **BeautifulSoup / Scrapy** – para web scraping das plataformas de estágio
 - **PostgreSQL** – banco de dados relacional
 - **SQLAlchemy / psycopg2** – ORM e conexão com o banco
@@ -19,8 +19,7 @@ A proposta é simplificar o processo de busca por oportunidades, oferecendo uma 
 - **React.js**
 - **Vite** (para build rápido)
 - **Axios** – para comunicação com a API
-- **TailwindCSS** – estilização moderna e responsiva
-
+  
 ---
 
 ## 🧠 Objetivo do Projeto
