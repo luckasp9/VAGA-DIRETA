@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 
 
+
+
 def get_nube_vagas(limit: int = 50):
     """
     Raspa vagas de estágio do site do Nube.
@@ -11,7 +13,10 @@ def get_nube_vagas(limit: int = 50):
     base_url = "https://www.nube.com.br/estudantes/vagas"
 
     try:
-        response = requests.get(base_url, timeout=10)
+        headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
+        response = requests.get("https://www.nube.com.br/estudantes/vagas", headers=headers)
         response.raise_for_status()
     except Exception as e:
         print(f"[NUBE] Erro ao acessar o site: {e}")

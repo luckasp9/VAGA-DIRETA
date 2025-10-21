@@ -4,8 +4,8 @@ from sqlalchemy.exc import IntegrityError
 from datetime import datetime, timedelta
 from app.database import SessionLocal
 from app import models
-from app.routes.jooble_api import get_vagas_jooble
-from app.routes.adzuna_api import get_vagas_adzuna
+from app.routes.adzuna_api import fetch_adzuna_vagas
+from app.routes.jooble_api import fetch_jooble_vagas
 from app.scrapers.nube_scraper import get_nube_vagas
 from app.scrapers.ciee_scraper import get_ciee_vagas
 
@@ -97,7 +97,7 @@ def salvar_vagas_no_banco(vagas, db: Session):
 
 
 @router.get("/vagas/todas")
-def obter_todas_vagas(limit: int = 30, db: Session = Depends(get_db)):
+def obter_todas_vagas(limit: int = 50, db: Session = Depends(get_db)):
     """
     Coleta vagas de Jooble, Adzuna, Nube e CIEE.
     Salva novas no banco e usa cache de 6 horas.
@@ -113,11 +113,13 @@ def obter_todas_vagas(limit: int = 30, db: Session = Depends(get_db)):
         }
 
     fontes = {
-        "Jooble": get_vagas_jooble,
-        "Adzuna": get_vagas_adzuna,
-        "Nube": get_nube_vagas,
-        "CIEE": get_ciee_vagas
-    }
+    "Jooble": fetch_jooble_vagas,
+    "Adzuna": fetch_adzuna_vagas,
+    "Nube": get_nube_vagas,
+    "CIEE": get_ciee_vagas
+}
+
+    
 
     vagas_total = []
     erros = {}
