@@ -1,0 +1,212 @@
+[
+    {
+        "name": "__goc_session__",
+        "value": "ubflogrcwtqcokbmxyzycnbpgzdrubfm",
+        "domain": "www.nube.com.br",
+        "path": "/",
+        "expires": 1764253587.626929,
+        "httpOnly": true,
+        "secure": true,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_gcl_au",
+        "value": "1.1.1878997141.1763648788",
+        "domain": ".nube.com.br",
+        "path": "/",
+        "expires": 1771424787,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "CLID",
+        "value": "7c2fda92b1c14fefa4bed42580a52199.20251120.20261120",
+        "domain": "www.clarity.ms",
+        "path": "/",
+        "expires": 1795184787.945002,
+        "httpOnly": true,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "_ttp",
+        "value": "35kKmNtrFPgzojmhMqbd6PAefGX",
+        "domain": ".tiktok.com",
+        "path": "/",
+        "expires": 1797344787.984734,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "_tt_enable_cookie",
+        "value": "1",
+        "domain": ".nube.com.br",
+        "path": "/",
+        "expires": 1797344788,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_ttp",
+        "value": "01KAGTHNJVF936DCW8JHJSW0QK_.tt.2",
+        "domain": ".nube.com.br",
+        "path": "/",
+        "expires": 1797344788,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_ga_2W6QPP2KXW",
+        "value": "GS2.1.s1763648788$o1$g0$t1763648788$j60$l0$h2124840536",
+        "domain": ".nube.com.br",
+        "path": "/",
+        "expires": 1798208788.133836,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_ga",
+        "value": "GA1.1.1927381431.1763648788",
+        "domain": ".nube.com.br",
+        "path": "/",
+        "expires": 1798208788.134335,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "li_sugr",
+        "value": "08db01ba-f51f-4f12-9481-fe61494deb09",
+        "domain": ".linkedin.com",
+        "path": "/",
+        "expires": 1771424789.389713,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "bcookie",
+        "value": "\"v=2&ce3ddf57-828a-4946-89a0-c5bb0cb6313d\"",
+        "domain": ".linkedin.com",
+        "path": "/",
+        "expires": 1795184789.389791,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "lidc",
+        "value": "\"b=OGST02:s=O:r=O:a=O:p=O:g=3702:u=1:x=1:i=1763648787:t=1763735187:v=2:sig=AQFVqGZv1Oa_MtlCKDM4PT_QWC9WJqvQ\"",
+        "domain": ".linkedin.com",
+        "path": "/",
+        "expires": 1763735188.233272,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "_fbp",
+        "value": "fb.2.1763648788232.262220988742414576",
+        "domain": ".nube.com.br",
+        "path": "/",
+        "expires": 1771424788,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_clck",
+        "value": "1sxi6xr%5E2%5Eg16%5E0%5E2150",
+        "domain": ".nube.com.br",
+        "path": "/",
+        "expires": 1795184788,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "ttcsid",
+        "value": "1763648788062::4kpWSNwQPi9_xN9xqHKJ.1.1763648788276.0",
+        "domain": ".nube.com.br",
+        "path": "/",
+        "expires": 1797344788,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "ttcsid_D34055BC77U1PDQ728B0",
+        "value": "1763648788062::7EC2Uk7GKBJETLzN6kPo.1.1763648788276.0",
+        "domain": ".nube.com.br",
+        "path": "/",
+        "expires": 1797344788,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "test_cookie",
+        "value": "CheckForPermission",
+        "domain": ".doubleclick.net",
+        "path": "/",
+        "expires": 1763649688.393806,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "UserMatchHistory",
+        "value": "AQJIQu_AZ5K7GAAAAZqhqNXxi2G2Q9DJfR1jdjdiFhWVdU02Dz5dPSHe7LJCAXhC3OS85xMxgAYA-A",
+        "domain": ".linkedin.com",
+        "path": "/",
+        "expires": 1766240788.45853,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "AnalyticsSyncHistory",
+        "value": "AQKOqaqYltINcQAAAZqhqNXxoKIz9X7ipRYEcyu1iAn8HRi46pumH5yv-Zk3T8OQljvH_mJCe3HAHOxCDcUzfg",
+        "domain": ".linkedin.com",
+        "path": "/",
+        "expires": 1766240788.458659,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "bscookie",
+        "value": "\"v=1&20251120142628d8d46f23-0cd4-447e-8740-48ef12b0dff6AQGDSBj7aZzj29-Y6bE2dRouJ8fG2XBz\"",
+        "domain": ".www.linkedin.com",
+        "path": "/",
+        "expires": 1795184788.790259,
+        "httpOnly": true,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "__cf_bm",
+        "value": "6dMXsr4Z8guLwT.7raiZxpxVQlfxs_tg9d7tmEIjfr8-1763648788-1.0.1.1-sSCe4F6N7a5OoLHZMY8yRUnullA3Gn2ExsCo94Ax6Nql.ltnQ6CQUy.k9bj6.E0X3Wmew6z763z8Rl7QESCZkAuthOHb1Juxr6rwuscOUO0",
+        "domain": ".linkedin.com",
+        "path": "/",
+        "expires": 1763650588.790327,
+        "httpOnly": true,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "_clsk",
+        "value": "1co3cou%5E1763648788818%5E1%5E1%5Ev.clarity.ms%2Fcollect",
+        "domain": ".nube.com.br",
+        "path": "/",
+        "expires": 1763735188,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    }
+]
