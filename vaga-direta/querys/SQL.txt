@@ -36,3 +36,13 @@ CREATE TABLE IF NOT EXISTS tcc.vaga_curso (
     curso_id INTEGER REFERENCES tcc.cursos(id),
     PRIMARY KEY (vaga_id, curso_id)
 )
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tabela de beneficios
+
+CREATE TABLE tcc.beneficio (
+    id SERIAL PRIMARY KEY,
+    vaga_id INT REFERENCES tcc.vaga(id) ON DELETE CASCADE,
+    beneficio TEXT NOT NULL
+);
