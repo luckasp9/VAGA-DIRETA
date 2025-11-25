@@ -121,9 +121,8 @@ def normalize_job(job_item: Dict[str, Any]) -> Dict[str, Any]:
         estado = vagas_loc[0].get("uf", "") or vagas_loc[0].get("estado", "") or ""
 
     salario = jd.get("salario")
-    faixa = jd.get("faixaSalarial") or ""
     if salario is None or salario == 0:
-        bolsa_valor = faixa
+        bolsa_valor = "A combinar"
     else:
         bolsa_valor = salario
 
@@ -136,7 +135,7 @@ def normalize_job(job_item: Dict[str, Any]) -> Dict[str, Any]:
 
     return {
         "id": job_id,
-        "url": f"https://www.catho.com.br/vagas/{job_id}",
+        "url": f"https://www.catho.com.br/vagas/{titulo}/{job_id}",
         "titulo": titulo,
         "bolsa_valor": bolsa_valor,
         "cidade": cidade,
@@ -145,7 +144,9 @@ def normalize_job(job_item: Dict[str, Any]) -> Dict[str, Any]:
         "logo": "",
         "empresa": empresa,
         "descricao": descricao,
-        "curso": curso or ""
+        "curso": curso or "",
+        "PCD": "",
+        "modalidade": "", 
     }
 
 

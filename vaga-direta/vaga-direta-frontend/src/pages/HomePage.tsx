@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import type { Vacancy } from "../types/vacancy";
+//import { getVagas } from "../services/apiVagas";
 import {
   getVacancies,
   type VacancyFilters,
@@ -8,6 +9,8 @@ import VacancyFiltersBar from "../components/vacancies/VacancyFilters";
 import { VacancyCard } from "../components/vacancies/VacancyCard";
 import { VacancySkeleton } from "../components/vacancies/VacancySkeleton";
 import { Button } from "../components/ui/Button";
+
+
 
 const PAGE_SIZE = 6;
 

@@ -1,0 +1,38 @@
+Tabela em que os estágios são inseridos após o Get ser executado
+
+CREATE TABLE tcc.vaga (
+    id SERIAL PRIMARY KEY,
+    id_vaga VARCHAR UNIQUE,
+    titulo_vaga VARCHAR(255),
+    empresa_nome VARCHAR(255),
+    descricao_vaga TEXT,
+    cidade_vaga VARCHAR(100),
+    estado_vaga VARCHAR(100),
+    salario VARCHAR(255),
+    url VARCHAR(255),
+    curso_id VARCHAR(255),
+    pcd boolean,
+    modalidade varchar(255),
+    created_at TIMESTAMP DEFAULT NOW()
+    
+)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tabela de cursos
+
+CREATE TABLE IF NOT EXISTS tcc.curso (
+    id SERIAL PRIMARY KEY,
+    nome TEXT UNIQUE NOT NULL
+);
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Tabela de relação das vagas com os cursos
+
+CREATE TABLE IF NOT EXISTS tcc.vaga_curso (
+    vaga_id INTEGER REFERENCES tcc.vaga(id),
+    curso_id INTEGER REFERENCES tcc.cursos(id),
+    PRIMARY KEY (vaga_id, curso_id)
+)
