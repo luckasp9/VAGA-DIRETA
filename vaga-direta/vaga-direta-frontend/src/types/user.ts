@@ -5,4 +5,5 @@ export type User = {
   course: string;
   semester: number;
   phone?: string;
+  state?: string;
 };

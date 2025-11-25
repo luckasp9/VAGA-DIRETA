@@ -14,7 +14,7 @@ export type RegisterPayload = {
   course: string;
   semester: number;
   password: string;
-  // estado REMOVIDO por enquanto
+  state: string;
 };
 
 /**
@@ -82,10 +82,9 @@ export async function register(payload: RegisterPayload): Promise<User> {
     phone: payload.phone,
     course: payload.course,
     semester: payload.semester,
-    // estado não é mais obrigatório; se quiser trazer de volta depois, dá pra reaproveitar
+    state: payload.state,   // <--- NOVO: salvar estado
   };
 
   storeUser(newUser);
-
   return newUser;
 }

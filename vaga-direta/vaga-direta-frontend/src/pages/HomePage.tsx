@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import type { Vacancy } from "../types/vacancy";
-//import { getVagas } from "../services/apiVagas";
 import {
   getVacancies,
   type VacancyFilters,
@@ -9,21 +8,23 @@ import VacancyFiltersBar from "../components/vacancies/VacancyFilters";
 import { VacancyCard } from "../components/vacancies/VacancyCard";
 import { VacancySkeleton } from "../components/vacancies/VacancySkeleton";
 import { Button } from "../components/ui/Button";
-
-
+import { useAuth } from "../context/AuthContext";
 
 const PAGE_SIZE = 6;
 
 export const HomePage: React.FC = () => {
-  const [filters, setFilters] = useState<VacancyFilters>({
-    keyword: "",
-    courses: [],
-    modality: "",
-    platform: "",
-    shift: "",
-    types: [],
-  });
+  const { user } = useAuth();
 
+  const [filters, setFilters] = useState<VacancyFilters>(() => ({
+    keyword: "",
+    courses: user?.course ? [user.course] : [],
+    modality: "",
+    pcd: "",
+    state: user?.state ?? "",
+    city: "",
+  }));
+
+  const [allVacancies, setAllVacancies] = useState<Vacancy[]>([]);
   const [vacancies, setVacancies] = useState<Vacancy[]>([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -38,8 +39,18 @@ export const HomePage: React.FC = () => {
   const loadVacancies = async (currentFilters: VacancyFilters) => {
     setLoading(true);
     setCurrentPage(1);
-    const data = await getVacancies(currentFilters);
-    setVacancies(data);
+
+    // Para montar as cidades, queremos a lista filtrada
+    // sem levar em conta "city" (apenas estado, curso etc).
+    const { city, ...rest } = currentFilters;
+
+    const [all, filtered] = await Promise.all([
+      getVacancies({ ...rest, city: "" }),
+      getVacancies(currentFilters),
+    ]);
+
+    setAllVacancies(all);
+    setVacancies(filtered);
     setLoading(false);
   };
 
@@ -55,11 +66,11 @@ export const HomePage: React.FC = () => {
   const handleClearFilters = () => {
     const cleared: VacancyFilters = {
       keyword: "",
-      courses: [],
+      courses: filters.courses ?? [], // mantém curso
       modality: "",
-      platform: "",
-      shift: "",
-      types: [],
+      pcd: "",
+      state: filters.state ?? "", // mantém estado
+      city: "",                   // limpa cidade
     };
     setFilters(cleared);
     loadVacancies(cleared);
@@ -71,6 +82,21 @@ export const HomePage: React.FC = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  // Opções de cidade geradas a partir das vagas (do banco),
+  // já "pré-filtradas" pelo estado selecionado.
+  const cityOptions = Array.from(
+    new Set(
+      allVacancies
+        .filter((v) =>
+          filters.state && v.state
+            ? v.state === filters.state
+            : true
+        )
+        .map((v) => v.city)
+        .filter((c): c is string => !!c)
+    )
+  ).sort();
+
   return (
     <div className="flex flex-col gap-4">
       <VacancyFiltersBar
@@ -79,6 +105,7 @@ export const HomePage: React.FC = () => {
         onApply={handleApplyFilters}
         onClear={handleClearFilters}
         loading={loading}
+        cityOptions={cityOptions} // <--- NOVO
       />
 
       {loading && (

@@ -14,6 +14,37 @@ const courseOptions = [
   { value: "Engenharia de Software", label: "Engenharia de Software" },
 ];
 
+const stateOptions = [
+  { value: "AC", label: "Acre (AC)" },
+  { value: "AL", label: "Alagoas (AL)" },
+  { value: "AP", label: "Amapá (AP)" },
+  { value: "AM", label: "Amazonas (AM)" },
+  { value: "BA", label: "Bahia (BA)" },
+  { value: "CE", label: "Ceará (CE)" },
+  { value: "DF", label: "Distrito Federal (DF)" },
+  { value: "ES", label: "Espírito Santo (ES)" },
+  { value: "GO", label: "Goiás (GO)" },
+  { value: "MA", label: "Maranhão (MA)" },
+  { value: "MT", label: "Mato Grosso (MT)" },
+  { value: "MS", label: "Mato Grosso do Sul (MS)" },
+  { value: "MG", label: "Minas Gerais (MG)" },
+  { value: "PA", label: "Pará (PA)" },
+  { value: "PB", label: "Paraíba (PB)" },
+  { value: "PR", label: "Paraná (PR)" },
+  { value: "PE", label: "Pernambuco (PE)" },
+  { value: "PI", label: "Piauí (PI)" },
+  { value: "RJ", label: "Rio de Janeiro (RJ)" },
+  { value: "RN", label: "Rio Grande do Norte (RN)" },
+  { value: "RS", label: "Rio Grande do Sul (RS)" },
+  { value: "RO", label: "Rondônia (RO)" },
+  { value: "RR", label: "Roraima (RR)" },
+  { value: "SC", label: "Santa Catarina (SC)" },
+  { value: "SP", label: "São Paulo (SP)" },
+  { value: "SE", label: "Sergipe (SE)" },
+  { value: "TO", label: "Tocantins (TO)" },
+];
+
+
 const semesterOptions = Array.from({ length: 10 }).map((_, index) => ({
   value: String(index + 1),
   label: `${index + 1}º semestre`,
@@ -27,6 +58,7 @@ export const RegisterPage: React.FC = () => {
   const [phone, setPhone] = useState("");
   const [course, setCourse] = useState("");
   const [semester, setSemester] = useState("");
+  const [state, setState] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -36,7 +68,7 @@ export const RegisterPage: React.FC = () => {
     event.preventDefault();
     setError(null);
 
-    if (!fullName || !email || !course || !semester) {
+    if (!fullName || !email || !course || !semester || !state) {
       setError("Preencha todos os campos obrigatórios.");
       return;
     }
@@ -52,8 +84,8 @@ export const RegisterPage: React.FC = () => {
       phone: phone || undefined,
       course,
       semester: Number(semester),
+      state, 
       password,
-      // estado REMOVIDO
     };
 
     try {
@@ -114,6 +146,14 @@ export const RegisterPage: React.FC = () => {
         options={courseOptions}
         required
         placeholder="Selecione um curso"
+      />
+      <Select
+        label="Estado (UF)"
+        value={state}
+        onChange={(e) => setState(e.target.value)}
+        options={stateOptions}
+        required
+        placeholder="Selecione o estado"
       />
 
       <Select

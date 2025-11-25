@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import type { Vacancy } from "../../types/vacancy";
 import { Badge } from "../ui/Badge";
 import { Button } from "../ui/Button";
-import { MapPin, Building2, Monitor, Clock } from "lucide-react";
+import { MapPin, Building2, Monitor } from "lucide-react";
 
 type Props = {
   vacancy: Vacancy;
@@ -46,21 +46,10 @@ export const VacancyCard: React.FC<Props> = ({ vacancy }) => {
           <Monitor className="h-3 w-3" />
           {vacancy.modality} • {vacancy.platform}
         </p>
-        <p className="flex items-center gap-1">
-          <Clock className="h-3 w-3" />
-          {vacancy.workload} • {vacancy.shift}
-        </p>
         <p>
           <span className="font-semibold">Bolsa: </span>
           {vacancy.stipend}
         </p>
-      </div>
-
-      <div className="flex justify-between items-center text-xs text-slate-600">
-        <span>
-          <span className="font-semibold">Auxílio transporte: </span>
-          {vacancy.transportAllowance ? "Sim" : "Não"}
-        </span>
       </div>
 
       <div className="mt-2">
