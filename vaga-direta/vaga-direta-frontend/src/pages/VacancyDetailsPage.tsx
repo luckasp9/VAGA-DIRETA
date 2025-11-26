@@ -1,19 +1,32 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import type { Vacancy } from "../types/vacancy";
 import { getVacancyById } from "../services/vacancyService";
 import { Button } from "../components/ui/Button";
 import { Badge } from "../components/ui/Badge";
 import { MapPin, Building2, Monitor, ChevronLeft } from "lucide-react";
 
+type LocationState = {
+  vacancy?: Vacancy;
+};
+
 export const VacancyDetailsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const [vacancy, setVacancy] = useState<Vacancy | null>(null);
-  const [loading, setLoading] = useState(true);
+  const state = (location.state as LocationState | null) || {};
+  const vacancyFromState = state.vacancy;
+
+  const [vacancy, setVacancy] = useState<Vacancy | null>(
+    vacancyFromState ?? null
+  );
+  const [loading, setLoading] = useState(!vacancyFromState);
 
   useEffect(() => {
+    // Se já veio pelo state, não precisa buscar de novo
+    if (vacancyFromState) return;
+
     const load = async () => {
       if (!id) {
         setLoading(false);
@@ -21,7 +34,6 @@ export const VacancyDetailsPage: React.FC = () => {
       }
 
       const numericId = Number(id);
-
       if (Number.isNaN(numericId)) {
         console.error("ID inválido na URL:", id);
         setLoading(false);
@@ -34,7 +46,7 @@ export const VacancyDetailsPage: React.FC = () => {
     };
 
     load();
-  }, [id]);
+  }, [id, vacancyFromState]);
 
   const handleBack = () => {
     navigate(-1);
@@ -124,7 +136,6 @@ export const VacancyDetailsPage: React.FC = () => {
           <span className="font-semibold">Bolsa: </span>
           {vacancy.stipend}
         </p>
-        {/* Auxílio transporte e turno/horas removidos */}
       </div>
 
       {/* Descrição + benefícios */}
@@ -134,16 +145,22 @@ export const VacancyDetailsPage: React.FC = () => {
             Descrição da vaga
           </h2>
           <p className="text-slate-700 whitespace-pre-line">
-            {vacancy.activities || vacancy.requirements}
+            {vacancy.activities || vacancy.requirements || "Não informado."}
           </p>
         </div>
 
         {vacancy.benefits && (
           <div>
             <h2 className="font-semibold text-slate-900 mb-1">Benefícios</h2>
-            <p className="text-slate-700 whitespace-pre-line">
-              {vacancy.benefits}
-            </p>
+            <ul className="text-slate-700 space-y-1 list-disc list-inside">
+              {vacancy.benefits
+                .split(/[,;\n]/)            // separa por vírgula, ponto e vírgula ou quebra de linha
+                .map((b) => b.trim())
+                .filter(Boolean)
+                .map((b, idx) => (
+                  <li key={idx}>{b}</li>
+                ))}
+            </ul>
           </div>
         )}
       </div>

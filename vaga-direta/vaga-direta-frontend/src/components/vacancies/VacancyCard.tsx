@@ -13,7 +13,7 @@ export const VacancyCard: React.FC<Props> = ({ vacancy }) => {
   const navigate = useNavigate();
 
   const handleDetails = () => {
-    navigate(`/vacancies/${vacancy.id}`);
+    navigate(`/vacancies/${vacancy.id}`, { state: { vacancy } });
   };
 
   return (

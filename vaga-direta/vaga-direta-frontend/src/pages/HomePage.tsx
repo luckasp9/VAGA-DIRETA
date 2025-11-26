@@ -11,6 +11,7 @@ import { Button } from "../components/ui/Button";
 import { useAuth } from "../context/AuthContext";
 
 const PAGE_SIZE = 6;
+const FILTERS_STORAGE_KEY = "vaga-direta:vacancy-filters";
 
 export const HomePage: React.FC = () => {
   const { user } = useAuth();
@@ -40,8 +41,6 @@ export const HomePage: React.FC = () => {
     setLoading(true);
     setCurrentPage(1);
 
-    // Para montar as cidades, queremos a lista filtrada
-    // sem levar em conta "city" (apenas estado, curso etc).
     const { city, ...rest } = currentFilters;
 
     const [all, filtered] = await Promise.all([
@@ -54,12 +53,48 @@ export const HomePage: React.FC = () => {
     setLoading(false);
   };
 
+  // Ao montar, tenta recuperar filtros salvos.
   useEffect(() => {
+    const stored = localStorage.getItem(FILTERS_STORAGE_KEY);
+
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored) as VacancyFilters;
+
+        const effective: VacancyFilters = {
+          keyword: parsed.keyword ?? "",
+          courses:
+            parsed.courses && parsed.courses.length > 0
+              ? parsed.courses
+              : user?.course
+              ? [user.course]
+              : [],
+          modality: parsed.modality ?? "",
+          pcd: parsed.pcd ?? "",
+          state: parsed.state ?? user?.state ?? "",
+          city: parsed.city ?? "",
+        };
+
+        setFilters(effective);
+        loadVacancies(effective);
+        return;
+      } catch (e) {
+        console.warn("Não foi possível ler filtros salvos:", e);
+      }
+    }
+
+    // Se não tem nada salvo, usa os filtros padrão (com curso/estado do usuário)
     loadVacancies(filters);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [user]);
+
+  const handleFiltersChange = (next: VacancyFilters) => {
+      setFilters(next);
+      localStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify(next));
+  };
 
   const handleApplyFilters = () => {
+    localStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify(filters));
     loadVacancies(filters);
   };
 
@@ -70,9 +105,11 @@ export const HomePage: React.FC = () => {
       modality: "",
       pcd: "",
       state: filters.state ?? "", // mantém estado
-      city: "",                   // limpa cidade
+      city: "", // limpa cidade
     };
+
     setFilters(cleared);
+    localStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify(cleared));
     loadVacancies(cleared);
   };
 
@@ -82,15 +119,12 @@ export const HomePage: React.FC = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // Opções de cidade geradas a partir das vagas (do banco),
-  // já "pré-filtradas" pelo estado selecionado.
+  // cidades disponíveis (já respeitando o estado)
   const cityOptions = Array.from(
     new Set(
       allVacancies
         .filter((v) =>
-          filters.state && v.state
-            ? v.state === filters.state
-            : true
+          filters.state && v.state ? v.state === filters.state : true
         )
         .map((v) => v.city)
         .filter((c): c is string => !!c)
@@ -101,11 +135,11 @@ export const HomePage: React.FC = () => {
     <div className="flex flex-col gap-4">
       <VacancyFiltersBar
         filters={filters}
-        onChange={setFilters}
+        onChange={handleFiltersChange}
         onApply={handleApplyFilters}
         onClear={handleClearFilters}
         loading={loading}
-        cityOptions={cityOptions} // <--- NOVO
+        cityOptions={cityOptions}
       />
 
       {loading && (
@@ -130,7 +164,6 @@ export const HomePage: React.FC = () => {
             ))}
           </div>
 
-          {/* Paginação centralizada */}
           <div className="flex flex-col items-center gap-2 mt-6 text-xs text-slate-600">
             <div className="flex items-center gap-2">
               <Button
@@ -143,23 +176,23 @@ export const HomePage: React.FC = () => {
                 Anterior
               </Button>
 
-              {Array.from({ length: totalPages }).map((_, index) => {
-                const page = index + 1;
-                const isActive = page === currentPage;
-                return (
-                  <button
-                    key={page}
-                    onClick={() => goToPage(page)}
-                    className={`h-8 w-8 rounded-md text-xs font-medium transition ${
-                      isActive
-                        ? "bg-primary-600 text-white"
-                        : "bg-white border border-slate-300 text-slate-700 hover:bg-slate-100"
-                    }`}
-                  >
-                    {page}
-                  </button>
-                );
-              })}
+            {Array.from({ length: totalPages }).map((_, index) => {
+              const page = index + 1;
+              const isActive = page === currentPage;
+              return (
+                <button
+                  key={page}
+                  onClick={() => goToPage(page)}
+                  className={`h-8 w-8 rounded-md text-xs font-medium transition ${
+                    isActive
+                      ? "bg-primary-600 text-white"
+                      : "bg-white border border-slate-300 text-slate-700 hover:bg-slate-100"
+                  }`}
+                >
+                  {page}
+                </button>
+              );
+            })}
 
               <Button
                 type="button"
