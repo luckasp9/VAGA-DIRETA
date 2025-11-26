@@ -8,7 +8,7 @@ export type VacancyFilters = {
   /** "" | "pcd" | "nao_pcd" */
   pcd?: string;
   state?: string;
-  city?: string; // <--- NOVO
+  cities?: string[]; // <--- AGORA É MULTI
 };
 
 type ApiVaga = {
@@ -105,9 +105,10 @@ export async function getVacancies(
       return false;
     }
 
-    // Cidade (dependente do estado)
-    if (filters.city) {
-      if (!vacancy.city || vacancy.city !== filters.city) {
+    // Cidades (multi)
+    if (filters.cities && filters.cities.length > 0) {
+      const city = vacancy.city ?? "";
+      if (!city || !filters.cities.includes(city)) {
         return false;
       }
     }

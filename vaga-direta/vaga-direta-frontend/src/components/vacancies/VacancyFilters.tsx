@@ -66,7 +66,6 @@ type Props = {
   onClear: () => void;
   loading?: boolean;
 
-  // NOVO: cidades disponíveis (vêm do HomePage a partir do banco)
   cityOptions: string[];
 };
 
@@ -81,9 +80,9 @@ export const VacancyFiltersBar: React.FC<Props> = ({
   const setField = (field: keyof VacancyFilters, value: any) => {
     const updated: VacancyFilters = { ...filters, [field]: value };
 
-    // Se o estado mudar, limpamos a cidade para evitar cidade "inválida".
+    // Se o estado muda, zeramos as cidades selecionadas
     if (field === "state") {
-      updated.city = "";
+      updated.cities = [];
     }
 
     onChange(updated);
@@ -96,10 +95,17 @@ export const VacancyFiltersBar: React.FC<Props> = ({
     });
   };
 
-  const citySelectOptions: Option[] = [
-    { value: "", label: "Todas as cidades" },
-    ...cityOptions.map((c) => ({ value: c, label: c })),
-  ];
+  const handleCitiesChange = (values: string[]) => {
+    onChange({
+      ...filters,
+      cities: values,
+    });
+  };
+
+  const cityMultiOptions = cityOptions.map((c) => ({
+    value: c,
+    label: c,
+  }));
 
   return (
     <div className="bg-white border border-primary-100 rounded-xl shadow-md p-4 mb-4">
@@ -135,15 +141,18 @@ export const VacancyFiltersBar: React.FC<Props> = ({
           />
         </div>
 
-        {/* Cidade (dependente do estado) */}
+        {/* Cidade - MultiSelect */}
         <div className="w-56">
-          <Select
+          <MultiSelect
             label="Cidade"
-            value={filters.city ?? ""}
-            onChange={(e) => setField("city", e.target.value)}
-            options={citySelectOptions}
-            // Se quiser travar quando não tiver estado:
-            // disabled={!filters.state}
+            options={cityMultiOptions}
+            selectedValues={filters.cities ?? []}
+            onChange={handleCitiesChange}
+            placeholder={
+              cityMultiOptions.length === 0
+                ? "Nenhuma cidade disponível"
+                : "Todas as cidades"
+            }
           />
         </div>
 
