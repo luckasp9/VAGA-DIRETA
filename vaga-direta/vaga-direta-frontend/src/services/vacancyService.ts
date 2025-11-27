@@ -8,7 +8,7 @@ export type VacancyFilters = {
   /** "" | "pcd" | "nao_pcd" */
   pcd?: string;
   state?: string;
-  cities?: string[]; // <--- AGORA É MULTI
+  cities?: string[];
 };
 
 type ApiVaga = {
@@ -25,6 +25,22 @@ type ApiVaga = {
   pcd?: boolean;
   modalidade?: string | null;
   beneficios?: string[];
+};
+
+const API_BASE = "http://localhost:8000/api/vagas";
+
+export type VacancyInput = {
+  titulo_vaga: string;
+  empresa_nome: string;
+  descricao_vaga: string;
+  cidade_vaga: string;
+  estado_vaga: string;
+  salario: string;
+  url: string;
+  cursos: string[];
+  pcd: boolean;
+  modalidade: string;
+  beneficios: string[]; // um benefício por linha no formulário
 };
 
 function mapApiVagaToVacancy(api: ApiVaga): Vacancy {
@@ -71,7 +87,6 @@ export async function getVacancies(
   const source = apiData.map(mapApiVagaToVacancy);
 
   return source.filter((vacancy) => {
-    // Palavra-chave
     if (filters.keyword) {
       const kw = filters.keyword.toLowerCase();
       const inTitle = vacancy.title.toLowerCase().includes(kw);
@@ -79,7 +94,6 @@ export async function getVacancies(
       if (!inTitle && !inActivities) return false;
     }
 
-    // Cursos (multi)
     if (filters.courses && filters.courses.length > 0) {
       const hasCourse = filters.courses.some((course) =>
         vacancy.courses.includes(course)
@@ -87,12 +101,10 @@ export async function getVacancies(
       if (!hasCourse) return false;
     }
 
-    // Modalidade
     if (filters.modality && vacancy.modality !== filters.modality) {
       return false;
     }
 
-    // PCD
     if (filters.pcd === "pcd" && !vacancy.pcd) {
       return false;
     }
@@ -100,12 +112,10 @@ export async function getVacancies(
       return false;
     }
 
-    // Estado (UF)
     if (filters.state && vacancy.state && vacancy.state !== filters.state) {
       return false;
     }
 
-    // Cidades (multi)
     if (filters.cities && filters.cities.length > 0) {
       const city = vacancy.city ?? "";
       if (!city || !filters.cities.includes(city)) {
@@ -120,6 +130,49 @@ export async function getVacancies(
 export async function getVacancyById(id: number): Promise<Vacancy | null> {
   const apiData = (await getVaga(id)) as ApiVaga;
   if (!apiData) return null;
-
   return mapApiVagaToVacancy(apiData);
+}
+
+// ====== CRUD para área administrativa ======
+
+async function sendVacancy(
+  method: "POST" | "PUT",
+  idOrBody: number | VacancyInput,
+  maybeBody?: VacancyInput
+): Promise<Vacancy> {
+  const id = typeof idOrBody === "number" ? idOrBody : undefined;
+  const body = typeof idOrBody === "number" ? maybeBody! : idOrBody;
+
+  const url = id ? `${API_BASE}/${id}` : API_BASE;
+
+  const res = await fetch(url, {
+    method,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+
+  if (!res.ok) {
+    throw new Error(`Erro ao salvar vaga (${method})`);
+  }
+
+  const data = (await res.json()) as ApiVaga;
+  return mapApiVagaToVacancy(data);
+}
+
+export async function createVacancy(input: VacancyInput): Promise<Vacancy> {
+  return sendVacancy("POST", input);
+}
+
+export async function updateVacancy(
+  id: number,
+  input: VacancyInput
+): Promise<Vacancy> {
+  return sendVacancy("PUT", id, input);
+}
+
+export async function deleteVacancy(id: number): Promise<void> {
+  const res = await fetch(`${API_BASE}/${id}`, { method: "DELETE" });
+  if (!res.ok) {
+    throw new Error("Erro ao excluir vaga");
+  }
 }

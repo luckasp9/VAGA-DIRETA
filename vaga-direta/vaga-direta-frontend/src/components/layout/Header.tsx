@@ -57,6 +57,19 @@ export const Header: React.FC = () => {
           >
             Perfil
           </NavLink>
+
+          {user?.isAdmin && (
+            <NavLink
+              to="/admin"
+              className={({ isActive }) =>
+                `uppercase tracking-wide ${
+                  isActive ? "font-semibold" : "text-white/80"
+                }`
+              }
+            >
+              Admin
+            </NavLink>
+          )}
         </nav>
 
         {/* Usuário + sair */}

@@ -6,4 +6,5 @@ export type User = {
   semester: number;
   phone?: string;
   state?: string;
+  isAdmin?: boolean;
 };

@@ -13,8 +13,8 @@ export type RegisterPayload = {
   phone?: string;
   course: string;
   semester: number;
-  password: string;
   state: string;
+  password: string;
 };
 
 /**
@@ -23,12 +23,10 @@ export type RegisterPayload = {
  * ======
  */
 
-// salva usuário logado no localStorage
 export function storeUser(user: User): void {
   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(user));
 }
 
-// lê usuário salvo no localStorage (ou null)
 export function getStoredUser(): User | null {
   try {
     const raw = localStorage.getItem(LOCAL_STORAGE_KEY);
@@ -39,7 +37,6 @@ export function getStoredUser(): User | null {
   }
 }
 
-// remove usuário do localStorage
 export function clearStoredUser(): void {
   localStorage.removeItem(LOCAL_STORAGE_KEY);
 }
@@ -50,7 +47,6 @@ export function clearStoredUser(): void {
  * ======
  */
 
-// pega usuário salvo (se existir)
 export function getCurrentUser(): User | null {
   return getStoredUser();
 }
@@ -59,7 +55,6 @@ export function logout(): void {
   clearStoredUser();
 }
 
-// login mockado: só verifica se email bate com o usuário salvo
 export async function login(payload: LoginPayload): Promise<User> {
   await new Promise((res) => setTimeout(res, 400));
 
@@ -68,7 +63,6 @@ export async function login(payload: LoginPayload): Promise<User> {
     throw new Error("Credenciais inválidas ou usuário não cadastrado.");
   }
 
-  // (por enquanto não validamos senha)
   return user;
 }
 
@@ -82,7 +76,9 @@ export async function register(payload: RegisterPayload): Promise<User> {
     phone: payload.phone,
     course: payload.course,
     semester: payload.semester,
-    state: payload.state,   // <--- NOVO: salvar estado
+    state: payload.state,
+    // para testes: se quiser um admin, cadastre com esse e-mail
+    isAdmin: payload.email === "admin@admin.com",
   };
 
   storeUser(newUser);

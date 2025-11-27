@@ -6,6 +6,7 @@ import { RegisterPage } from "../pages/RegisterPage";
 import { HomePage } from "../pages/HomePage";
 import { ProfilePage } from "../pages/ProfilePage";
 import { VacancyDetailsPage } from "../pages/VacancyDetailsPage";
+import { AdminPage } from "../pages/AdminPage";
 
 import { AuthLayout } from "../components/layout/AuthLayout";
 import { MainLayout } from "../components/layout/MainLayout";
@@ -59,6 +60,16 @@ export const AppRouter: React.FC = () => {
               <PrivateRoute>
                 <MainLayout>
                   <ProfilePage />
+                </MainLayout>
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/admin"
+            element={
+              <PrivateRoute>
+                <MainLayout>
+                  <AdminPage />
                 </MainLayout>
               </PrivateRoute>
             }
