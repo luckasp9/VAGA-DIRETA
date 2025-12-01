@@ -39,7 +39,9 @@ def listar_vagas():
     for vaga in vagas:
         vaga_dict = dict(vaga)
 
-        # Buscar benefícios da vaga
+        # -----------------------------------------
+        # BENEFÍCIOS (lista)
+        # -----------------------------------------
         cur.execute("""
             SELECT beneficio 
             FROM tcc.beneficio 
@@ -48,8 +50,37 @@ def listar_vagas():
 
         beneficios_rows = cur.fetchall()
         beneficios = [row["beneficio"] for row in beneficios_rows]
-
         vaga_dict["beneficios"] = beneficios
+
+        # -----------------------------------------
+        # CURSOS (lista)
+        # -----------------------------------------
+        cur.execute("""
+            SELECT curso 
+            FROM tcc.curso
+            WHERE vaga_id = %s;
+        """, (vaga["id"],))
+
+        cursos_rows = cur.fetchall()
+        cursos = [row["curso"] for row in cursos_rows]
+        vaga_dict["cursos"] = cursos
+
+        # -----------------------------------------
+        # PLATAFORMA (string)
+        # tabela: tcc.plataforma
+        # colunas: id (PK), plataforma (nome)
+        # vaga.id_plataforma -> plataforma.id
+        # -----------------------------------------
+        cur.execute("""
+            SELECT plataforma 
+            FROM tcc.plataforma
+            WHERE id = %s;
+        """, (vaga["id_plataforma"],))
+
+        plataforma_row = cur.fetchone()
+        plataforma_nome = plataforma_row["plataforma"] if plataforma_row else None
+        vaga_dict["plataforma"] = plataforma_nome
+
         resultado.append(vaga_dict)
 
     con.close()

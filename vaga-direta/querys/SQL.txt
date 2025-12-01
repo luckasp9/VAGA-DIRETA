@@ -10,32 +10,12 @@ CREATE TABLE tcc.vaga (
     estado_vaga VARCHAR(100),
     salario VARCHAR(255),
     url VARCHAR(255),
-    curso_id VARCHAR(255),
-    pcd boolean,
-    modalidade varchar(255),
+    curso_id INTEGER,
+    pcd BOOLEAN,
+    modalidade VARCHAR(255),
+    id_plataforma INTEGER,
     created_at TIMESTAMP DEFAULT NOW()
-    
-)
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Tabela de cursos
-
-CREATE TABLE IF NOT EXISTS tcc.curso (
-    id SERIAL PRIMARY KEY,
-    nome TEXT UNIQUE NOT NULL
 );
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-Tabela de relação das vagas com os cursos
-
-CREATE TABLE IF NOT EXISTS tcc.vaga_curso (
-    vaga_id INTEGER REFERENCES tcc.vaga(id),
-    curso_id INTEGER REFERENCES tcc.cursos(id),
-    PRIMARY KEY (vaga_id, curso_id)
-)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -45,4 +25,29 @@ CREATE TABLE tcc.beneficio (
     id SERIAL PRIMARY KEY,
     vaga_id INT REFERENCES tcc.vaga(id) ON DELETE CASCADE,
     beneficio TEXT NOT NULL
+);
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tabela de usuários
+
+CREATE TABLE tcc.usuario (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    nome VARCHAR NOT NULL,
+    email VARCHAR NOT NULL,
+    tipo_usuario BOOLEAN NOT NULL DEFAULT false,
+    telefone VARCHAR NOT NULL,
+    curso VARCHAR NOT NULL,
+    semestre SMALLINT NOT NULL,
+    estado VARCHAR NOT NULL,
+    senha VARCHAR NOT NULL
+);
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tabela de cursos
+
+CREATE TABLE tcc.curso (
+    id SERIAL PRIMARY KEY,
+    vaga_id INT REFERENCES tcc.vaga(id) ON DELETE CASCADE,
+    curso TEXT 
 );

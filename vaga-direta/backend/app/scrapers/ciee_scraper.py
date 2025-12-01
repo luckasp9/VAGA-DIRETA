@@ -82,7 +82,7 @@ def normalize(vaga):
 
     return {
         "id": vaga.get("codigoVaga"),
-        "titulo": vaga.get("titulo"),
+        "titulo": vaga.get("tipoVaga"),
         "empresa": vaga.get("nomeEmpresa"),
         "descricao": descricao,
         "cidade": local.get("cidade"),
@@ -92,7 +92,7 @@ def normalize(vaga):
         "pcd": detectar_pcd(descricao),
         "modalidade": detectar_modalidade(descricao),
         "cursos": cursos,
-        "url": f"https://portal.ciee.org.br/vagas/{vaga.get('codigoVaga')}",
+        "url": f"https://ciee.app/detalhes-vaga/{vaga.get('codigoVaga')}",
     }
 
 

@@ -12,8 +12,10 @@ class Vaga(BaseModel):
     estado_vaga: str
     salario: str
     url: str
-    curso_id: str
+    cursos: List[str] = []
     pcd: bool
     modalidade: str
     created_at: datetime
     beneficios: List[str] = []
+    plataforma: str
+    
