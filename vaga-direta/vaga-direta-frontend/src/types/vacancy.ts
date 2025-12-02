@@ -1,19 +1,23 @@
+// src/types/vacancy.ts
 export type Vacancy = {
   id: number;
   code: string;
   title: string;
   courses: string[];
   location: string;
-  modality: string; // Presencial, Remoto, Híbrido...
-  platform: string; // LinkedIn, Catho, etc.
+  modality: string;
+  platform: string;
   company: string;
   stipend: string;
   transportAllowance: boolean;
-  type?: string; // Vaga afirmativa, Estágio obrigatório, etc.
-  shift: string; // Manhã, Tarde, Noite...
-  workload: string; // ex.: "30h semanais"
+  type?: string;
+  shift: string;
+  workload: string;
   benefits?: string;
   activities: string;
   requirements: string;
   applyUrl?: string;
+  pcd?: boolean;
+  city?: string;
+  state?: string;
 };

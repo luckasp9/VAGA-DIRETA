@@ -1,166 +1,92 @@
 import type { Vacancy } from "../types/vacancy";
+import { getVagas, getVaga } from "./apiVagas";
 
 export type VacancyFilters = {
   keyword?: string;
   courses?: string[];
   modality?: string;
-  platform?: string;
-  shift?: string;
-  types?: string[];
+  /** "" | "pcd" | "nao_pcd" */
+  pcd?: string;
+  state?: string;
+  cities?: string[];
 };
 
-const API_URL = "http://localhost:3001/vacancies";
+type ApiVaga = {
+  id: number;
+  id_vaga?: string | null;
+  titulo_vaga: string;
+  empresa_nome: string;
+  descricao_vaga?: string | null;
+  cidade_vaga?: string | null;
+  estado_vaga?: string | null;
+  salario?: string | null;
+  url?: string | null;
+  cursos?: string[];
+  pcd?: boolean;
+  modalidade?: string | null;
+  beneficios?: string[];
+};
 
-// Tenta buscar da API fake (json-server). Se falhar, usa os mocks.
-async function fetchVacanciesFromApi(): Promise<Vacancy[] | null> {
-  try {
-    const res = await fetch(API_URL);
-    if (!res.ok) throw new Error("Erro ao buscar vagas na API fake");
-    const data = (await res.json()) as Vacancy[];
-    return data;
-  } catch (err) {
-    console.error("[vacancyService] Falha ao buscar API fake:", err);
-    return null;
-  }
+const API_BASE = "http://localhost:8000/api/vagas";
+
+export type VacancyInput = {
+  titulo_vaga: string;
+  empresa_nome: string;
+  descricao_vaga: string;
+  cidade_vaga: string;
+  estado_vaga: string;
+  salario: string;
+  url: string;
+  cursos: string[];
+  pcd: boolean;
+  modalidade: string;
+  beneficios: string[]; // um benefício por linha no formulário
+};
+
+function mapApiVagaToVacancy(api: ApiVaga): Vacancy {
+  const courses = api.cursos ?? [];
+  const city = api.cidade_vaga ?? "";
+  const state = api.estado_vaga ?? "";
+  const location =
+    city && state ? `${city} - ${state}` : city || state || "";
+
+  return {
+    id: api.id,
+    code: api.id_vaga ?? `VD-${api.id}`,
+    title: api.titulo_vaga,
+    company: api.empresa_nome,
+    courses,
+
+    location,
+    modality: api.modalidade ?? "",
+    platform: "Plataforma original",
+
+    stipend: api.salario ?? "A combinar",
+    transportAllowance: false,
+    type: api.pcd ? "PCD" : undefined,
+
+    shift: "",
+    workload: "",
+
+    benefits: api.beneficios?.join(", "),
+    activities: api.descricao_vaga ?? "",
+    requirements: "",
+
+    applyUrl: api.url ?? undefined,
+
+    pcd: !!api.pcd,
+    city,
+    state,
+  };
 }
-
-// Mocks usados como fallback
-const mockVacancies: Vacancy[] = [
-  {
-    id: 1,
-    code: "VD-001",
-    title: "Estágio em Desenvolvimento Web",
-    courses: ["Ciência da Computação", "Sistemas de Informação"],
-    location: "Brasília - DF",
-    modality: "Híbrido",
-    platform: "LinkedIn",
-    company: "Empresa Tech BR",
-    stipend: "R$ 1.500,00",
-    transportAllowance: true,
-    type: "Estágio obrigatório",
-    shift: "Tarde",
-    workload: "30h semanais",
-    benefits: "Vale-refeição, Day-off no aniversário",
-    activities:
-      "Desenvolvimento de novas funcionalidades, correção de bugs e participação em reuniões de planejamento.",
-    requirements:
-      "Conhecimentos básicos em HTML, CSS, JavaScript e Git. Desejável noções de React.",
-    applyUrl: "https://www.linkedin.com/",
-  },
-  {
-    id: 2,
-    code: "VD-002",
-    title: "Estágio em Dados",
-    courses: ["Ciência da Computação", "Engenharia de Software"],
-    location: "São Paulo - SP",
-    modality: "Remoto",
-    platform: "Catho",
-    company: "Data Insights LTDA",
-    stipend: "R$ 1.800,00",
-    transportAllowance: false,
-    type: "Sem experiência",
-    shift: "Manhã",
-    workload: "20h semanais",
-    benefits: "Auxílio home office, acesso a cursos internos",
-    activities:
-      "Criação de relatórios, análises exploratórias de dados e manutenção de dashboards.",
-    requirements:
-      "Conhecimentos em SQL e Excel. Desejável noções de Python ou R.",
-    applyUrl: "#",
-  },
-  {
-    id: 3,
-    code: "VD-003",
-    title: "Estágio em UX/UI",
-    courses: ["Sistemas de Informação", "Engenharia de Software"],
-    location: "São Paulo - SP",
-    modality: "Presencial",
-    platform: "Agiel",
-    company: "Agência Criativa SP",
-    stipend: "R$ 1.300,00",
-    transportAllowance: true,
-    type: "Vaga afirmativa",
-    shift: "Manhã",
-    workload: "30h semanais",
-    benefits: "Vale-transporte, vale-alimentação",
-    activities:
-      "Criação de protótipos, testes de usabilidade e documentação de fluxos.",
-    requirements:
-      "Conhecimentos em Figma ou similar. Desejável noções de HTML/CSS.",
-    applyUrl: "#",
-  },
-  {
-    id: 4,
-    code: "VD-004",
-    title: "Estágio em Suporte Técnico",
-    courses: ["Ciência da Computação"],
-    location: "Remoto",
-    modality: "Remoto",
-    platform: "Super Estágios",
-    company: "Suporte Já LTDA",
-    stipend: "R$ 1.200,00",
-    transportAllowance: false,
-    type: "Sem experiência",
-    shift: "Noite",
-    workload: "30h semanais",
-    benefits: "Equipamentos fornecidos pela empresa",
-    activities:
-      "Atendimento a usuários, registro de chamados e manutenção de estações de trabalho.",
-    requirements:
-      "Boa comunicação e interesse em suporte de TI. Desejável noções de redes.",
-    applyUrl: "#",
-  },
-  {
-    id: 5,
-    code: "VD-005",
-    title: "Estágio em QA/Tester",
-    courses: ["Ciência da Computação", "Engenharia de Software"],
-    location: "Belo Horizonte - MG",
-    modality: "Híbrido",
-    platform: "LinkedIn",
-    company: "Qualidade Tech",
-    stipend: "R$ 1.600,00",
-    transportAllowance: true,
-    type: "Estágio obrigatório",
-    shift: "Tarde",
-    workload: "30h semanais",
-    benefits: "Plano de saúde, vale-alimentação",
-    activities:
-      "Criação e execução de casos de teste, registro de defeitos e apoio na automação de testes.",
-    requirements:
-      "Noções de testes de software. Desejável conhecimento em ferramentas de automação.",
-    applyUrl: "#",
-  },
-  {
-    id: 6,
-    code: "VD-006",
-    title: "Estágio em Ciência de Dados",
-    courses: ["Ciência da Computação"],
-    location: "Curitiba - PR",
-    modality: "Presencial",
-    platform: "CIEE",
-    company: "Analytics Corp",
-    stipend: "R$ 2.000,00",
-    transportAllowance: false,
-    type: "Vaga afirmativa",
-    shift: "Integral",
-    workload: "30h semanais",
-    benefits: "Estacionamento, cursos internos",
-    activities:
-      "Preparação de dados, criação de modelos simples e apoio em projetos de machine learning.",
-    requirements:
-      "Conhecimentos em Python, bibliotecas de dados (Pandas, NumPy) e SQL.",
-    applyUrl: "#",
-  },
-];
 
 export async function getVacancies(
   filters: VacancyFilters
 ): Promise<Vacancy[]> {
-  const source = (await fetchVacanciesFromApi()) ?? mockVacancies;
+  const apiData = (await getVagas()) as ApiVaga[];
+  const source = apiData.map(mapApiVagaToVacancy);
 
   return source.filter((vacancy) => {
-    // Palavra-chave
     if (filters.keyword) {
       const kw = filters.keyword.toLowerCase();
       const inTitle = vacancy.title.toLowerCase().includes(kw);
@@ -168,7 +94,6 @@ export async function getVacancies(
       if (!inTitle && !inActivities) return false;
     }
 
-    // Cursos (multi)
     if (filters.courses && filters.courses.length > 0) {
       const hasCourse = filters.courses.some((course) =>
         vacancy.courses.includes(course)
@@ -176,24 +101,24 @@ export async function getVacancies(
       if (!hasCourse) return false;
     }
 
-    // Modalidade
     if (filters.modality && vacancy.modality !== filters.modality) {
       return false;
     }
 
-    // Plataforma
-    if (filters.platform && vacancy.platform !== filters.platform) {
+    if (filters.pcd === "pcd" && !vacancy.pcd) {
+      return false;
+    }
+    if (filters.pcd === "nao_pcd" && vacancy.pcd) {
       return false;
     }
 
-    // Turno
-    if (filters.shift && vacancy.shift !== filters.shift) {
+    if (filters.state && vacancy.state && vacancy.state !== filters.state) {
       return false;
     }
 
-    // Tipo (multi)
-    if (filters.types && filters.types.length > 0) {
-      if (!vacancy.type || !filters.types.includes(vacancy.type)) {
+    if (filters.cities && filters.cities.length > 0) {
+      const city = vacancy.city ?? "";
+      if (!city || !filters.cities.includes(city)) {
         return false;
       }
     }
@@ -203,7 +128,51 @@ export async function getVacancies(
 }
 
 export async function getVacancyById(id: number): Promise<Vacancy | null> {
-  const source = (await fetchVacanciesFromApi()) ?? mockVacancies;
-  const vacancy = source.find((v) => v.id === id);
-  return vacancy ?? null;
+  const apiData = (await getVaga(id)) as ApiVaga;
+  if (!apiData) return null;
+  return mapApiVagaToVacancy(apiData);
+}
+
+// ====== CRUD para área administrativa ======
+
+async function sendVacancy(
+  method: "POST" | "PUT",
+  idOrBody: number | VacancyInput,
+  maybeBody?: VacancyInput
+): Promise<Vacancy> {
+  const id = typeof idOrBody === "number" ? idOrBody : undefined;
+  const body = typeof idOrBody === "number" ? maybeBody! : idOrBody;
+
+  const url = id ? `${API_BASE}/${id}` : API_BASE;
+
+  const res = await fetch(url, {
+    method,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+
+  if (!res.ok) {
+    throw new Error(`Erro ao salvar vaga (${method})`);
+  }
+
+  const data = (await res.json()) as ApiVaga;
+  return mapApiVagaToVacancy(data);
+}
+
+export async function createVacancy(input: VacancyInput): Promise<Vacancy> {
+  return sendVacancy("POST", input);
+}
+
+export async function updateVacancy(
+  id: number,
+  input: VacancyInput
+): Promise<Vacancy> {
+  return sendVacancy("PUT", id, input);
+}
+
+export async function deleteVacancy(id: number): Promise<void> {
+  const res = await fetch(`${API_BASE}/${id}`, { method: "DELETE" });
+  if (!res.ok) {
+    throw new Error("Erro ao excluir vaga");
+  }
 }

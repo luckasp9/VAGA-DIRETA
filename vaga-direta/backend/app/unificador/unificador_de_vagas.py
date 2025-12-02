@@ -29,7 +29,10 @@ def normalizar_ciee(vaga):
         "logo": vaga.get("logo", ""),
         "empresa": vaga.get("empresa", ""),
         "descricao": vaga.get("descricao", ""),
-        "curso": ""
+        "curso": ,
+        "pcd": ,
+        "modalidade": ,
+        "plataforma": "1"
     }
 
 
@@ -50,7 +53,10 @@ def normalizar_nube(vaga):
         "logo": "",
         "empresa": vaga.get("empresa", ""),
         "descricao": vaga.get("descricao", ""),
-        "curso": vaga.get("curso", "")
+        "curso": vaga.get("curso", ""),
+        "pcd": ,
+        "modalidade": ,
+        "plataforma": "2"
     }
 
 
@@ -72,8 +78,13 @@ def normalizar_empregare(vaga):
         "logo": "",
         "empresa": vaga.get("empresa", ""),
         "descricao": vaga.get("descricao", ""),
-        "curso": ""
+        "curso": "",
+        "pcd": ,
+        "modalidade": ,
+        "plataforma": "3"
     }
+    
+    
 
 
 # ------------------------------------------------------------

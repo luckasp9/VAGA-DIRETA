@@ -8,19 +8,24 @@ import VacancyFiltersBar from "../components/vacancies/VacancyFilters";
 import { VacancyCard } from "../components/vacancies/VacancyCard";
 import { VacancySkeleton } from "../components/vacancies/VacancySkeleton";
 import { Button } from "../components/ui/Button";
+import { useAuth } from "../context/AuthContext";
 
 const PAGE_SIZE = 6;
+const FILTERS_STORAGE_KEY = "vaga-direta:vacancy-filters";
 
 export const HomePage: React.FC = () => {
+  const { user } = useAuth();
+
   const [filters, setFilters] = useState<VacancyFilters>({
     keyword: "",
-    courses: [],
+    courses: user?.course ? [user.course] : [],
     modality: "",
-    platform: "",
-    shift: "",
-    types: [],
+    pcd: "",
+    state: user?.state ?? "",
+    cities: [], // multi cidade
   });
 
+  const [allVacancies, setAllVacancies] = useState<Vacancy[]>([]);
   const [vacancies, setVacancies] = useState<Vacancy[]>([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -35,30 +40,84 @@ export const HomePage: React.FC = () => {
   const loadVacancies = async (currentFilters: VacancyFilters) => {
     setLoading(true);
     setCurrentPage(1);
-    const data = await getVacancies(currentFilters);
-    setVacancies(data);
+
+    const { cities, ...rest } = currentFilters;
+
+    const [all, filtered] = await Promise.all([
+      getVacancies({ ...rest, cities: [] }),
+      getVacancies(currentFilters),
+    ]);
+
+    setAllVacancies(all);
+    setVacancies(filtered);
     setLoading(false);
   };
 
+  // Ao montar (ou quando o user muda), restaura filtros salvos se existirem
   useEffect(() => {
-    loadVacancies(filters);
+    const stored = localStorage.getItem(FILTERS_STORAGE_KEY);
+
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored) as VacancyFilters;
+
+        const effective: VacancyFilters = {
+          keyword: parsed.keyword ?? "",
+          courses:
+            parsed.courses ?? (user?.course ? [user.course] : []),
+          modality: parsed.modality ?? "",
+          pcd: parsed.pcd ?? "",
+          state: parsed.state ?? user?.state ?? "",
+          cities: parsed.cities ?? [],
+        };
+
+        setFilters(effective);
+        loadVacancies(effective);
+        return;
+      } catch (e) {
+        console.warn("Não foi possível ler filtros salvos:", e);
+      }
+    }
+
+    // Se não tem nada salvo, usa curso/estado do usuário como default
+    const defaultFilters: VacancyFilters = {
+      keyword: "",
+      courses: user?.course ? [user.course] : [],
+      modality: "",
+      pcd: "",
+      state: user?.state ?? "",
+      cities: [],
+    };
+
+    setFilters(defaultFilters);
+    loadVacancies(defaultFilters);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [user]);
+
+  // Toda vez que os filtros mudam (por qualquer interação),
+  // salvamos no localStorage também.
+  const handleFiltersChange = (next: VacancyFilters) => {
+    setFilters(next);
+    localStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify(next));
+  };
 
   const handleApplyFilters = () => {
+    localStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify(filters));
     loadVacancies(filters);
   };
 
   const handleClearFilters = () => {
     const cleared: VacancyFilters = {
       keyword: "",
-      courses: [],
+      courses: filters.courses ?? [], // mantém curso como está
       modality: "",
-      platform: "",
-      shift: "",
-      types: [],
+      pcd: "",
+      state: filters.state ?? "", // mantém estado atual
+      cities: [], // limpa cidades
     };
+
     setFilters(cleared);
+    localStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify(cleared));
     loadVacancies(cleared);
   };
 
@@ -68,14 +127,27 @@ export const HomePage: React.FC = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  // cidades disponíveis (a partir das vagas, levando em conta o estado selecionado)
+  const cityOptions = Array.from(
+    new Set(
+      allVacancies
+        .filter((v) =>
+          filters.state && v.state ? v.state === filters.state : true
+        )
+        .map((v) => v.city)
+        .filter((c): c is string => !!c)
+    )
+  ).sort();
+
   return (
     <div className="flex flex-col gap-4">
       <VacancyFiltersBar
         filters={filters}
-        onChange={setFilters}
+        onChange={handleFiltersChange}
         onApply={handleApplyFilters}
         onClear={handleClearFilters}
         loading={loading}
+        cityOptions={cityOptions}
       />
 
       {loading && (
@@ -100,7 +172,6 @@ export const HomePage: React.FC = () => {
             ))}
           </div>
 
-          {/* Paginação centralizada */}
           <div className="flex flex-col items-center gap-2 mt-6 text-xs text-slate-600">
             <div className="flex items-center gap-2">
               <Button

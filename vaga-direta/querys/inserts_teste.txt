@@ -1,0 +1,75 @@
+insert de vagas:
+
+INSERT INTO tcc.vaga (
+    id_vaga, titulo_vaga, empresa_nome, descricao_vaga, cidade_vaga, estado_vaga,
+    salario, url, curso_id, pcd, modalidade
+) VALUES
+(
+    '346611',
+    '|Engenharia|Manutencao|Estagio|Ribeirao Pires|SP',
+    'Aperam - 346611',
+    '',
+    'Ribeirão Pires',
+    'SP',
+    'R$ 1.949,20',
+    'https://www.nube.com.br/detalhes-vaga/346611/vaga-de-estagio-em-engenharia-aperam-ribeirao-pires-sp-bolsa-de-1949-mais-beneficios',
+    '',
+    false,
+    ''
+),
+(
+    '356470',
+    '|Administrativa|Administrativa|Estagio|Limeira|SP',
+    'Forvia - 356470',
+    '',
+    'Limeira',
+    'SP',
+    'R$ 1.663,00',
+    'https://www.nube.com.br/detalhes-vaga/356470/vaga-de-estagio-em-administrativa-forvia-limeira-sp-bolsa-de-1663-mais-beneficios',
+    '',
+    false,
+    ''
+),
+(
+    '346873',
+    '|Logistica||Estagio|Limeira|SP',
+    'Forvia - 346873',
+    '',
+    'Limeira',
+    'SP',
+    'R$ 1.663,00',
+    'https://www.nube.com.br/detalhes-vaga/346873/vaga-de-estagio-em-logistica-forvia-limeira-sp-bolsa-de-1663-mais-beneficios',
+    '',
+    false,
+    ''
+),
+(
+    '356218',
+    '|Gastronomia||Estagio|Sao Paulo|SP',
+    'Gastronomia - 356218',
+    '',
+    'São Paulo',
+    'SP',
+    'R$ 1.100,00',
+    'https://www.nube.com.br/detalhes-vaga/356218/vaga-de-estagio-em-gastronomia-sao-paulo-sp-bolsa-de-1100-mais-beneficios',
+    '',
+    false,
+    ''
+);
+
+
+insert de beneficios:
+
+INSERT INTO tcc.beneficio (vaga_id, beneficio)
+VALUES
+(1, 'Vale-transporte'),
+(1, 'Vale-alimentação'),
+(2, 'Gympass'),
+(2, 'Vale-transporte'),
+(2, 'Vale-alimentação'),
+(3, 'Gympass'),
+(3, 'Vale-transporte'),
+(3, 'Vale-alimentação'),
+(3, 'Gympass'),
+(3, 'Vale-transporte'),
+(3, 'Vale-alimentação')

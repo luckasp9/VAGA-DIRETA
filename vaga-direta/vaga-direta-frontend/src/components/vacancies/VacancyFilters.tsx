@@ -22,27 +22,41 @@ const modalityOptions: Option[] = [
   { value: "Híbrido", label: "Híbrido" },
 ];
 
-const platformOptions: Option[] = [
-  { value: "LinkedIn", label: "LinkedIn" },
-  { value: "Catho", label: "Catho" },
-  { value: "Agiel", label: "Agiel" },
-  { value: "Super Estágios", label: "Super Estágios" },
-  { value: "CIEE", label: "CIEE" },
-  { value: "Nube", label: "Nube" },
-  { value: "Outro", label: "Outros" },
+const stateOptions: Option[] = [
+  { value: "", label: "Todos os estados" },
+  { value: "AC", label: "Acre (AC)" },
+  { value: "AL", label: "Alagoas (AL)" },
+  { value: "AP", label: "Amapá (AP)" },
+  { value: "AM", label: "Amazonas (AM)" },
+  { value: "BA", label: "Bahia (BA)" },
+  { value: "CE", label: "Ceará (CE)" },
+  { value: "DF", label: "Distrito Federal (DF)" },
+  { value: "ES", label: "Espírito Santo (ES)" },
+  { value: "GO", label: "Goiás (GO)" },
+  { value: "MA", label: "Maranhão (MA)" },
+  { value: "MT", label: "Mato Grosso (MT)" },
+  { value: "MS", label: "Mato Grosso do Sul (MS)" },
+  { value: "MG", label: "Minas Gerais (MG)" },
+  { value: "PA", label: "Pará (PA)" },
+  { value: "PB", label: "Paraíba (PB)" },
+  { value: "PR", label: "Paraná (PR)" },
+  { value: "PE", label: "Pernambuco (PE)" },
+  { value: "PI", label: "Piauí (PI)" },
+  { value: "RJ", label: "Rio de Janeiro (RJ)" },
+  { value: "RN", label: "Rio Grande do Norte (RN)" },
+  { value: "RS", label: "Rio Grande do Sul (RS)" },
+  { value: "RO", label: "Rondônia (RO)" },
+  { value: "RR", label: "Roraima (RR)" },
+  { value: "SC", label: "Santa Catarina (SC)" },
+  { value: "SP", label: "São Paulo (SP)" },
+  { value: "SE", label: "Sergipe (SE)" },
+  { value: "TO", label: "Tocantins (TO)" },
 ];
 
-const shiftOptions: Option[] = [
-  { value: "Manhã", label: "Manhã" },
-  { value: "Tarde", label: "Tarde" },
-  { value: "Noite", label: "Noite" },
-  { value: "Integral", label: "Integral" },
-];
-
-const typeOptions: Option[] = [
-  { value: "Vaga afirmativa", label: "Vaga afirmativa" },
-  { value: "Sem experiência", label: "Sem experiência" },
-  { value: "Estágio obrigatório", label: "Estágio obrigatório" },
+const pcdOptions: Option[] = [
+  { value: "", label: "Todas as vagas" },
+  { value: "pcd", label: "Vagas para PCD" },
+  { value: "nao_pcd", label: "Demais vagas" },
 ];
 
 type Props = {
@@ -51,6 +65,8 @@ type Props = {
   onApply: () => void;
   onClear: () => void;
   loading?: boolean;
+
+  cityOptions: string[];
 };
 
 export const VacancyFiltersBar: React.FC<Props> = ({
@@ -59,9 +75,17 @@ export const VacancyFiltersBar: React.FC<Props> = ({
   onApply,
   onClear,
   loading,
+  cityOptions,
 }) => {
   const setField = (field: keyof VacancyFilters, value: any) => {
-    onChange({ ...filters, [field]: value });
+    const updated: VacancyFilters = { ...filters, [field]: value };
+
+    // Se o estado muda, zeramos as cidades selecionadas
+    if (field === "state") {
+      updated.cities = [];
+    }
+
+    onChange(updated);
   };
 
   const handleCoursesChange = (values: string[]) => {
@@ -71,12 +95,17 @@ export const VacancyFiltersBar: React.FC<Props> = ({
     });
   };
 
-  const handleTypesChange = (values: string[]) => {
+  const handleCitiesChange = (values: string[]) => {
     onChange({
       ...filters,
-      types: values,
+      cities: values,
     });
   };
+
+  const cityMultiOptions = cityOptions.map((c) => ({
+    value: c,
+    label: c,
+  }));
 
   return (
     <div className="bg-white border border-primary-100 rounded-xl shadow-md p-4 mb-4">
@@ -102,6 +131,31 @@ export const VacancyFiltersBar: React.FC<Props> = ({
           />
         </div>
 
+        {/* Estado */}
+        <div className="w-48">
+          <Select
+            label="Estado"
+            value={filters.state ?? ""}
+            onChange={(e) => setField("state", e.target.value)}
+            options={stateOptions}
+          />
+        </div>
+
+        {/* Cidade - MultiSelect */}
+        <div className="w-56">
+          <MultiSelect
+            label="Cidade"
+            options={cityMultiOptions}
+            selectedValues={filters.cities ?? []}
+            onChange={handleCitiesChange}
+            placeholder={
+              cityMultiOptions.length === 0
+                ? "Nenhuma cidade disponível"
+                : "Todas as cidades"
+            }
+          />
+        </div>
+
         {/* Modalidade */}
         <div className="w-40">
           <Select
@@ -113,36 +167,13 @@ export const VacancyFiltersBar: React.FC<Props> = ({
           />
         </div>
 
-        {/* Plataforma */}
-        <div className="w-44">
+        {/* PCD */}
+        <div className="w-48">
           <Select
-            label="Plataforma"
-            value={filters.platform ?? ""}
-            onChange={(e) => setField("platform", e.target.value)}
-            options={platformOptions}
-            placeholder="Todas"
-          />
-        </div>
-
-        {/* Turno */}
-        <div className="w-36">
-          <Select
-            label="Turno"
-            value={filters.shift ?? ""}
-            onChange={(e) => setField("shift", e.target.value)}
-            options={shiftOptions}
-            placeholder="Todos"
-          />
-        </div>
-
-        {/* Tipo de vaga - MultiSelect */}
-        <div className="w-[260px]">
-          <MultiSelect
-            label="Tipo de vaga"
-            options={typeOptions}
-            selectedValues={filters.types ?? []}
-            onChange={handleTypesChange}
-            placeholder="Todos os tipos"
+            label="PCD"
+            value={filters.pcd ?? ""}
+            onChange={(e) => setField("pcd", e.target.value)}
+            options={pcdOptions}
           />
         </div>
 
@@ -166,5 +197,4 @@ export const VacancyFiltersBar: React.FC<Props> = ({
   );
 };
 
-// Default export para compatibilidade com import default
 export default VacancyFiltersBar;
