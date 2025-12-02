@@ -14,6 +14,7 @@ class VagaBase(BaseModel):
     pcd: bool
     modalidade: str
 
+    cursos: List[str] = []
 
 # ====== Modelo usado no POST/PUT (Admin) ======
 class VagaCreate(VagaBase):
@@ -39,7 +40,7 @@ class Vaga(VagaBase):
 
 
 
-
+    plataforma: str
 
 
 

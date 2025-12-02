@@ -8,7 +8,7 @@ import requests
 import json
 import time
 import argparse
-from typing import List, Dict, Any, Optional
+from typing import Dict, Any, Optional
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
@@ -18,11 +18,16 @@ from urllib3.util.retry import Retry
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(ROOT)
 
-from app.utils.detectar_cursos import detectar_cursos  # <-- AGORA FUNCIONA
+from app.utils.detectar_cursos import detectar_cursos
 
 
+# Diretório onde os arquivos serão salvos
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DEFAULT_OUT = os.path.join(BASE_DIR, "vagas_catho.json")
+DATA_DIR = os.path.join(BASE_DIR, "data")
+os.makedirs(DATA_DIR, exist_ok=True)
+
+DEFAULT_OUT = os.path.join(DATA_DIR, "vagas_catho.json")
+
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
@@ -71,14 +76,14 @@ def extract_buildid_from_html_text(html: str) -> Optional[str]:
 
 def get_build_id_from_network(session: requests.Session) -> str:
     url = "https://www.catho.com.br/vagas/estagio"
-    print("🔎 Buscando buildId na página:", url)
+    print(" Buscando buildId na página:", url)
     r = session.get(url, timeout=20)
     r.raise_for_status()
     html = r.text
     bid = extract_buildid_from_html_text(html)
     if not bid:
         raise RuntimeError("Não encontrei buildId no HTML.")
-    print("✅ buildId encontrado:", bid)
+    print(" buildId encontrado:", bid)
     return bid
 
 
@@ -93,20 +98,23 @@ def fetch_page(session: requests.Session, build_id: str, page: int):
 
 
 # -------------------------
-# Normalização padronizada (Catho)
+# Normalização padronizada
 # -------------------------
 def normalize_job(job_item: Dict[str, Any]) -> Dict[str, Any]:
-    # Foco na estrutura da Catho
     jd = job_item.get("job_customized_data") or job_item.get("jobCustomizedData") or {}
     job_id = jd.get("id") or job_item.get("job_id") or ""
 
-    # Local
+    # Local (cidade e estado)
     cidade = ""
     estado = ""
     vagas_loc = jd.get("vagas") or []
+
     if isinstance(vagas_loc, list) and vagas_loc and isinstance(vagas_loc[0], dict):
         cidade = vagas_loc[0].get("cidade", "") or ""
-        estado = vagas_loc[0].get("uf", "") or vagas_loc[0].get("estado", "") or ""
+        estado_raw = vagas_loc[0].get("uf", "") or vagas_loc[0].get("estado", "") or ""
+
+        # Remover casos do tipo "SP<br>Híbrido"
+        estado = estado_raw.split("<br>")[0].strip()
 
     # Bolsa
     salario = jd.get("salario")
@@ -124,34 +132,25 @@ def normalize_job(job_item: Dict[str, Any]) -> Dict[str, Any]:
     url = f"https://www.catho.com.br/vagas/{titulo.replace(' ', '-').lower()}/{job_id}"
 
     # -------------------------
-    # Modalidade (melhorada)
+    # Modalidade
     # -------------------------
     modalidade = ""
     txt = f"{titulo} {descricao} {json.dumps(jd).lower()}"
 
-    remoto_keywords = [
-        "home office", "home-office", "remoto", "remota",
-        "teletrabalho", "totalmente remoto", "100% remoto"
-    ]
+    remoto_keywords = ["home office", "home-office", "remoto", "remota", "teletrabalho", "100% remoto"]
+    hibrido_keywords = ["híbrido", "hibrido", "modelo híbrido"]
 
-    hibrido_keywords = [
-        "híbrido", "hibrido", "modelo híbrido", "modelo hibrido"
-    ]
-
-    # ordem importa — híbrido antes de remoto/presencial
-    if any(k in txt for k in hibrido_keywords):
+    if any(k.lower() in txt.lower() for k in hibrido_keywords):
         modalidade = "Híbrido"
-    elif any(k in txt for k in remoto_keywords):
+    elif any(k.lower() in txt.lower() for k in remoto_keywords):
         modalidade = "Remoto"
     else:
         modalidade = "Presencial"
 
-    # PCD — Catho raramente envia, mas tentamos identificar
-    pcd = False
-    if "pcd" in titulo.lower() or "pcd" in descricao.lower():
-        pcd = True
+    # PCD
+    pcd = "pcd" in titulo.lower() or "pcd" in descricao.lower()
 
-    # Cursos (detectar dentro de título + descrição)
+    # Cursos detectados
     cursos_texto = f"{titulo}"
     cursos = detectar_cursos(cursos_texto)
 
@@ -159,28 +158,28 @@ def normalize_job(job_item: Dict[str, Any]) -> Dict[str, Any]:
         "id": str(job_id),
         "titulo": titulo,
         "descricao": descricao,
-        "empresa_nome": empresa,
+        "empresa": empresa,
         "cidade": cidade,
         "estado": estado,
-        "salario": bolsa_valor,
+        "bolsa": bolsa_valor,
         "beneficios": beneficios,
-        "url": url,
+        "logo": "",
         "pcd": pcd,
         "modalidade": modalidade,
         "cursos": cursos,
+        "url": url,
     }
 
 
 # -------------------------
 # Fluxo principal
 # -------------------------
-def scrape_catho(pages=549, delay=0.3, test_json=None, test_html=None, out_file=DEFAULT_OUT):
+def scrape_catho(pages=TOTAL_PAGES, delay=0.3, test_json=None, test_html=None, out_file=DEFAULT_OUT):
     session = make_session()
     results = []
 
-    # modo teste com json local
     if test_json:
-        print("🧪 Test JSON:", test_json)
+        print(" Test JSON:", test_json)
         with open(test_json, "r", encoding="utf-8") as f:
             data = json.load(f)
         jobs = data.get("pageProps", {}).get("jobSearch", {}).get("jobSearchResult", {}).get("data", {}).get("jobs", [])
@@ -188,13 +187,8 @@ def scrape_catho(pages=549, delay=0.3, test_json=None, test_html=None, out_file=
             results.append(normalize_job(j))
         return results
 
-    # buildId
-    if test_html:
-        print("🧪 Test HTML (ignorado aqui)")
-        raise NotImplementedError()
-
     build_id = get_build_id_from_network(session)
-    print(f"🚀 Iniciando scraping — {pages} páginas, delay={delay}s")
+    print(f" Iniciando scraping — {pages} páginas, delay={delay}s")
 
     for p in range(1, pages + 1):
         try:
@@ -206,21 +200,21 @@ def scrape_catho(pages=549, delay=0.3, test_json=None, test_html=None, out_file=
 
         jobs = data.get("pageProps", {}).get("jobSearch", {}).get("jobSearchResult", {}).get("data", {}).get("jobs", [])
         if not jobs:
-            print(f"⚠ Página {p} sem jobs — encerrando.")
+            print(f" Página {p} sem jobs — encerrando.")
             break
 
-        print(f"📄 Página {p}: {len(jobs)} vagas")
+        print(f" Página {p}: {len(jobs)} vagas")
 
         for job_item in jobs:
             results.append(normalize_job(job_item))
 
         time.sleep(delay)
 
-    # salvar
+    # salvar arquivo
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=4)
 
-    print(f"✅ Salvo {len(results)} vagas em {out_file}")
+    print(f" Salvo {len(results)} vagas em {out_file}")
     return results
 
 
