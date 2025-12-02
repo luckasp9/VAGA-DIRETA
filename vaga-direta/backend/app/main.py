@@ -1,87 +1,70 @@
-from fastapi import FastAPI
+# main.py
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-import psycopg2
-import psycopg2.extras
-from app.models import Vaga
 
+from app.models import Vaga, VagaCreate
+from app import crud
 
 app = FastAPI()
 
 # --- CORS ---
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],   # em produção, restringe isso
     allow_headers=["*"],
-    allow_methods=["*"]
+    allow_methods=["*"],
 )
 
-# --- Conexão ---
-def conn():
-    return psycopg2.connect(
-        host="localhost",
-        database="postgres",
-        user="postgres",
-        password="1234"
-    )
 
-# --- ENDPOINT /api/vagas ---
+# =========================
+# Rotas de vagas (Home + Admin)
+# =========================
+
 @app.get("/api/vagas", response_model=list[Vaga])
 def listar_vagas():
-    con = conn()
-    cur = con.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    """
+    Lista todas as vagas (Home / Admin).
+    """
+    return crud.listar_vagas()
 
-    # Buscar vagas
-    cur.execute("SELECT * FROM tcc.vaga;")
-    vagas = cur.fetchall()
 
-    resultado = []
+@app.get("/api/vagas/{vaga_id}", response_model=Vaga)
+def detalhar_vaga(vaga_id: int):
+    """
+    Detalhe de uma vaga específica (Saiba mais).
+    """
+    vaga = crud.obter_vaga(vaga_id)
+    if not vaga:
+        raise HTTPException(status_code=404, detail="Vaga não encontrada.")
+    return vaga
 
-    for vaga in vagas:
-        vaga_dict = dict(vaga)
 
-        # -----------------------------------------
-        # BENEFÍCIOS (lista)
-        # -----------------------------------------
-        cur.execute("""
-            SELECT beneficio 
-            FROM tcc.beneficio 
-            WHERE vaga_id = %s;
-        """, (vaga["id"],))
+@app.post("/api/vagas", response_model=Vaga, status_code=201)
+def criar_vaga(vaga_in: VagaCreate):
+    """
+    Criação de vaga (Admin).
+    """
+    return crud.criar_vaga(vaga_in)
 
-        beneficios_rows = cur.fetchall()
-        beneficios = [row["beneficio"] for row in beneficios_rows]
-        vaga_dict["beneficios"] = beneficios
 
-        # -----------------------------------------
-        # CURSOS (lista)
-        # -----------------------------------------
-        cur.execute("""
-            SELECT curso 
-            FROM tcc.curso
-            WHERE vaga_id = %s;
-        """, (vaga["id"],))
+@app.put("/api/vagas/{vaga_id}", response_model=Vaga)
+def atualizar_vaga(vaga_id: int, vaga_in: VagaCreate):
+    """
+    Atualização de vaga (Admin).
+    """
+    vaga = crud.atualizar_vaga(vaga_id, vaga_in)
+    if not vaga:
+        raise HTTPException(status_code=404, detail="Vaga não encontrada.")
+    return vaga
 
-        cursos_rows = cur.fetchall()
-        cursos = [row["curso"] for row in cursos_rows]
-        vaga_dict["cursos"] = cursos
 
-        # -----------------------------------------
-        # PLATAFORMA (string)
-        # tabela: tcc.plataforma
-        # colunas: id (PK), plataforma (nome)
-        # vaga.id_plataforma -> plataforma.id
-        # -----------------------------------------
-        cur.execute("""
-            SELECT plataforma 
-            FROM tcc.plataforma
-            WHERE id = %s;
-        """, (vaga["id_plataforma"],))
-
-        plataforma_row = cur.fetchone()
-        plataforma_nome = plataforma_row["plataforma"] if plataforma_row else None
-        vaga_dict["plataforma"] = plataforma_nome
-
-        resultado.append(vaga_dict)
-
-    con.close()
-    return resultado
+@app.delete("/api/vagas/{vaga_id}", status_code=204)
+def apagar_vaga(vaga_id: int):
+    """
+    Exclusão de vaga (Admin).
+    """
+    ok = crud.excluir_vaga(vaga_id)
+    if not ok:
+        raise HTTPException(status_code=404, detail="Vaga não encontrada.")
+    # 204 = sem conteúdo
+    return

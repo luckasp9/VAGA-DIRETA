@@ -2,8 +2,10 @@ export type User = {
   id: number;
   fullName: string;
   email: string;
-  course: string;
-  semester: number;
-  phone?: string;
-  state?: string;
+  course?: string | null;
+  semester?: number | null;
+  phone?: string | null;
+  state?: string | null;
+  userType?: string | null;
+  isAdmin: boolean; 
 };

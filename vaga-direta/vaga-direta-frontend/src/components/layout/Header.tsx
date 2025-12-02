@@ -14,7 +14,7 @@ export const Header: React.FC = () => {
   };
 
   const handleProfile = () => {
-    navigate("/profile");
+    navigate("/perfil");
   };
 
   return (
@@ -48,7 +48,7 @@ export const Header: React.FC = () => {
             Vagas
           </NavLink>
           <NavLink
-            to="/profile"
+            to="/perfil"
             className={({ isActive }) =>
               `uppercase tracking-wide ${
                 isActive ? "font-semibold" : "text-white/80"
@@ -57,6 +57,19 @@ export const Header: React.FC = () => {
           >
             Perfil
           </NavLink>
+
+          {user?.isAdmin && (
+            <NavLink
+              to="/admin"
+              className={({ isActive }) =>
+                `uppercase tracking-wide ${
+                  isActive ? "font-semibold" : "text-white/80"
+                }`
+              }
+            >
+              Admin
+            </NavLink>
+          )}
         </nav>
 
         {/* Usuário + sair */}

@@ -14,6 +14,11 @@ const courseOptions = [
   { value: "Engenharia de Software", label: "Engenharia de Software" },
 ];
 
+const semesterOptions = Array.from({ length: 10 }).map((_, index) => ({
+  value: String(index + 1),
+  label: `${index + 1}º semestre`,
+}));
+
 const stateOptions = [
   { value: "AC", label: "Acre (AC)" },
   { value: "AL", label: "Alagoas (AL)" },
@@ -43,12 +48,6 @@ const stateOptions = [
   { value: "SE", label: "Sergipe (SE)" },
   { value: "TO", label: "Tocantins (TO)" },
 ];
-
-
-const semesterOptions = Array.from({ length: 10 }).map((_, index) => ({
-  value: String(index + 1),
-  label: `${index + 1}º semestre`,
-}));
 
 export const RegisterPage: React.FC = () => {
   const navigate = useNavigate();
@@ -84,7 +83,7 @@ export const RegisterPage: React.FC = () => {
       phone: phone || undefined,
       course,
       semester: Number(semester),
-      state, 
+      state,
       password,
     };
 
@@ -147,14 +146,6 @@ export const RegisterPage: React.FC = () => {
         required
         placeholder="Selecione um curso"
       />
-      <Select
-        label="Estado (UF)"
-        value={state}
-        onChange={(e) => setState(e.target.value)}
-        options={stateOptions}
-        required
-        placeholder="Selecione o estado"
-      />
 
       <Select
         label="Semestre atual"
@@ -163,6 +154,15 @@ export const RegisterPage: React.FC = () => {
         options={semesterOptions}
         required
         placeholder="Selecione o semestre"
+      />
+
+      <Select
+        label="Estado"
+        value={state}
+        onChange={(e) => setState(e.target.value)}
+        options={stateOptions}
+        required
+        placeholder="Selecione o estado"
       />
 
       <Input

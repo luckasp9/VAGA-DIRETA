@@ -1,16 +1,23 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import type { User } from "../types/user";
-import { getStoredUser, storeUser, clearStoredUser } from "../services/authService";
+import {
+  getStoredUser,
+  storeUser,
+  clearStoredUser,
+} from "../services/authService";
 
 type AuthContextValue = {
   user: User | null;
   login: (user: User) => void;
   logout: () => void;
+  updateUser: (partial: Partial<User>) => void;
 };
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
-export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
@@ -28,8 +35,17 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     clearStoredUser();
   };
 
+  const updateUser = (partial: Partial<User>) => {
+    setUser((prev) => {
+      if (!prev) return prev;
+      const updated = { ...prev, ...partial };
+      storeUser(updated);
+      return updated;
+    });
+  };
+
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ user, login, logout, updateUser }}>
       {children}
     </AuthContext.Provider>
   );
