@@ -3,6 +3,10 @@ import { useAuth } from "../context/AuthContext";
 import { Input } from "../components/ui/Input";
 import { Select } from "../components/ui/Select";
 import { Button } from "../components/ui/Button";
+import {
+  updateProfile,
+  type UpdateProfilePayload,
+} from "../services/authService";
 
 const courseOptions = [
   { value: "Ciência da Computação", label: "Ciência da Computação" },
@@ -59,6 +63,7 @@ export const ProfilePage: React.FC = () => {
 
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   if (!user) {
     return (
@@ -70,21 +75,40 @@ export const ProfilePage: React.FC = () => {
     );
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setMessage(null);
+    setError(null);
     setSaving(true);
 
-    updateUser({
+    const payload: UpdateProfilePayload = {
       fullName,
       phone,
       course,
-      semester: Number(semester),
+      semester: semester ? Number(semester) : undefined,
       state,
-    });
+    };
 
-    setSaving(false);
-    setMessage("Dados atualizados com sucesso (localmente).");
+    try {
+      // Atualiza no backend (FastAPI + banco)
+      await updateProfile(user.id, payload);
+
+      // Atualiza no contexto/localStorage com os mesmos dados
+      updateUser({
+        fullName,
+        phone,
+        course,
+        semester: semester ? Number(semester) : undefined,
+        state,
+      });
+
+      setMessage("Dados atualizados com sucesso.");
+    } catch (err) {
+      console.error(err);
+      setError("Não foi possível atualizar os dados. Tente novamente.");
+    } finally {
+      setSaving(false);
+    }
   };
 
   return (
@@ -93,13 +117,20 @@ export const ProfilePage: React.FC = () => {
         Meu Perfil
       </h2>
       <p className="text-xs text-slate-500 mb-4">
-        Aqui você pode atualizar algumas informações do seu cadastro. Neste
-        protótipo, os dados são salvos apenas no navegador (localStorage).
+        Aqui você pode atualizar algumas informações do seu cadastro. As
+        alterações são salvas na sua conta e refletidas nos filtros da
+        plataforma.
       </p>
 
       {message && (
         <p className="mb-3 text-xs text-green-600 bg-green-50 border border-green-100 rounded-md px-3 py-2">
           {message}
+        </p>
+      )}
+
+      {error && (
+        <p className="mb-3 text-xs text-red-600 bg-red-50 border border-red-100 rounded-md px-3 py-2">
+          {error}
         </p>
       )}
 

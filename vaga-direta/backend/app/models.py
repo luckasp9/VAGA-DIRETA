@@ -2,7 +2,6 @@ from pydantic import BaseModel
 from typing import List, Optional
 from datetime import datetime
 
-
 # Campos base que tanto o create/update quanto a resposta usam
 class VagaBase(BaseModel):
     titulo_vaga: str
@@ -37,3 +36,219 @@ class Vaga(VagaBase):
 
     class Config:
         orm_mode = True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+from pydantic import BaseModel, EmailStr
+from typing import Optional
+
+
+# =========================
+# Modelos de USUÁRIO
+# =========================
+
+class UsuarioBase(BaseModel):
+    nome: str
+    email: EmailStr
+    telefone: Optional[str] = None
+    curso: Optional[str] = None
+    semestre: Optional[int] = None
+    estado: Optional[str] = None
+
+
+class UsuarioCreate(UsuarioBase):
+    """
+    Dados que vêm do cadastro (inclui senha em texto).
+    tipo_usuario: por padrão 'aluno'. Admin você pode setar direto no BD.
+    """
+    senha: str
+    tipo_usuario: str = "aluno"
+
+
+class UsuarioPublic(UsuarioBase):
+    """
+    Dados que voltam para o frontend (sem senha).
+    """
+    id: int
+    tipo_usuario: str
+
+    class Config:
+        orm_mode = True
+
+
+class UsuarioLogin(BaseModel):
+    email: EmailStr
+    senha: str
+
+# =========================
+# USUÁRIO PERFIL 
+# =========================
+
+class UsuarioUpdate(BaseModel):
+    """
+    Campos que o usuário pode alterar no perfil.
+    Todos opcionais para permitir update parcial.
+    """
+    nome: Optional[str] = None
+    telefone: Optional[str] = None
+    curso: Optional[str] = None
+    semestre: Optional[int] = None
+    estado: Optional[str] = None

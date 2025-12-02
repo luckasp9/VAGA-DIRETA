@@ -20,6 +20,13 @@ const PrivateRoute: React.FC<{ children: React.ReactElement }> = ({ children }) 
   return children;
 };
 
+const AdminRoute: React.FC<{ children: React.ReactElement }> = ({ children }) => {
+  const { user } = useAuth();
+  if (!user) return <Navigate to="/login" replace />;
+  if (!user.isAdmin) return <Navigate to="/" replace />;
+  return children;
+};
+
 export const AppRouter: React.FC = () => {
   return (
     <BrowserRouter>
@@ -35,7 +42,7 @@ export const AppRouter: React.FC = () => {
           />
 
           <Route
-            path="/register"
+            path="/cadastro"
             element={
               <AuthLayout title="Crie sua conta">
                 <RegisterPage />
@@ -55,7 +62,7 @@ export const AppRouter: React.FC = () => {
           />
 
           <Route
-            path="/profile"
+            path="/perfil"
             element={
               <PrivateRoute>
                 <MainLayout>
@@ -67,16 +74,15 @@ export const AppRouter: React.FC = () => {
           <Route
             path="/admin"
             element={
-              <PrivateRoute>
+              <AdminRoute>
                 <MainLayout>
                   <AdminPage />
                 </MainLayout>
-              </PrivateRoute>
+              </AdminRoute>
             }
           />
-
           <Route
-            path="/vacancies/:id"
+            path="/vagas/:id"
             element={
               <PrivateRoute>
                 <MainLayout>

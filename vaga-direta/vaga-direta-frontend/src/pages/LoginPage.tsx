@@ -25,7 +25,7 @@ export const LoginPage: React.FC = () => {
       navigate("/");
     } catch (err) {
       console.error(err);
-      setError("Não foi possível realizar o login. Tente novamente.");
+      setError("Não foi possível realizar o login. Verifique seus dados.");
     } finally {
       setLoading(false);
     }
@@ -55,7 +55,7 @@ export const LoginPage: React.FC = () => {
 
       <p className="mt-2 text-sm text-center text-slate-600">
         Ainda não tem conta?{" "}
-        <Link to="/register" className="text-primary-600 hover:underline">
+        <Link to="/cadastro" className="text-primary-600 hover:underline">
           Clique aqui para se cadastrar
         </Link>
       </p>
