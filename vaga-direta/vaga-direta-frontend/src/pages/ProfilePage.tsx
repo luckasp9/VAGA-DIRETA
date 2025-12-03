@@ -1,25 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { Input } from "../components/ui/Input";
 import { Select } from "../components/ui/Select";
 import { Button } from "../components/ui/Button";
-import {
-  updateProfile,
-  type UpdateProfilePayload,
-} from "../services/authService";
+import { formatPhone } from "../utils/phone";
 
-const courseOptions = [
-  { value: "Ciência da Computação", label: "Ciência da Computação" },
-  { value: "Sistemas de Informação", label: "Sistemas de Informação" },
-  { value: "Engenharia de Software", label: "Engenharia de Software" },
-];
+type Option = {
+  value: string;
+  label: string;
+};
 
-const semesterOptions = Array.from({ length: 10 }).map((_, index) => ({
-  value: String(index + 1),
-  label: `${index + 1}º semestre`,
-}));
+const semesterOptions: Option[] = Array.from({ length: 10 }).map(
+  (_, index) => ({
+    value: String(index + 1),
+    label: `${index + 1}º semestre`,
+  })
+);
 
-const stateOptions = [
+const stateOptions: Option[] = [
   { value: "AC", label: "Acre (AC)" },
   { value: "AL", label: "Alagoas (AL)" },
   { value: "AP", label: "Amapá (AP)" },
@@ -49,8 +47,17 @@ const stateOptions = [
   { value: "TO", label: "Tocantins (TO)" },
 ];
 
+const COURSES_API_URL = "http://localhost:8000/api/cursos";
+
 export const ProfilePage: React.FC = () => {
   const { user, updateUser } = useAuth();
+
+const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const formatted = formatPhone(e.target.value);
+  setPhone(formatted);
+};
+
+
 
   const [fullName, setFullName] = useState(user?.fullName ?? "");
   const [email] = useState(user?.email ?? "");
@@ -63,7 +70,70 @@ export const ProfilePage: React.FC = () => {
 
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
+
+  // cursos vindos do backend
+  const [courseOptions, setCourseOptions] = useState<Option[]>([]);
+  const [loadingCourses, setLoadingCourses] = useState(false);
+  const [coursesError, setCoursesError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const loadCourses = async () => {
+      setLoadingCourses(true);
+      setCoursesError(null);
+
+      try {
+        const res = await fetch(COURSES_API_URL);
+        if (!res.ok) {
+          throw new Error("Erro ao buscar cursos");
+        }
+
+        const data = await res.json();
+
+        // Aceita tanto string[] quanto array de objetos { nome / curso / nome_curso }
+        const names: string[] = Array.isArray(data)
+          ? data
+              .map((item: any) => {
+                if (typeof item === "string") return item;
+                return (
+                  item.nome ??
+                  item.curso ??
+                  item.nome_curso ??
+                  "" // ignora se não conseguir mapear
+                );
+              })
+              .filter((n: string) => !!n)
+          : [];
+
+        let options: Option[] = names.map((n) => ({
+          value: n,
+          label: n,
+        }));
+
+        // garante que o curso atual do usuário aparece na lista
+        if (user?.course && !options.some((o) => o.value === user.course)) {
+          options = [
+            { value: user.course, label: user.course },
+            ...options,
+          ];
+        }
+
+        setCourseOptions(options);
+      } catch (err) {
+        console.error(err);
+        setCoursesError("Não foi possível carregar a lista de cursos.");
+        // fallback: pelo menos o curso atual
+        if (user?.course) {
+          setCourseOptions([
+            { value: user.course, label: user.course },
+          ]);
+        }
+      } finally {
+        setLoadingCourses(false);
+      }
+    };
+
+    loadCourses();
+  }, [user?.course]);
 
   if (!user) {
     return (
@@ -78,34 +148,21 @@ export const ProfilePage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setMessage(null);
-    setError(null);
     setSaving(true);
 
-    const payload: UpdateProfilePayload = {
-      fullName,
-      phone,
-      course,
-      semester: semester ? Number(semester) : undefined,
-      state,
-    };
-
     try {
-      // Atualiza no backend (FastAPI + banco)
-      await updateProfile(user.id, payload);
-
-      // Atualiza no contexto/localStorage com os mesmos dados
-      updateUser({
+      await updateUser({
         fullName,
         phone,
         course,
-        semester: semester ? Number(semester) : undefined,
+        semester: Number(semester),
         state,
       });
 
       setMessage("Dados atualizados com sucesso.");
     } catch (err) {
       console.error(err);
-      setError("Não foi possível atualizar os dados. Tente novamente.");
+      setMessage("Não foi possível atualizar os dados. Tente novamente.");
     } finally {
       setSaving(false);
     }
@@ -117,20 +174,18 @@ export const ProfilePage: React.FC = () => {
         Meu Perfil
       </h2>
       <p className="text-xs text-slate-500 mb-4">
-        Aqui você pode atualizar algumas informações do seu cadastro. As
-        alterações são salvas na sua conta e refletidas nos filtros da
-        plataforma.
+        Aqui você pode atualizar algumas informações do seu cadastro.
       </p>
 
       {message && (
-        <p className="mb-3 text-xs text-green-600 bg-green-50 border border-green-100 rounded-md px-3 py-2">
+        <p
+          className={`mb-3 text-xs rounded-md px-3 py-2 ${
+            message.startsWith("Não foi")
+              ? "text-red-600 bg-red-50 border border-red-100"
+              : "text-green-600 bg-green-50 border border-green-100"
+          }`}
+        >
           {message}
-        </p>
-      )}
-
-      {error && (
-        <p className="mb-3 text-xs text-red-600 bg-red-50 border border-red-100 rounded-md px-3 py-2">
-          {error}
         </p>
       )}
 
@@ -153,18 +208,29 @@ export const ProfilePage: React.FC = () => {
         <Input
           label="Telefone"
           value={phone}
-          onChange={(e) => setPhone(e.target.value)}
+          onChange={handlePhoneChange}
           placeholder="(99) 99999-9999"
+          inputMode="numeric"
+          maxLength={15}
         />
 
-        <Select
-          label="Curso"
-          value={course}
-          onChange={(e) => setCourse(e.target.value)}
-          options={courseOptions}
-          required
-          placeholder="Selecione um curso"
-        />
+        <div className="flex flex-col gap-1">
+          <Select
+            label="Curso"
+            value={course}
+            onChange={(e) => setCourse(e.target.value)}
+            options={courseOptions}
+            required
+            placeholder={
+              loadingCourses
+                ? "Carregando cursos..."
+                : "Selecione um curso"
+            }
+          />
+          {coursesError && (
+            <span className="text-xs text-red-500">{coursesError}</span>
+          )}
+        </div>
 
         <Select
           label="Semestre atual"

@@ -1,16 +1,31 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+// src/context/AuthContext.tsx
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import type { User } from "../types/user";
 import {
   getStoredUser,
   storeUser,
   clearStoredUser,
+  updateUserProfile,
 } from "../services/authService";
+
+type UpdateUserPatch = {
+  fullName?: string;
+  phone?: string;
+  course?: string;
+  semester?: number;
+  state?: string;
+};
 
 type AuthContextValue = {
   user: User | null;
   login: (user: User) => void;
   logout: () => void;
-  updateUser: (partial: Partial<User>) => void;
+  updateUser: (patch: UpdateUserPatch) => Promise<void>;
 };
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
@@ -35,13 +50,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
     clearStoredUser();
   };
 
-  const updateUser = (partial: Partial<User>) => {
-    setUser((prev) => {
-      if (!prev) return prev;
-      const updated = { ...prev, ...partial };
-      storeUser(updated);
-      return updated;
-    });
+  const updateUser = async (patch: UpdateUserPatch) => {
+    if (!user) return;
+
+    const updated = await updateUserProfile(user.id, patch);
+    setUser(updated);
+    // storeUser já é chamado dentro de updateUserProfile,
+    // mas não custa garantir:
+    storeUser(updated);
   };
 
   return (

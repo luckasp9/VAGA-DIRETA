@@ -1,7 +1,8 @@
+// src/services/authService.ts
 import type { User } from "../types/user";
 
 const LOCAL_STORAGE_KEY = "vaga-direta:user";
-const API_BASE = "http://localhost:8000/api"; // ajuste se o backend estiver em outra porta
+const API_BASE = "http://localhost:8000/api";
 
 export type LoginPayload = {
   email: string;
@@ -18,14 +19,7 @@ export type RegisterPayload = {
   password: string;
 };
 
-export type UpdateProfilePayload = {
-  fullName?: string;
-  phone?: string;
-  course?: string;
-  semester?: number;
-  state?: string;
-};
-
+// formato que o backend (UsuarioPublic) devolve
 type ApiUser = {
   id: number;
   nome: string;
@@ -38,31 +32,26 @@ type ApiUser = {
 };
 
 function mapApiUserToUser(api: ApiUser): User {
+  const isAdmin = api.tipo_usuario === "admin";
+
   return {
     id: api.id,
     fullName: api.nome,
     email: api.email,
-    course: api.curso ?? undefined,
-    semester: api.semestre ?? undefined,
+    course: api.curso ?? "",
+    semester: api.semestre ?? 0,
     phone: api.telefone ?? undefined,
     state: api.estado ?? undefined,
     userType: api.tipo_usuario,
-    isAdmin: api.tipo_usuario === "admin",
+    isAdmin,
   };
 }
+/* ========== LocalStorage helpers ========== */
 
-/**
- * ======
- * Funções usadas pelo AuthContext
- * ======
- */
-
-// salva usuário logado no localStorage
 export function storeUser(user: User): void {
   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(user));
 }
 
-// lê usuário salvo no localStorage (ou null)
 export function getStoredUser(): User | null {
   try {
     const raw = localStorage.getItem(LOCAL_STORAGE_KEY);
@@ -73,51 +62,28 @@ export function getStoredUser(): User | null {
   }
 }
 
-// remove usuário do localStorage
 export function clearStoredUser(): void {
   localStorage.removeItem(LOCAL_STORAGE_KEY);
 }
 
-// pega usuário salvo (se existir)
-export function getCurrentUser(): User | null {
-  return getStoredUser();
-}
-
-export function logout(): void {
-  clearStoredUser();
-}
-
-/**
- * ======
- * APIs reais de autenticação (backend FastAPI)
- * ======
- */
+/* ========== Auth com backend ========== */
 
 export async function login(payload: LoginPayload): Promise<User> {
   const res = await fetch(`${API_BASE}/login`, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       email: payload.email,
-      senha: payload.password, // backend espera 'senha'
+      senha: payload.password,
     }),
   });
 
   if (!res.ok) {
-    let msg = "Não foi possível realizar o login.";
-    try {
-      const data = await res.json();
-      if (data?.detail) msg = data.detail;
-    } catch {
-      // ignore
-    }
-    throw new Error(msg);
+    throw new Error("Credenciais inválidas.");
   }
 
-  const apiUser = (await res.json()) as ApiUser;
-  const user = mapApiUserToUser(apiUser);
+  const data = (await res.json()) as ApiUser;
+  const user = mapApiUserToUser(data);
   storeUser(user);
   return user;
 }
@@ -125,9 +91,7 @@ export async function login(payload: LoginPayload): Promise<User> {
 export async function register(payload: RegisterPayload): Promise<User> {
   const res = await fetch(`${API_BASE}/usuarios`, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       nome: payload.fullName,
       email: payload.email,
@@ -136,65 +100,56 @@ export async function register(payload: RegisterPayload): Promise<User> {
       semestre: payload.semester,
       estado: payload.state,
       senha: payload.password,
-      tipo_usuario: "aluno", // padrão
+      tipo_usuario: "aluno",
     }),
   });
 
   if (!res.ok) {
-    let msg = "Não foi possível finalizar o cadastro.";
-    try {
-      const data = await res.json();
-      if (data?.detail) msg = data.detail;
-    } catch {
-      // ignore
-    }
-    throw new Error(msg);
+    throw new Error("Erro ao cadastrar usuário");
   }
 
-  
-  const apiUser = (await res.json()) as ApiUser;
-  const user = mapApiUserToUser(apiUser);
+  const data = (await res.json()) as ApiUser;
+  const user = mapApiUserToUser(data);
 
-  // mantém o comportamento antigo: salvar no localStorage,
-  // embora o usuário só vá logar de fato depois.
+  // se preferir só logar depois do login, pode tirar esse storeUser
   storeUser(user);
-
   return user;
 }
 
-  export async function updateProfile(
-    userId: number,
-    payload: UpdateProfilePayload
-  ): Promise<User> {
-    const body: any = {};
+/* ========== Update de perfil ========== */
 
-    if (payload.fullName !== undefined) body.nome = payload.fullName;
-    if (payload.phone !== undefined) body.telefone = payload.phone;
-    if (payload.course !== undefined) body.curso = payload.course;
-    if (payload.semester !== undefined) body.semestre = payload.semester;
-    if (payload.state !== undefined) body.estado = payload.state;
+export type UpdateUserPayload = {
+  fullName?: string;
+  phone?: string;
+  course?: string;
+  semester?: number;
+  state?: string;
+};
 
-    const res = await fetch(`${API_BASE}/usuarios/${userId}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    });
+export async function updateUserProfile(
+  id: number,
+  patch: UpdateUserPayload
+): Promise<User> {
+  const body: any = {};
 
-    if (!res.ok) {
-      let msg = "Não foi possível atualizar o perfil.";
-      try {
-        const data = await res.json();
-        if (data?.detail) msg = data.detail;
-      } catch {
-        // ignore
-      }
-      throw new Error(msg);
-    }
+  if (patch.fullName !== undefined) body.nome = patch.fullName;
+  if (patch.phone !== undefined) body.telefone = patch.phone;
+  if (patch.course !== undefined) body.curso = patch.course;
+  if (patch.semester !== undefined) body.semestre = patch.semester;
+  if (patch.state !== undefined) body.estado = patch.state;
 
-    const apiUser = (await res.json()) as ApiUser;
-    const user = mapApiUserToUser(apiUser);
-    storeUser(user); // mantém user atualizado no localStorage
-    return user;
+  const res = await fetch(`${API_BASE}/usuarios/${id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+
+  if (!res.ok) {
+    throw new Error("Erro ao atualizar usuário");
   }
+
+  const data = (await res.json()) as ApiUser;
+  const user = mapApiUserToUser(data);
+  storeUser(user);
+  return user;
+}

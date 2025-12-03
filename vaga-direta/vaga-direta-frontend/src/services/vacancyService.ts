@@ -24,7 +24,6 @@ type ApiVaga = {
   cursos?: string[];
   pcd?: boolean;
   modalidade?: string | null;
-  plataforma?: string | null;
   beneficios?: string[];
 };
 
@@ -48,7 +47,6 @@ function mapApiVagaToVacancy(api: ApiVaga): Vacancy {
   const courses = api.cursos ?? [];
   const city = api.cidade_vaga ?? "";
   const state = api.estado_vaga ?? "";
-  const platform = api.plataforma ?? "Plataforma original";
   const location =
     city && state ? `${city} - ${state}` : city || state || "";
 
@@ -61,7 +59,7 @@ function mapApiVagaToVacancy(api: ApiVaga): Vacancy {
 
     location,
     modality: api.modalidade ?? "",
-    platform,
+    platform: "Plataforma original",
 
     stipend: api.salario ?? "A combinar",
     transportAllowance: false,
@@ -82,13 +80,23 @@ function mapApiVagaToVacancy(api: ApiVaga): Vacancy {
   };
 }
 
-export async function getVacancies(
-  filters: VacancyFilters
-): Promise<Vacancy[]> {
+/**
+ * Busca TODAS as vagas da API e converte para o modelo do front.
+ */
+export async function getAllVacancies(): Promise<Vacancy[]> {
   const apiData = (await getVagas()) as ApiVaga[];
-  const source = apiData.map(mapApiVagaToVacancy);
+  return apiData.map(mapApiVagaToVacancy);
+}
 
+/**
+ * Aplica os filtros em uma lista já carregada de vagas.
+ */
+export function filterVacancies(
+  source: Vacancy[],
+  filters: VacancyFilters
+): Vacancy[] {
   return source.filter((vacancy) => {
+    // Palavra-chave
     if (filters.keyword) {
       const kw = filters.keyword.toLowerCase();
       const inTitle = vacancy.title.toLowerCase().includes(kw);
@@ -96,6 +104,7 @@ export async function getVacancies(
       if (!inTitle && !inActivities) return false;
     }
 
+    // Cursos (multi)
     if (filters.courses && filters.courses.length > 0) {
       const hasCourse = filters.courses.some((course) =>
         vacancy.courses.includes(course)
@@ -103,10 +112,12 @@ export async function getVacancies(
       if (!hasCourse) return false;
     }
 
+    // Modalidade
     if (filters.modality && vacancy.modality !== filters.modality) {
       return false;
     }
 
+    // PCD
     if (filters.pcd === "pcd" && !vacancy.pcd) {
       return false;
     }
@@ -114,10 +125,12 @@ export async function getVacancies(
       return false;
     }
 
+    // Estado
     if (filters.state && vacancy.state && vacancy.state !== filters.state) {
       return false;
     }
 
+    // Cidades (multi)
     if (filters.cities && filters.cities.length > 0) {
       const city = vacancy.city ?? "";
       if (!city || !filters.cities.includes(city)) {
@@ -127,6 +140,17 @@ export async function getVacancies(
 
     return true;
   });
+}
+
+/**
+ * Mantido por compatibilidade: carrega tudo e já devolve filtrado.
+ * (Se algum lugar ainda usar, continua funcionando.)
+ */
+export async function getVacancies(
+  filters: VacancyFilters
+): Promise<Vacancy[]> {
+  const all = await getAllVacancies();
+  return filterVacancies(all, filters);
 }
 
 export async function getVacancyById(id: number): Promise<Vacancy | null> {

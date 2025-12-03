@@ -9,8 +9,7 @@ import {
   type RegisterPayload,
 } from "../services/authService";
 import { fetchCourseOptions } from "../services/catalogService";
-
-// REMOVIDO o courseOptions fixo aqui
+import { formatPhone } from "../utils/phone";
 
 const semesterOptions = Array.from({ length: 10 }).map((_, index) => ({
   value: String(index + 1),
@@ -49,6 +48,11 @@ const stateOptions = [
 
 export const RegisterPage: React.FC = () => {
   const navigate = useNavigate();
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formatted = formatPhone(e.target.value);
+    setPhone(formatted);
+  };
 
   const [courseOptions, setCourseOptions] = useState<Option[]>([]); // NOVO
 
@@ -148,8 +152,10 @@ export const RegisterPage: React.FC = () => {
       <Input
         label="Telefone (opcional)"
         value={phone}
-        onChange={(e) => setPhone(e.target.value)}
+        onChange={handlePhoneChange}
         placeholder="(99) 99999-9999"
+        inputMode="numeric"
+        maxLength={15}
       />
 
       <Select

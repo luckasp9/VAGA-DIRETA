@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import type { Vacancy } from "../types/vacancy";
+
 import {
-  getVacancies,
+  getAllVacancies,
+  filterVacancies,
   type VacancyFilters,
 } from "../services/vacancyService";
+
 import VacancyFiltersBar from "../components/vacancies/VacancyFilters";
 import { VacancyCard } from "../components/vacancies/VacancyCard";
 import { VacancySkeleton } from "../components/vacancies/VacancySkeleton";
@@ -61,28 +64,21 @@ export const HomePage: React.FC = () => {
     pageNumbers.push(p);
   }
 
-  const loadVacancies = async (currentFilters: VacancyFilters) => {
-    try {
+    const loadVacancies = async (currentFilters: VacancyFilters) => {
       setLoading(true);
       setCurrentPage(1);
 
-      const { cities, ...rest } = currentFilters;
+      try {
+        const all = await getAllVacancies();        // 1 chamada só
+        const filtered = filterVacancies(all, currentFilters);
 
-      const [all, filtered] = await Promise.all([
-        getVacancies({ ...rest, cities: [] }),
-        getVacancies(currentFilters),
-      ]);
+        setAllVacancies(all);
+        setVacancies(filtered);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-      setAllVacancies(all);
-      setVacancies(filtered);
-    } catch (error) {
-      console.error("Erro ao carregar vagas:", error);
-      setAllVacancies([]);
-      setVacancies([]);
-    } finally {
-      setLoading(false);
-    }
-  };
 
 
   // Ao montar (ou quando o user muda), restaura filtros salvos se existirem
