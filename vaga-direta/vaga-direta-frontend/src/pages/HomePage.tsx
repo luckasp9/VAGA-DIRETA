@@ -62,12 +62,10 @@ export const HomePage: React.FC = () => {
     setLoading(false);
   };
 
-  // monta filtros iniciais a partir do usuário + localStorage
-  // monta filtros iniciais a partir do usuário + localStorage
   useEffect(() => {
     if (!user) return; // Home é privada, mas por segurança
 
-    const stored = localStorage.getItem(filtersStorageKey);
+    const stored = sessionStorage.getItem(filtersStorageKey);
 
     if (stored) {
       try {
@@ -106,29 +104,28 @@ export const HomePage: React.FC = () => {
   }, [user, filtersStorageKey]);
 
 
-  // sempre que filtros mudarem via UI, atualiza state + localStorage
   const handleFiltersChange = (next: VacancyFilters) => {
     setFilters(next);
-    localStorage.setItem(filtersStorageKey, JSON.stringify(next));
+    sessionStorage.setItem(filtersStorageKey, JSON.stringify(next));
   };
 
   const handleApplyFilters = () => {
-    localStorage.setItem(filtersStorageKey, JSON.stringify(filters));
+    sessionStorage.setItem(filtersStorageKey, JSON.stringify(filters));
     loadVacancies(filters);
   };
 
   const handleClearFilters = () => {
     const cleared: VacancyFilters = {
       keyword: "",
-      courses: filters.courses ?? [], // mantém curso selecionado
+      courses: filters.courses ?? [], // mantém curso como está
       modality: "",
       pcd: "",
-      state: filters.state ?? "", // mantém estado
+      state: filters.state ?? "", // mantém estado atual
       cities: [], // limpa cidades
     };
 
     setFilters(cleared);
-    localStorage.setItem(filtersStorageKey, JSON.stringify(cleared));
+    sessionStorage.setItem(filtersStorageKey, JSON.stringify(cleared));
     loadVacancies(cleared);
   };
 
