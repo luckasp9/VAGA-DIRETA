@@ -107,6 +107,25 @@
         "url": "https://www.catho.com.br/vagas/estágio-em-jornalismo/34402621"
     },
     {
+        "id": "34406806",
+        "titulo": "Estágio em Administração",
+        "descricao": "AUXILIAR NAS SEGUINTES ATIVIDADES: rotinas administrativas com recepção, atendimento telefônico, apoiar nos cadastros na plataforma com: operação, suprimentos, vendas, faturamento, marketing e relatórios em geral. Ajudar na expedição, logística e secretaria em geral. Manter organizado e limpo o ambiente de trabalho.Cursando ensino superior em Administração ou áreas relacionadas\nConhecimentos básicos em informática\nBoa comunicação e habilidades interpessoais\nExperiência prévia em estágios na área administrativa\nConhecimento em sistemas de gestão empresarial\nInglês intermediárioDeverá estar cursando: ADMINISTRAÇÃO - EAD., CONTABILIDADE., GESTÃO DE RECURSOS HUMANOS",
+        "empresa": "Confidencial",
+        "cidade": "São Bernardo do Campo",
+        "estado": "SP",
+        "bolsa": 1500,
+        "beneficios": [
+            "Vale-transporte"
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://www.catho.com.br/vagas/estágio-em-administração/34406806"
+    },
+    {
         "id": "34409743",
         "titulo": "Estágio em Administração",
         "descricao": "???? RECEBIMENTO E DISTRIBUIÇÃO DE CORRESPONDÊNCIAS E MERCADORIAS;\n???? CONTROLE DE ENTRADA E SAÍDA DE MATERIAL ADMINISTRATIVO;\n???? ATENDIMENTO NA RECEPÇÃO E TELEFÔNICO;\n???? INTERAÇÃO COM FORNECEDORES EM GERAL;\n???? CONTROLE DE INFORMAÇÕES EM PLANILHAS;\n???? ROTINA ADMINISTRATIVA EM GERAL.Ensino Superior cursando.Deverá estar cursando: Administração ou Gestão Empresarial",
@@ -125,25 +144,6 @@
             "Administração"
         ],
         "url": "https://www.catho.com.br/vagas/estágio-em-administração/34409743"
-    },
-    {
-        "id": "34406806",
-        "titulo": "Estágio em Administração",
-        "descricao": "AUXILIAR NAS SEGUINTES ATIVIDADES: rotinas administrativas com recepção, atendimento telefônico, apoiar nos cadastros na plataforma com: operação, suprimentos, vendas, faturamento, marketing e relatórios em geral. Ajudar na expedição, logística e secretaria em geral. Manter organizado e limpo o ambiente de trabalho.Cursando ensino superior em Administração ou áreas relacionadas\nConhecimentos básicos em informática\nBoa comunicação e habilidades interpessoais\nExperiência prévia em estágios na área administrativa\nConhecimento em sistemas de gestão empresarial\nInglês intermediárioDeverá estar cursando: ADMINISTRAÇÃO - EAD., CONTABILIDADE., GESTÃO DE RECURSOS HUMANOS",
-        "empresa": "Confidencial",
-        "cidade": "São Bernardo do Campo",
-        "estado": "SP",
-        "bolsa": 1500,
-        "beneficios": [
-            "Vale-transporte"
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://www.catho.com.br/vagas/estágio-em-administração/34406806"
     },
     {
         "id": "34409975",
@@ -227,26 +227,6 @@
         "url": "https://www.catho.com.br/vagas/estágio-em-compras/34405835"
     },
     {
-        "id": "34402242",
-        "titulo": "Estágio Administrativo",
-        "descricao": "Realizar serviços gerais de suporte administrativo, a partir de instruções detalhadas e/ou orientações diversas recebidas do superior imediato e/ou de outros profissionais da equipe;\nVerificar as ordens de serviços de manutenções preventivas e corretivas imprimir e baixar no sistema; Realizar mapa de cotação para peças para os equipamentos medicos hospitalares.\nRecepcionar e direcionar Fornecedores e Terceiros para os responsáveis; Realizar recebimento, conferência, encaminhamento e entrada no sistema das notas fiscais de contratos, prestação de serviço e materiais/peças/equipamentos adquiridas pelo setor; Realizar preenchimento de formulários, estatísticas, relatórios mensais/semanais; Realizar arquivo de relatório, ordens de serviços e documentos diversos do setor; Realizar solicitação de materiais ao setor que impactam na rotina administrativa; Realizar controle dos materiais em Estoque da Engenharia Clínica bem como o apoio na execução do inventário de equipamentos, peças e ferramentas conforme necessidade; Executar todas as tarefas inerentes a sua função.Ensino Médio Completo;\nPacote Office básico;\nDesejável experiência na área Administrativa.\nDiferencial: Cursando EngenhariasDeverá estar cursando: Administração, Engenharia e afins.",
-        "empresa": "FRACTAL ",
-        "cidade": "Goiania",
-        "estado": "GO",
-        "bolsa": 1000,
-        "beneficios": [
-            "Seguro de vida em grupo",
-            "Transporte fornecido pela empresa"
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://www.catho.com.br/vagas/estágio-administrativo/34402242"
-    },
-    {
         "id": "34409875",
         "titulo": "Estágio em Marketing",
         "descricao": "Gestão de Redes Sociais, Criação de Materiais Gráficos, Produção de Conteúdo, Gravação e Edição de Vídeos e Suporte ao Comercial.Boa comunicação verbal e escrita;\nConhecimento básico em redes sociais (Instagram, Facebook, LinkedIn);\nNoções básicas de design gráfico (preferencialmente com uso do Canva);\nInteresse em aprender sobre o mercado de seguros e comportamento do consumidor;\nOrganização, criatividade e senso de responsabilidade.Deverá estar cursando: Estar cursando ensino superior em Marketing, Publicidade e Propaganda, Comunicação Social ou áreas correlatas (a partir do 4º semestre);",
@@ -266,6 +246,26 @@
             "Publicidade e Propaganda"
         ],
         "url": "https://www.catho.com.br/vagas/estágio-em-marketing/34409875"
+    },
+    {
+        "id": "34402242",
+        "titulo": "Estágio Administrativo",
+        "descricao": "Realizar serviços gerais de suporte administrativo, a partir de instruções detalhadas e/ou orientações diversas recebidas do superior imediato e/ou de outros profissionais da equipe;\nVerificar as ordens de serviços de manutenções preventivas e corretivas imprimir e baixar no sistema; Realizar mapa de cotação para peças para os equipamentos medicos hospitalares.\nRecepcionar e direcionar Fornecedores e Terceiros para os responsáveis; Realizar recebimento, conferência, encaminhamento e entrada no sistema das notas fiscais de contratos, prestação de serviço e materiais/peças/equipamentos adquiridas pelo setor; Realizar preenchimento de formulários, estatísticas, relatórios mensais/semanais; Realizar arquivo de relatório, ordens de serviços e documentos diversos do setor; Realizar solicitação de materiais ao setor que impactam na rotina administrativa; Realizar controle dos materiais em Estoque da Engenharia Clínica bem como o apoio na execução do inventário de equipamentos, peças e ferramentas conforme necessidade; Executar todas as tarefas inerentes a sua função.Ensino Médio Completo;\nPacote Office básico;\nDesejável experiência na área Administrativa.\nDiferencial: Cursando EngenhariasDeverá estar cursando: Administração, Engenharia e afins.",
+        "empresa": "FRACTAL ",
+        "cidade": "Goiania",
+        "estado": "GO",
+        "bolsa": 1000,
+        "beneficios": [
+            "Seguro de vida em grupo",
+            "Transporte fornecido pela empresa"
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://www.catho.com.br/vagas/estágio-administrativo/34402242"
     },
     {
         "id": "34406228",
@@ -291,48 +291,23 @@
         "url": "https://www.catho.com.br/vagas/estágio-na-área-administrativa/34406228"
     },
     {
-        "id": "34409615",
-        "titulo": "Estágio em Marketing",
-        "descricao": "Auxiliar no cadastro e atualização de produtos na plataforma Wordpress;\nRealizar o tratamento e edição de imagens de produtos utilizando Canva/Photoshop e programas similares;\nApoiar a criação de textos descritivos para os produtos;\nOrganizar as informações de produtos (categorias, especificações, variações) para garantir a padronização no e-commerce;\nColaborar na checagem e garantia de que os cadastros sejam feitos dentro dos prazos e padrões de qualidade;\nPrestar apoio para outras demandas referentes ao setor de Marketingstar cursando Ensino Superior em Marketing, Comunicação Social, Publicidade e Propaganda, Design ou áreas correlatas;\nConhecimento em edição de imagens;\nFamiliaridade com a plataforma Wordpress;\nNoções básicas de utilização de ferramentas de Inteligência Artificial (ex: ChatGPT, Gemini);\nBoa comunicação, proatividade e capacidade de trabalhar em equipe;\nMuita responsabilidade, organização e vontade de aprenderDeverá estar cursando: Estar cursando Ensino Superior em Marketing, Comunicação Social, Publicidade e Propaganda, Design ou áreas correlatas;",
-        "empresa": "Confidencial",
-        "cidade": "São Paulo",
-        "estado": "SP",
+        "id": "34402643",
+        "titulo": "ESTÁGIO COMERCIAL",
+        "descricao": "Rede de academias, referência Crossfit em Belo Horizonte, com unidade na região dos bairros nova granada, savassi e buritis busca 02 estagiários para atuar no atendimento comercial, com foco tanto no relacionamento com clientes quanto no suporte às ações comerciais da unidade.\n\nO que envolve essa posição: atendimento a alunos ativos para resolução de demandas diversas, atendimento comercial a novos alunos via WhatsApp e presencialmente, acompanhamento\n\nO que oferecemos: Bolsa de R$1.500,00 + Comissão (média de ganhos em torno de R$500,00), vale-transporte, bolsa para treinar na academia e acesso aos serviços de fisioterapia.\n\nJornada e local de trabalho: Segunda a Sexta Feira, na Região da Savassi. 15h15 às 21h15O que buscamos neste perfil: estudantes de Administração, Gestão Comercial ou áreas correlatas. Experiência prévia em atendimento ou vendas, Interesse genuíno pelo universo do esporte, bem-estar e qualidade de vida será considerado um diferencial.Deverá estar cursando: Administração, Gestão Comercial ou áreas correlatas. ",
+        "empresa": "SIRIANI | RECURSOS HUMANOS",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
         "bolsa": "A combinar",
         "beneficios": [
-            "Tíquete refeição",
             "Vale-transporte"
         ],
         "logo": "",
         "pcd": false,
         "modalidade": "Presencial",
         "cursos": [
-            "Comunicação",
-            "Marketing",
-            "Publicidade e Propaganda"
+            "Outros"
         ],
-        "url": "https://www.catho.com.br/vagas/estágio-em-marketing/34409615"
-    },
-    {
-        "id": "34409615",
-        "titulo": "Estágio em Marketing",
-        "descricao": "Auxiliar no cadastro e atualização de produtos na plataforma Wordpress;\nRealizar o tratamento e edição de imagens de produtos utilizando Canva/Photoshop e programas similares;\nApoiar a criação de textos descritivos para os produtos;\nOrganizar as informações de produtos (categorias, especificações, variações) para garantir a padronização no e-commerce;\nColaborar na checagem e garantia de que os cadastros sejam feitos dentro dos prazos e padrões de qualidade;\nPrestar apoio para outras demandas referentes ao setor de Marketingstar cursando Ensino Superior em Marketing, Comunicação Social, Publicidade e Propaganda, Design ou áreas correlatas;\nConhecimento em edição de imagens;\nFamiliaridade com a plataforma Wordpress;\nNoções básicas de utilização de ferramentas de Inteligência Artificial (ex: ChatGPT, Gemini);\nBoa comunicação, proatividade e capacidade de trabalhar em equipe;\nMuita responsabilidade, organização e vontade de aprenderDeverá estar cursando: Estar cursando Ensino Superior em Marketing, Comunicação Social, Publicidade e Propaganda, Design ou áreas correlatas;",
-        "empresa": "Confidencial",
-        "cidade": "São Paulo",
-        "estado": "SP",
-        "bolsa": "A combinar",
-        "beneficios": [
-            "Tíquete refeição",
-            "Vale-transporte"
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Comunicação",
-            "Marketing",
-            "Publicidade e Propaganda"
-        ],
-        "url": "https://www.catho.com.br/vagas/estágio-em-marketing/34409615"
+        "url": "https://www.catho.com.br/vagas/estágio-comercial/34402643"
     },
     {
         "id": "34407544",
@@ -350,6 +325,27 @@
             "Administração"
         ],
         "url": "https://www.catho.com.br/vagas/estágio-em-administração/34407544"
+    },
+    {
+        "id": "34402961",
+        "titulo": "Estágio em Biologia",
+        "descricao": "Observação e regência de aulas em escolas, participação em projetos de pesquisa em laboratórios, desenvolvimento de atividades de educação ambiental.Deverá estar cursando: Cursando ensino superior Biologia",
+        "empresa": "Confidencial",
+        "cidade": "Cajamar",
+        "estado": "SP",
+        "bolsa": "A combinar",
+        "beneficios": [
+            "Assistência odontológica",
+            "Vale-transporte"
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Biologia",
+            "Biomedicina"
+        ],
+        "url": "https://www.catho.com.br/vagas/estágio-em-biologia/34402961"
     },
     {
         "id": "34402971",
@@ -371,28 +367,6 @@
             "Pedagogia"
         ],
         "url": "https://www.catho.com.br/vagas/estágio-em-pedagogia/34402971"
-    },
-    {
-        "id": "34402961",
-        "titulo": "Estágio em Biologia",
-        "descricao": "Observação e regência de aulas em escolas, participação em projetos de pesquisa em laboratórios, desenvolvimento de atividades de educação ambiental.Deverá estar cursando: Cursando ensino superior Biologia",
-        "empresa": "Confidencial",
-        "cidade": "Cajamar",
-        "estado": "SP",
-        "bolsa": "A combinar",
-        "beneficios": [
-            "Assistência odontológica",
-            "Vale-transporte"
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Biologia",
-            "Biomedicina",
-            "Enfermagem"
-        ],
-        "url": "https://www.catho.com.br/vagas/estágio-em-biologia/34402961"
     },
     {
         "id": "34402811",
@@ -418,12 +392,34 @@
         "url": "https://www.catho.com.br/vagas/estágio-em-matemática/34402811"
     },
     {
-        "id": "34402643",
-        "titulo": "ESTÁGIO COMERCIAL",
-        "descricao": "Rede de academias, referência Crossfit em Belo Horizonte, com unidade na região dos bairros nova granada, savassi e buritis busca 02 estagiários para atuar no atendimento comercial, com foco tanto no relacionamento com clientes quanto no suporte às ações comerciais da unidade.\n\nO que envolve essa posição: atendimento a alunos ativos para resolução de demandas diversas, atendimento comercial a novos alunos via WhatsApp e presencialmente, acompanhamento\n\nO que oferecemos: Bolsa de R$1.500,00 + Comissão (média de ganhos em torno de R$500,00), vale-transporte, bolsa para treinar na academia e acesso aos serviços de fisioterapia.\n\nJornada e local de trabalho: Segunda a Sexta Feira, na Região da Savassi. 15h15 às 21h15O que buscamos neste perfil: estudantes de Administração, Gestão Comercial ou áreas correlatas. Experiência prévia em atendimento ou vendas, Interesse genuíno pelo universo do esporte, bem-estar e qualidade de vida será considerado um diferencial.Deverá estar cursando: Administração, Gestão Comercial ou áreas correlatas. ",
-        "empresa": "SIRIANI | RECURSOS HUMANOS",
-        "cidade": "Belo Horizonte",
-        "estado": "MG",
+        "id": "34409615",
+        "titulo": "Estágio em Marketing",
+        "descricao": "Auxiliar no cadastro e atualização de produtos na plataforma Wordpress;\nRealizar o tratamento e edição de imagens de produtos utilizando Canva/Photoshop e programas similares;\nApoiar a criação de textos descritivos para os produtos;\nOrganizar as informações de produtos (categorias, especificações, variações) para garantir a padronização no e-commerce;\nColaborar na checagem e garantia de que os cadastros sejam feitos dentro dos prazos e padrões de qualidade;\nPrestar apoio para outras demandas referentes ao setor de Marketingstar cursando Ensino Superior em Marketing, Comunicação Social, Publicidade e Propaganda, Design ou áreas correlatas;\nConhecimento em edição de imagens;\nFamiliaridade com a plataforma Wordpress;\nNoções básicas de utilização de ferramentas de Inteligência Artificial (ex: ChatGPT, Gemini);\nBoa comunicação, proatividade e capacidade de trabalhar em equipe;\nMuita responsabilidade, organização e vontade de aprenderDeverá estar cursando: Estar cursando Ensino Superior em Marketing, Comunicação Social, Publicidade e Propaganda, Design ou áreas correlatas;",
+        "empresa": "Confidencial",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "bolsa": "A combinar",
+        "beneficios": [
+            "Tíquete refeição",
+            "Vale-transporte"
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Comunicação",
+            "Marketing",
+            "Publicidade e Propaganda"
+        ],
+        "url": "https://www.catho.com.br/vagas/estágio-em-marketing/34409615"
+    },
+    {
+        "id": "34409626",
+        "titulo": "Estágio Marketing",
+        "descricao": "Auxiliar no cadastro e atualização de produtos na plataforma Wordpress;\nRealizar o tratamento e edição de imagens de produtos utilizando Canva/Photoshop e programas similares;\nApoiar a criação de textos descritivos para os produtos;\nOrganizar as informações de produtos (categorias, especificações, variações) para garantir a padronização no e-commerce;\nColaborar na checagem e garantia de que os cadastros sejam feitos dentro dos prazos e padrões de qualidade;\nPrestar apoio para outras demandas referentes ao setor de Marketing.Estar cursando Ensino Superior em Marketing, Comunicação Social, Publicidade e Propaganda, Design ou áreas correlatas;\nConhecimento em edição de imagens;\nFamiliaridade com a plataforma Wordpress;\nNoções básicas de utilização de ferramentas de Inteligência Artificial (ex: ChatGPT, Gemini);\nBoa comunicação, proatividade e capacidade de trabalhar em equipe;\nMuita responsabilidade, organização e vontade de aprender.Deverá estar cursando: Estar cursando Ensino Superior em Marketing, Comunicação Social, Publicidade e Propaganda, Design ou áreas correlatas;",
+        "empresa": "CASUAL MÓVEIS",
+        "cidade": "São Paulo",
+        "estado": "SP",
         "bolsa": "A combinar",
         "beneficios": [
             "Vale-transporte"
@@ -432,9 +428,11 @@
         "pcd": false,
         "modalidade": "Presencial",
         "cursos": [
-            "Outros"
+            "Comunicação",
+            "Marketing",
+            "Publicidade e Propaganda"
         ],
-        "url": "https://www.catho.com.br/vagas/estágio-comercial/34402643"
+        "url": "https://www.catho.com.br/vagas/estágio-marketing/34409626"
     },
     {
         "id": "34409644",
@@ -478,6 +476,26 @@
         "url": "https://www.catho.com.br/vagas/estágio-técnico/34402615"
     },
     {
+        "id": "34407448",
+        "titulo": "Estágio em Administração",
+        "descricao": "Atividades:\nAuxiliar nas rotinas de departamento financeiro.\nContas a receber.\nCompras.\nSuporte na recepção.\n\nHorário do estágio: 08:00 ás 15:00 (1h de almoço)Deverá estar cursando: Cursando graduação na área",
+        "empresa": "Cesmor",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "bolsa": "A combinar",
+        "beneficios": [
+            "Tíquete refeição",
+            "Vale-transporte"
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://www.catho.com.br/vagas/estágio-em-administração/34407448"
+    },
+    {
         "id": "34402056",
         "titulo": "Estágio em Química",
         "descricao": "Realizar a checagem dos equipamentos/instrumentos conforme procedimentos técnicos da empresa;\nAuxíliar na manutenção e conservação do laboratório;\nAuxiliar no preenchimento do controle de validade de reagentes e soluções;\nDentre outras atribuições do cargo.Ensino técnico ou superior em andamento em Química;\nVivência na área será considerado um diferencial.",
@@ -497,26 +515,6 @@
             "Química"
         ],
         "url": "https://www.catho.com.br/vagas/estágio-em-química/34402056"
-    },
-    {
-        "id": "34407448",
-        "titulo": "Estágio em Administração",
-        "descricao": "Atividades:\nAuxiliar nas rotinas de departamento financeiro.\nContas a receber.\nCompras.\nSuporte na recepção.\n\nHorário do estágio: 08:00 ás 15:00 (1h de almoço)Deverá estar cursando: Cursando graduação na área",
-        "empresa": "Cesmor",
-        "cidade": "Belo Horizonte",
-        "estado": "MG",
-        "bolsa": "A combinar",
-        "beneficios": [
-            "Tíquete refeição",
-            "Vale-transporte"
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://www.catho.com.br/vagas/estágio-em-administração/34407448"
     },
     {
         "id": "34402110",
@@ -609,9 +607,9 @@
         "url": "https://www.catho.com.br/vagas/estagio-de-cálculos/34390243"
     },
     {
-        "id": "34388005",
-        "titulo": "Estágio em finanças",
-        "descricao": "Oportunidade de Estágio em Finanças\n\nEstamos em busca de um estudante engajado e com grande interesse em aprender sobre o setor financeiro para compor nosso time.\nO estágio será uma excelente oportunidade para desenvolver habilidades práticas e teóricas em finanças, auxiliando em diversas atividades que contribuem para o crescimento e a sustentabilidade da empresa.\n\nO candidato selecionado irá trabalhar em estreita colaboração com profissionais experientes, auxiliando na análise de relatórios financeiros, na preparação de demonstrações financeiras e na revisão de orçamentos.\nAlém disso, o estagiário terá a chance de participar de projetos estratégicos, entender melhor o fluxo de caixa e contribuir para a tomada de decisões financeiras.\n\nPara esta posição, buscamos um estudante do curso de Ciências Contábeis, Administração ou áreas afins, com interesse em finanças e com boa capacidade analítica.\nÉ importante que o candidato tenha boa comunicação, ética de trabalho e queira aprender e crescer dentro do ambiente corporativo.\n\nO estágio é uma experiência remunerada, com benefícios adicionais conforme a política da empresa.\nO período de estágio é de seis meses, com possibilidade de renovação, dependendo do desempenho e interesse do estagiário.\n\nSe você está procurando um ambiente dinâmico e desafiador para aplicar o conhecimento teórico adquirido na faculdade, esta é a oportunidade perfeita para você.\nJunte-se a nós e faça parte de uma equipe comprometida com o sucesso e o desenvolvimento profissional de cada membro.\n\nAguardamos seu interesse e sua candidatura para fazer parte dessa jornada de aprendizado e crescimento profissional.Deverá estar cursando: Estar cursando graduação na área",
+        "id": "34387995",
+        "titulo": "Estágio em contabilidade",
+        "descricao": "Oportunidade de Estágio em Contabilidade\n\nEstamos buscando um estudante de contabilidade para um estágio que oferece uma experiência enriquecedora e um ambiente de trabalho dinâmico.\nO estágio é uma oportunidade para aplicar os conhecimentos teóricos adquiridos na faculdade em um ambiente prático e colaborativo.\nO candidato selecionado trabalhará em estreita colaboração com o departamento de contabilidade, auxiliando em várias atividades que são essenciais para o funcionamento da empresa.\n\nAs principais responsabilidades do estágio incluirão a participação na elaboração de relatórios financeiros, auxílio na preparação de demonstrações financeiras, suporte na revisão de documentos contábeis e auxílio na organização de arquivos financeiros.\nO estágio também oferece a oportunidade de aprender sobre processos de auditoria interna e a aplicação de normas contábeis.\n\nO candidato deve estar cursando o último ano ou próximo ao último ano de contabilidade e ter um bom conhecimento em softwares de contabilidade, como o Excel e sistemas específicos de contabilidade.\nHabilidades de comunicação e organização são fundamentais, assim como uma atitude proativa e interesse em aprender.\n\nO estágio é uma oportunidade para desenvolver habilidades práticas e fazer conexões valiosas na área de contabilidade.\nSe você está procurando uma experiência de estágio que combine aprendizado e crescimento profissional, esta é a oportunidade ideal para você.\n\nInteressados devem enviar seu currículo e uma carta de apresentação para a vaga.\nO processo seletivo inclui uma entrevista para avaliar a adequação do perfil do candidato às demandas da função.\n\nAproveite esta chance de ingressar em um ambiente de trabalho desafiador e enriquecedor.Deverá estar cursando: Estar cursando graduação na área",
         "empresa": "Confidencial",
         "cidade": "São Paulo",
         "estado": "SP",
@@ -622,10 +620,10 @@
         "modalidade": "Presencial",
         "cursos": [
             "Administração",
-            "Economia",
+            "Contabilidade",
             "Finanças"
         ],
-        "url": "https://www.catho.com.br/vagas/estágio-em-finanças/34388005"
+        "url": "https://www.catho.com.br/vagas/estágio-em-contabilidade/34387995"
     },
     {
         "id": "34388005",
@@ -645,6 +643,30 @@
             "Finanças"
         ],
         "url": "https://www.catho.com.br/vagas/estágio-em-finanças/34388005"
+    },
+    {
+        "id": "34390436",
+        "titulo": "Estágio em Logística",
+        "descricao": "Planejamento de rotas e transporte: A logística envolve o planejamento eficiente das rotas de transporte, considerando fatorescomo distância, capacidade dos veículos, condições das vias e prazos de entrega. Os veículos utilizados geralmente são caminhões-tanque ou veículos adaptados para transporte de gases.\nTransporte seguro: A condução do GLP exige cuidados especiais, incluindo o uso de equipamentos de proteção individual pelos motoristas, monitoramento constante das condições do transporte e cumprimento de normas de segurança para evitar vazamentos ou acidentes durante o trajeto.\nDistribuição e entrega: A entrega do GLP é realizada em pontos de venda, distribuidores ou diretamente aos consumidores finais. A equipe responsável deve assegurar que o produto seja descarregado de forma segura, verificando a integridade dos cilindros e a conformidade com as ordens de entrega.Requisitos obrigatórios\n\nEnsino Superior em andamento nos cursos de Logística, Administração e áreas afins.;\nDisponibilidade para estagiar 6h diárias;\nConhecimentos do Pacote Office.Deverá estar cursando: Logística, Administração e áreas afins.;",
+        "empresa": "ACROSS GESTÃO DE CARREIRAS",
+        "cidade": "Canoas",
+        "estado": "RS",
+        "bolsa": 1700,
+        "beneficios": [
+            "Seguro saúde",
+            "Assistência médica / Medicina em grupo",
+            "Assistência odontológica",
+            "Tíquete refeição",
+            "Tíquete alimentação",
+            "Vale-transporte"
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://www.catho.com.br/vagas/estágio-em-logística/34390436"
     },
     {
         "id": "34390415",
@@ -675,30 +697,6 @@
             "Engenharia de Produção"
         ],
         "url": "https://www.catho.com.br/vagas/estágio-em-engenharia/34390415"
-    },
-    {
-        "id": "34390436",
-        "titulo": "Estágio em Logística",
-        "descricao": "Planejamento de rotas e transporte: A logística envolve o planejamento eficiente das rotas de transporte, considerando fatorescomo distância, capacidade dos veículos, condições das vias e prazos de entrega. Os veículos utilizados geralmente são caminhões-tanque ou veículos adaptados para transporte de gases.\nTransporte seguro: A condução do GLP exige cuidados especiais, incluindo o uso de equipamentos de proteção individual pelos motoristas, monitoramento constante das condições do transporte e cumprimento de normas de segurança para evitar vazamentos ou acidentes durante o trajeto.\nDistribuição e entrega: A entrega do GLP é realizada em pontos de venda, distribuidores ou diretamente aos consumidores finais. A equipe responsável deve assegurar que o produto seja descarregado de forma segura, verificando a integridade dos cilindros e a conformidade com as ordens de entrega.Requisitos obrigatórios\n\nEnsino Superior em andamento nos cursos de Logística, Administração e áreas afins.;\nDisponibilidade para estagiar 6h diárias;\nConhecimentos do Pacote Office.Deverá estar cursando: Logística, Administração e áreas afins.;",
-        "empresa": "ACROSS GESTÃO DE CARREIRAS",
-        "cidade": "Canoas",
-        "estado": "RS",
-        "bolsa": 1700,
-        "beneficios": [
-            "Seguro saúde",
-            "Assistência médica / Medicina em grupo",
-            "Assistência odontológica",
-            "Tíquete refeição",
-            "Tíquete alimentação",
-            "Vale-transporte"
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://www.catho.com.br/vagas/estágio-em-logística/34390436"
     },
     {
         "id": "34390487",
@@ -885,51 +883,6 @@
         "url": "https://www.catho.com.br/vagas/estágio-em-marketing/34390164"
     },
     {
-        "id": "34390587",
-        "titulo": "Estágio de Engenharia",
-        "descricao": "Desenvolver atividades administrativas e técnicas\nUtilização de ferramentas e instrumentos de medição elétricos e mecânicos.\nExecutar atividades rotineiras seguindo orientação ou procedimento operacional com supervisão.\nAuxiliar em processos relacionados a sua área de atuação.\nDesenvolver relatórios da área técnica\nAuxiliar supervisor na elaboração da conferência de ordens de serviço\nDará baixa nas OS nos sistema da empresa\nObrigatório: Estar cursando ensino superior (engenharia elétrica, mecânica, mecatrônica ou demais áreas correlatas)\nDisponibilidade de estagiar até 2 anos\nDesejável formação técnica concluída (eletrotécnica, mecânica, mecatrônica ou demais áreas correlatas)\nHorário de trabalho 08h às 15h\n\nResidir em Campinas ou proximidades.Deverá estar cursando: Estar cursando graduação na área",
-        "empresa": "TK ELEVADORES",
-        "cidade": "Campinas",
-        "estado": "SP",
-        "bolsa": "A combinar",
-        "beneficios": [
-            "Assistência médica / Medicina em grupo",
-            "Assistência odontológica",
-            "Tíquete refeição",
-            "Vale-transporte"
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Engenharia",
-            "Engenharia Ambiental",
-            "Engenharia Civil",
-            "Engenharia Elétrica",
-            "Engenharia Mecânica",
-            "Engenharia Química",
-            "Engenharia de Produção"
-        ],
-        "url": "https://www.catho.com.br/vagas/estágio-de-engenharia/34390587"
-    },
-    {
-        "id": "34387944",
-        "titulo": "Estágio em Planejamento",
-        "descricao": "Apoio no mapeamento e especificação de fluxos de trabalho;\nAuxílio na geração de especificação técnica;\nSuporte no gerenciamento de projetos, relatórios e painéis;\nAcompanhar o monitoramento e funcionamento das soluções implantadas.Graduação em curso;\nConhecimento de ferramentas, como: Microsoft Office (Word, Excel, PowerPoint);\nInovação e resolutividade.Deverá estar cursando: Administração ou áreas correlatas.",
-        "empresa": "Confidencial",
-        "cidade": "Salvador",
-        "estado": "BA",
-        "bolsa": "A combinar",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://www.catho.com.br/vagas/estágio-em-planejamento/34387944"
-    },
-    {
         "id": "34387982",
         "titulo": "Estágio em TI",
         "descricao": "Manutenção em sistemas PHP com banco de dados MYSQL e SQL Server\nManutenção preventiva e corretiva de computadores;\nFormatação e configuração de computadores;\nCriação e configuração de usuários do AD e Controle de Acesso;\nInstalação de impressoras em rede;\nReestruturação da cabeamento de hacks;\nIdentificação do cabeamento estruturado;\nCriação e configuração de emails Office 365 e offline;Logica de programação, banco de dados,PHPDeverá estar cursando: Tecnologia da Informação\nAnálise e desenvolvimento de sistemas, técnico de informática, técnico de manutenção de desktop e notebook, analise de rede",
@@ -948,5 +901,43 @@
             "Outros"
         ],
         "url": "https://www.catho.com.br/vagas/estágio-em-ti/34387982"
+    },
+    {
+        "id": "34385115",
+        "titulo": "Estagio em edificações",
+        "descricao": "Acompanhamento da Execução;\nRealizar verificações e registros;\nAuxiliar na realização de medições de serviços executados;\nContribuir para a gestão da segurança do trabalho.Conhecimento de softwares, boa comunicação.Deverá estar cursando: Engenharia Civil ou Técnico em Edificações.",
+        "empresa": "MATRICIAL ENGENHARIA ",
+        "cidade": "Serra",
+        "estado": "ES",
+        "bolsa": "A combinar",
+        "beneficios": [
+            "Seguro de vida em grupo",
+            "Restaurante na empresa",
+            "Vale-transporte"
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://www.catho.com.br/vagas/estagio-em-edificações/34385115"
+    },
+    {
+        "id": "34387944",
+        "titulo": "Estágio em Planejamento",
+        "descricao": "Apoio no mapeamento e especificação de fluxos de trabalho;\nAuxílio na geração de especificação técnica;\nSuporte no gerenciamento de projetos, relatórios e painéis;\nAcompanhar o monitoramento e funcionamento das soluções implantadas.Graduação em curso;\nConhecimento de ferramentas, como: Microsoft Office (Word, Excel, PowerPoint);\nInovação e resolutividade.Deverá estar cursando: Administração ou áreas correlatas.",
+        "empresa": "Confidencial",
+        "cidade": "Salvador",
+        "estado": "BA",
+        "bolsa": "A combinar",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://www.catho.com.br/vagas/estágio-em-planejamento/34387944"
     }
 ]
