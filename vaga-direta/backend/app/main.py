@@ -14,12 +14,18 @@ import psycopg2.extras
 
 app = FastAPI()
 
+origins = [
+    "http://localhost:5173",  # Vite
+    "http://127.0.0.1:5173",
+]
+
 # --- CORS ---
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # em produção, restringe isso
-    allow_headers=["*"],
+    allow_origins=origins,
+    allow_credentials=True,
     allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # =========================
@@ -150,3 +156,50 @@ def atualizar_usuario(user_id: int, usuario_in: UsuarioUpdate):
     if not usuario:
         raise HTTPException(status_code=404, detail="Usuário não encontrado.")
     return usuario
+
+# =========================
+# CURSOS / PLATAFORMAS
+# =========================
+
+@app.get("/api/cursos", response_model=list[str])
+def listar_cursos():
+    """
+    Retorna lista de nomes de cursos distintos
+    a partir da tabela tcc.curso.
+    """
+    # reaproveitando a conexão do users_crud
+    con = users_crud.get_connection()
+    cur = con.cursor(cursor_factory=psycopg2.extras.DictCursor)
+
+    try:
+        cur.execute("""
+            SELECT DISTINCT curso
+            FROM tcc.curso
+            WHERE curso IS NOT NULL
+            ORDER BY curso;
+        """)
+        rows = cur.fetchall()
+        return [row["curso"] for row in rows]
+    finally:
+        con.close()
+
+
+@app.get("/api/plataformas", response_model=list[str])
+def listar_plataformas():
+    """
+    Retorna lista de plataformas cadastradas.
+    """
+    con = users_crud.get_connection()
+    cur = con.cursor(cursor_factory=psycopg2.extras.DictCursor)
+
+    try:
+        cur.execute("""
+            SELECT nome_plataforma
+            FROM tcc.plataforma
+            WHERE nome_plataforma IS NOT NULL
+            ORDER BY nome_plataforma;
+        """)
+        rows = cur.fetchall()
+        return [row["nome_plataforma"] for row in rows]
+    finally:
+        con.close()

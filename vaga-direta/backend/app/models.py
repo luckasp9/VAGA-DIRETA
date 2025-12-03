@@ -1,210 +1,70 @@
-from pydantic import BaseModel
-from typing import List, Optional
 from datetime import datetime
+from typing import List, Optional
 
-# Campos base que tanto o create/update quanto a resposta usam
+from pydantic import BaseModel, EmailStr, Field
+
+
+# ======================================================
+# MODELOS DE VAGA
+# ======================================================
+
 class VagaBase(BaseModel):
+    """
+    Campos base da vaga. Usados tanto na criação/edição
+    quanto nas respostas da API.
+    """
+
     titulo_vaga: str
     empresa_nome: str
-    descricao_vaga: str
-    cidade_vaga: str
-    estado_vaga: str
-    salario: str
-    url: str
-    pcd: bool
-    modalidade: str
 
-    cursos: List[str] = []
+    # Estes campos podem ser NULL no banco, então deixamos opcionais
+    descricao_vaga: Optional[str] = None
+    cidade_vaga: Optional[str] = None
+    estado_vaga: Optional[str] = None
+    salario: Optional[str] = None
+    url: Optional[str] = None
 
-# ====== Modelo usado no POST/PUT (Admin) ======
+    pcd: Optional[bool] = None
+    modalidade: Optional[str] = None
+
+    # Lista de nomes de cursos vinculados à vaga
+    cursos: List[str] = Field(default_factory=list)
+
+
 class VagaCreate(VagaBase):
-    # O que o frontend do Admin já está mandando:
-    cursos: List[str] = []        # Multi-select de cursos
-    beneficios: List[str] = []    # Um por linha no formulário
+    """
+    Modelo usado no POST/PUT da área administrativa.
+    O formulário do Admin manda:
+      - cursos: lista de nomes de cursos selecionados
+      - beneficios: um benefício por linha
+    """
+
+    cursos: List[str] = Field(default_factory=list)
+    beneficios: List[str] = Field(default_factory=list)
 
 
-# ====== Modelo de resposta para o frontend (/api/vagas, /api/vagas/{id}) ======
 class Vaga(VagaBase):
+    """
+    Modelo de resposta para o frontend em:
+      - GET /api/vagas
+      - GET /api/vagas/{id}
+      - POST/PUT /api/vagas (retorno)
+    """
+
     id: int
-    id_vaga: Optional[str]
-    curso_id: str                 # **campo da tabela tcc.vaga, mantido**
+    id_vaga: Optional[str] = None
     created_at: datetime
 
-    # Campos “derivados” que não estão diretamente em tcc.vaga,
-    # mas vêm de tcc.beneficio e tcc.vaga_curso/tcc.cursos:
-    beneficios: List[str] = []
-    cursos: List[str] = []        # Lista dos nomes de cursos ligados à vaga
+    beneficios: List[str] = Field(default_factory=list)
+    cursos: List[str] = Field(default_factory=list)
 
     class Config:
         orm_mode = True
 
 
-
-    plataforma: str
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-from pydantic import BaseModel, EmailStr
-from typing import Optional
-
-
-# =========================
-# Modelos de USUÁRIO
-# =========================
+# ======================================================
+# MODELOS DE USUÁRIO
+# ======================================================
 
 class UsuarioBase(BaseModel):
     nome: str
@@ -218,7 +78,8 @@ class UsuarioBase(BaseModel):
 class UsuarioCreate(UsuarioBase):
     """
     Dados que vêm do cadastro (inclui senha em texto).
-    tipo_usuario: por padrão 'aluno'. Admin você pode setar direto no BD.
+    tipo_usuario: por padrão 'aluno'.
+    Usuário admin você configura direto no banco.
     """
     senha: str
     tipo_usuario: str = "aluno"
@@ -227,6 +88,10 @@ class UsuarioCreate(UsuarioBase):
 class UsuarioPublic(UsuarioBase):
     """
     Dados que voltam para o frontend (sem senha).
+    Usado em:
+      - POST /api/usuarios
+      - POST /api/login
+      - PUT /api/usuarios/{id}
     """
     id: int
     tipo_usuario: str
@@ -239,9 +104,6 @@ class UsuarioLogin(BaseModel):
     email: EmailStr
     senha: str
 
-# =========================
-# USUÁRIO PERFIL 
-# =========================
 
 class UsuarioUpdate(BaseModel):
     """

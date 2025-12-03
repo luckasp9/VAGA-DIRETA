@@ -24,6 +24,7 @@ type ApiVaga = {
   cursos?: string[];
   pcd?: boolean;
   modalidade?: string | null;
+  plataforma?: string | null;
   beneficios?: string[];
 };
 
@@ -47,6 +48,7 @@ function mapApiVagaToVacancy(api: ApiVaga): Vacancy {
   const courses = api.cursos ?? [];
   const city = api.cidade_vaga ?? "";
   const state = api.estado_vaga ?? "";
+  const platform = api.plataforma ?? "Plataforma original";
   const location =
     city && state ? `${city} - ${state}` : city || state || "";
 
@@ -59,7 +61,7 @@ function mapApiVagaToVacancy(api: ApiVaga): Vacancy {
 
     location,
     modality: api.modalidade ?? "",
-    platform: "Plataforma original",
+    platform,
 
     stipend: api.salario ?? "A combinar",
     transportAllowance: false,

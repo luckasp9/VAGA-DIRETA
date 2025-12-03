@@ -1,5 +1,173 @@
 [
   {
+    "id": 118801,
+    "titulo": "Estagiário | Performance Corporativa | Belo Horizonte",
+    "empresa": "SICOOB CENTRAL CREDIMINAS",
+    "descricao": "Faça parte do Sicoob Central Crediminas!Construindo um futuro cooperativo com propósito e pessoas no centro.Somos o Sicoob Central Crediminas, a Cooperativa Central de Crédito de Minas Gerais. Desde 1",
+    "cidade": "Belo Horizonte",
+    "estado": "MG",
+    "bolsa": "",
+    "beneficios": [],
+    "logo": "https://storage.empregare.com/empresas/thumb/587f9ed6-990f-4734-97d8-9245909f30e0.png",
+    "pcd": false,
+    "modalidade": "Presencial",
+    "cursos": [
+      "Artes Visuais",
+      "Comunicação",
+      "Design"
+    ],
+    "url": "https://www.empregare.com/pt-br/vaga-estagiario-performance-corporativa-belo-_118801"
+  },
+  {
+    "id": 137524,
+    "titulo": "ESTÁGIO EM PSICOLOGIA ORGANIZACIONAL",
+    "empresa": "Águia Branca",
+    "descricao": "Junte-se à Nossa Jornada! Vaga de Estágio em Psicologia na Viação Águia Branca Você, estudante que está entre o 5° e o 8° período de Psicologia, preferencialmente já cursou a matéria de Psicologia Org",
+    "cidade": "Cariacica",
+    "estado": "ES",
+    "bolsa": "R$ 1.000,00",
+    "beneficios": [],
+    "logo": "https://storage.empregare.com/empresas/thumb/d0d433fa-db11-4cd2-8e35-046169683d4c.jpg",
+    "pcd": false,
+    "modalidade": "Presencial",
+    "cursos": [
+      "Psicologia"
+    ],
+    "url": "https://www.empregare.com/pt-br/vaga-estagio-em-psicologia-organizacional_137524"
+  },
+  {
+    "id": 140397,
+    "titulo": "Estágio (Gestão de Pessoas foco em Endomarketing) - João Pessoa/PB",
+    "empresa": "SICOOB CENTRAL NE",
+    "descricao": "Auxiliar na criação e execução de campanhas de endomarketing para engajamento interno.Presta suporte no desenvolvimento de materiais de comunicação interna, como e-mails, murais, newsletters e posts p",
+    "cidade": "João Pessoa",
+    "estado": "PB",
+    "bolsa": "R$ 1.000,00 até R$ 1.400,00",
+    "beneficios": [],
+    "logo": "https://storage.empregare.com/empresas/thumb/587f9ed6-990f-4734-97d8-9245909f30e0.png",
+    "pcd": false,
+    "modalidade": "Presencial",
+    "cursos": [
+      "Administração",
+      "Ciência da Computação",
+      "Comunicação",
+      "Desenvolvimento de Sistemas",
+      "Engenharia de Software",
+      "Gestão Comercial",
+      "Gestão Pública",
+      "Marketing",
+      "Publicidade e Propaganda"
+    ],
+    "url": "https://www.empregare.com/pt-br/vaga-estagio-gestao-de-pessoas-foco-em-endoma_140397"
+  },
+  {
+    "id": 140390,
+    "titulo": "ESTÁGIO: ADMINISTRATIVO - ASA NORTE - DF",
+    "empresa": "Up Estágio",
+    "descricao": "Atendimento ao público, presencial, telefônico e via WhatsApp; Captação de novos alunos; Renovação de contratos; Apoio em rotinas administrativas e de recepção.",
+    "cidade": "Plano Piloto - Brasília",
+    "estado": "DF",
+    "bolsa": "R$ 900,00",
+    "beneficios": [],
+    "logo": "https://storage.empregare.com/empresas/thumb/sem-logo.png",
+    "pcd": false,
+    "modalidade": "Presencial",
+    "cursos": [
+      "Administração"
+    ],
+    "url": "https://www.empregare.com/pt-br/vaga-estagio-administrativo-asa-norte-df_140390"
+  },
+  {
+    "id": 140388,
+    "titulo": "ESTÁGIO: ADMINISTRATIVO - ASA NORTE - DF",
+    "empresa": "Up Estágio",
+    "descricao": "Atendimento ao público, presencial, telefônico e via WhatsApp; Captação de novos alunos; Renovação de contratos; Apoio em rotinas administrativas e de recepção.",
+    "cidade": "Plano Piloto - Brasília",
+    "estado": "DF",
+    "bolsa": "R$ 900,00",
+    "beneficios": [],
+    "logo": "https://storage.empregare.com/empresas/thumb/sem-logo.png",
+    "pcd": false,
+    "modalidade": "Presencial",
+    "cursos": [
+      "Administração"
+    ],
+    "url": "https://www.empregare.com/pt-br/vaga-estagio-administrativo-asa-norte-df_140388"
+  },
+  {
+    "id": 140389,
+    "titulo": "ESTÁGIO: ADMINISTRATIVO - ASA SUL - DF",
+    "empresa": "Up Estágio",
+    "descricao": "Atendimento ao público, presencial, telefônico e via WhatsApp; Captação de novos alunos; Renovação de contratos; Apoio em rotinas administrativas e de recepção.",
+    "cidade": "Plano Piloto - Brasília",
+    "estado": "DF",
+    "bolsa": "R$ 900,00",
+    "beneficios": [],
+    "logo": "https://storage.empregare.com/empresas/thumb/sem-logo.png",
+    "pcd": false,
+    "modalidade": "Presencial",
+    "cursos": [
+      "Administração"
+    ],
+    "url": "https://www.empregare.com/pt-br/vaga-estagio-administrativo-asa-sul-df_140389"
+  },
+  {
+    "id": 128221,
+    "titulo": "Estagiário",
+    "empresa": "SICOOB CREDPOM",
+    "descricao": "- Auxiliar nas demandas do setor comercial e setor de crédito;- Geração de relatórios; - Abertura de chamados CCS;- Manutenção e controle do estoque de brindes e máquinas sipag;- Atendimento pós visit",
+    "cidade": "Florianópolis",
+    "estado": "SC",
+    "bolsa": "R$ 950,00",
+    "beneficios": [],
+    "logo": "https://storage.empregare.com/empresas/thumb/587f9ed6-990f-4734-97d8-9245909f30e0.png",
+    "pcd": false,
+    "modalidade": "Presencial",
+    "cursos": [
+      "Outros"
+    ],
+    "url": "https://www.empregare.com/pt-br/vaga-estagiario_128221"
+  },
+  {
+    "id": 136905,
+    "titulo": "Estagiário(a) Jurídico",
+    "empresa": "SICOOB UNICENTRO NORTE BRASILEIRO",
+    "descricao": "Realizar pesquisas doutrinárias e jurisprudenciais; Elaborar petições simples; Auxiliar na organização de documentos e processos; Participar de reuniões com advogados; Atuar no suporte administrativo ",
+    "cidade": "Porto Velho",
+    "estado": "RO",
+    "bolsa": "",
+    "beneficios": [],
+    "logo": "https://storage.empregare.com/empresas/thumb/587f9ed6-990f-4734-97d8-9245909f30e0.png",
+    "pcd": false,
+    "modalidade": "Presencial",
+    "cursos": [
+      "Administração",
+      "Direito"
+    ],
+    "url": "https://www.empregare.com/pt-br/vaga-estagiario-a-juridico_136905"
+  },
+  {
+    "id": 140356,
+    "titulo": "ADMINISTRAÇÃO",
+    "empresa": "CIPE",
+    "descricao": "Atendimento a clientes externos e internos, com informações básicas, lançamento de consolidação de atendimentos no sistema SAS, Organização de cadastros dos clientes, auxilio no atendimento presencial",
+    "cidade": "Vitória",
+    "estado": "ES",
+    "bolsa": "R$ 1.000,00",
+    "beneficios": [],
+    "logo": "https://storage.empregare.com/empresas/thumb/sem-logo.png",
+    "pcd": false,
+    "modalidade": "Presencial",
+    "cursos": [
+      "Administração",
+      "Análise e Desenvolvimento de Sistemas",
+      "Ciência da Computação",
+      "Engenharia de Software",
+      "Sistemas de Informação"
+    ],
+    "url": "https://www.empregare.com/pt-br/vaga-administracao_140356"
+  },
+  {
     "id": 137766,
     "titulo": "Estagiário(a) Financeiro",
     "empresa": "Mais Energia",
@@ -1157,24 +1325,6 @@
     "url": "https://www.empregare.com/pt-br/vaga-estagio-de-engenharia-banco-de-curriculo_109602"
   },
   {
-    "id": 136905,
-    "titulo": "Estagiário Jurídico",
-    "empresa": "SICOOB UNICENTRO NORTE BRASILEIRO",
-    "descricao": "Realizar pesquisas doutrinárias e jurisprudenciais; Elaborar petições simples; Auxiliar na organização de documentos e processos; Participar de reuniões com advogados; Atuar no suporte administrativo ",
-    "cidade": "Porto Velho",
-    "estado": "RO",
-    "bolsa": "",
-    "beneficios": [],
-    "logo": "https://storage.empregare.com/empresas/thumb/587f9ed6-990f-4734-97d8-9245909f30e0.png",
-    "pcd": false,
-    "modalidade": "Presencial",
-    "cursos": [
-      "Administração",
-      "Direito"
-    ],
-    "url": "https://www.empregare.com/pt-br/vaga-estagiario-juridico_136905"
-  },
-  {
     "id": 135252,
     "titulo": "Estagiário",
     "empresa": "SICOOB PALMEIRAS",
@@ -1544,25 +1694,6 @@
       "Administração"
     ],
     "url": "https://www.empregare.com/pt-br/vaga-estagio-administrativo-ceilandia-df_138204"
-  },
-  {
-    "id": 138202,
-    "titulo": "ESTÁGIO: ADMINISTRATIVO - HOME OFFICE - DF",
-    "empresa": "Up Estágio",
-    "descricao": "Emitir vouchers de vendas e manter controle dos registros; Solicitar folha de pagamento mensal junto à contabilidade; Encaminhar documentação de admissão de novos colaboradores; Auxiliar no agendament",
-    "cidade": "Remoto",
-    "estado": "Remoto",
-    "bolsa": "R$ 850,00",
-    "beneficios": [],
-    "logo": "https://storage.empregare.com/empresas/thumb/sem-logo.png",
-    "pcd": false,
-    "modalidade": "Remoto",
-    "cursos": [
-      "Administração",
-      "Contabilidade",
-      "Finanças"
-    ],
-    "url": "https://www.empregare.com/pt-br/vaga-estagio-administrativo-home-office-df_138202"
   },
   {
     "id": 138160,
@@ -2740,6 +2871,136 @@
     "url": "https://www.empregare.com/pt-br/vaga-estagiario-producao-industrial_105673"
   },
   {
+    "id": 118804,
+    "titulo": "Estagiário | Controladoria e Apoio a Compras | Belo Horizonte",
+    "empresa": "SICOOB CENTRAL CREDIMINAS",
+    "descricao": "Faça parte do Sicoob Central Crediminas!Construindo um futuro cooperativo com propósito e pessoas no centro.Somos o Sicoob Central Crediminas, a Cooperativa Central de Crédito de Minas Gerais. Desde 1",
+    "cidade": "Belo Horizonte",
+    "estado": "MG",
+    "bolsa": "",
+    "beneficios": [],
+    "logo": "https://storage.empregare.com/empresas/thumb/587f9ed6-990f-4734-97d8-9245909f30e0.png",
+    "pcd": false,
+    "modalidade": "Presencial",
+    "cursos": [
+      "Artes Visuais",
+      "Comunicação",
+      "Design"
+    ],
+    "url": "https://www.empregare.com/pt-br/vaga-estagiario-controladoria-e-apoio-a-compr_118804"
+  },
+  {
+    "id": 140414,
+    "titulo": "Estagio em Engenharia Civil",
+    "empresa": "Construtora Pagano S/A",
+    "descricao": "Conferencia dos Serviços com os Devidos projetosPreenchimento de Relatórios da QualidadeControle de Consumo de MaterialAcompanhamento e Mapeamento de ConcretagensRecebimento e Levantamento de Materiai",
+    "cidade": "Franca",
+    "estado": "SP",
+    "bolsa": "R$ 1.279,40",
+    "beneficios": [],
+    "logo": "https://storage.empregare.com/empresas/thumb/sem-logo.png",
+    "pcd": false,
+    "modalidade": "Presencial",
+    "cursos": [
+      "Engenharia",
+      "Engenharia Ambiental",
+      "Engenharia Civil",
+      "Engenharia Elétrica",
+      "Engenharia Mecânica",
+      "Engenharia Química",
+      "Engenharia de Produção"
+    ],
+    "url": "https://www.empregare.com/pt-br/vaga-estagio-em-engenharia-civil_140414"
+  },
+  {
+    "id": 140363,
+    "titulo": "Estágio",
+    "empresa": "SICOOB TOCANTINS",
+    "descricao": "Realizar atividades administrativas, como controle de planilhas e arquivos; Suporte interno; Conferência de documentos;Procedimentos de autoatendimento.",
+    "cidade": "Cristalândia",
+    "estado": "TO",
+    "bolsa": "",
+    "beneficios": [],
+    "logo": "https://storage.empregare.com/empresas/thumb/587f9ed6-990f-4734-97d8-9245909f30e0.png",
+    "pcd": false,
+    "modalidade": "Presencial",
+    "cursos": [
+      "Administração"
+    ],
+    "url": "https://www.empregare.com/pt-br/vaga-estagio_140363"
+  },
+  {
+    "id": 137546,
+    "titulo": "Estágio - Assistente administrativo",
+    "empresa": "IDEAL IMOB",
+    "descricao": "• Auxiliar na elaboração e gestão de contratos, assegurando a conformidade documental. • Acompanhar processos de cobrança, monitorando prazos e interagindo com clientes e fornecedores. • Manter a orga",
+    "cidade": "Taguatinga - Brasília",
+    "estado": "DF",
+    "bolsa": "R$ 1.000,00",
+    "beneficios": [],
+    "logo": "https://storage.empregare.com/empresas/thumb/sem-logo.png",
+    "pcd": false,
+    "modalidade": "Presencial",
+    "cursos": [
+      "Administração",
+      "Gestão Comercial",
+      "Gestão Pública"
+    ],
+    "url": "https://www.empregare.com/pt-br/vaga-estagio-assistente-administrativo_137546"
+  },
+  {
+    "id": 74338,
+    "titulo": "Pessoa Estagiária Administrativo/Comercial",
+    "empresa": "GRUPO BRAMED",
+    "descricao": "Somos uma organização composta por duas grandes marcas fortemente atuante no Distrito Federal e com inúmeras operações espalhadas por todo Brasil. Nossas frentes de negócio se integram promovendo solu",
+    "cidade": "Taguatinga - Brasília",
+    "estado": "DF",
+    "bolsa": "R$ 900,00",
+    "beneficios": [],
+    "logo": "https://storage.empregare.com/empresas/thumb/sem-logo.png",
+    "pcd": false,
+    "modalidade": "Presencial",
+    "cursos": [
+      "Administração"
+    ],
+    "url": "https://www.empregare.com/pt-br/vaga-pessoa-estagiaria-administrativo-comerci_74338"
+  },
+  {
+    "id": 140347,
+    "titulo": "Estagiário Atendimento - Araguari - MG",
+    "empresa": "SICOOB ARACREDI  ",
+    "descricao": "Realizar atendimento ativo e/ou receptivoPrestar suporte as Cooperativas e Cooperados;Receber e transferir contatos telefônicos para as áreas;Zelar pelo cumprimento dos normativos, regulamentos e polí",
+    "cidade": "Araguari",
+    "estado": "MG",
+    "bolsa": "R$ 1.518,00",
+    "beneficios": [],
+    "logo": "https://storage.empregare.com/empresas/thumb/587f9ed6-990f-4734-97d8-9245909f30e0.png",
+    "pcd": false,
+    "modalidade": "Presencial",
+    "cursos": [
+      "Outros"
+    ],
+    "url": "https://www.empregare.com/pt-br/vaga-estagiario-atendimento-araguari-mg_140347"
+  },
+  {
+    "id": 131704,
+    "titulo": "ESTÁGIO: PEDAGOGIA - ÁGUAS CLARAS - DF",
+    "empresa": "Up Estágio",
+    "descricao": "Monitoria Pedagógica.",
+    "cidade": "Águas Claras - Brasília",
+    "estado": "DF",
+    "bolsa": "R$ 800,00",
+    "beneficios": [],
+    "logo": "https://storage.empregare.com/empresas/thumb/sem-logo.png",
+    "pcd": false,
+    "modalidade": "Presencial",
+    "cursos": [
+      "Educação",
+      "Pedagogia"
+    ],
+    "url": "https://www.empregare.com/pt-br/vaga-estagio-pedagogia-aguas-claras-df_131704"
+  },
+  {
     "id": 131698,
     "titulo": "Estagiário Nível Superior (Área Comercial)",
     "empresa": "SICOOB CREDIJUSTRA ",
@@ -2866,25 +3127,6 @@
       "Engenharia de Software"
     ],
     "url": "https://www.empregare.com/pt-br/vaga-processo-seletivo-programa-de-estagio_136898"
-  },
-  {
-    "id": 137546,
-    "titulo": "Estágio - Assistente administrativo",
-    "empresa": "IDEAL IMOB",
-    "descricao": "• Auxiliar na elaboração e gestão de contratos, assegurando a conformidade documental. • Acompanhar processos de cobrança, monitorando prazos e interagindo com clientes e fornecedores. • Manter a orga",
-    "cidade": "Taguatinga - Brasília",
-    "estado": "DF",
-    "bolsa": "R$ 1.000,00",
-    "beneficios": [],
-    "logo": "https://storage.empregare.com/empresas/thumb/sem-logo.png",
-    "pcd": false,
-    "modalidade": "Presencial",
-    "cursos": [
-      "Administração",
-      "Gestão Comercial",
-      "Gestão Pública"
-    ],
-    "url": "https://www.empregare.com/pt-br/vaga-estagio-assistente-administrativo_137546"
   },
   {
     "id": 140135,
@@ -3053,23 +3295,6 @@
       "Sistemas de Informação"
     ],
     "url": "https://www.empregare.com/pt-br/vaga-estagio_126167"
-  },
-  {
-    "id": 121735,
-    "titulo": "Estagiário Fiscal",
-    "empresa": "Gomide Contabilidade",
-    "descricao": "Auxiliar nas atividades do Departamento Fiscal, como emissão de documentos fiscais, cálculo de tributos, preenchimento e envio das declarações fiscais e relatórios obrigatórios aos órgãos governamenta",
-    "cidade": "Taguatinga - Brasília",
-    "estado": "DF",
-    "bolsa": "R$ 800,00",
-    "beneficios": [],
-    "logo": "https://storage.empregare.com/empresas/thumb/c58ec7ad-94a6-425b-98ca-621daf3ebe45.jpg",
-    "pcd": false,
-    "modalidade": "Presencial",
-    "cursos": [
-      "Outros"
-    ],
-    "url": "https://www.empregare.com/pt-br/vaga-estagiario-fiscal_121735"
   },
   {
     "id": 139946,
@@ -3533,42 +3758,6 @@
       "Zootecnia"
     ],
     "url": "https://www.empregare.com/pt-br/vaga-estagio-veterinaria-taguatinga-norte-df_139131"
-  },
-  {
-    "id": 129962,
-    "titulo": "ESTÁGIO: PEDAGOGIA - NOROESTE - DF",
-    "empresa": "Up Estágio",
-    "descricao": "Monitoria Pedagógica",
-    "cidade": "Brasília",
-    "estado": "DF",
-    "bolsa": "R$ 1.100,00",
-    "beneficios": [],
-    "logo": "https://storage.empregare.com/empresas/thumb/sem-logo.png",
-    "pcd": false,
-    "modalidade": "Presencial",
-    "cursos": [
-      "Educação",
-      "Pedagogia"
-    ],
-    "url": "https://www.empregare.com/pt-br/vaga-estagio-pedagogia-noroeste-df_129962"
-  },
-  {
-    "id": 129970,
-    "titulo": "ESTÁGIO: PEDAGOGIA - SUDOESTE - DF",
-    "empresa": "Up Estágio",
-    "descricao": "Monitoria Pedagógica",
-    "cidade": "Sudoeste/Octogonal - Brasília",
-    "estado": "DF",
-    "bolsa": "R$ 1.000,00",
-    "beneficios": [],
-    "logo": "https://storage.empregare.com/empresas/thumb/sem-logo.png",
-    "pcd": false,
-    "modalidade": "Presencial",
-    "cursos": [
-      "Educação",
-      "Pedagogia"
-    ],
-    "url": "https://www.empregare.com/pt-br/vaga-estagio-pedagogia-sudoeste-df_129970"
   },
   {
     "id": 129977,
@@ -4206,23 +4395,6 @@
       "Pedagogia"
     ],
     "url": "https://www.empregare.com/pt-br/vaga-estagio-pedagogia-ceilandia-norte-df_137850"
-  },
-  {
-    "id": 137846,
-    "titulo": "ESTÁGIO: ADMINISTRATIVO - TAGUATINGA/ÁGUAS CLARAS - DF",
-    "empresa": "Up Estágio",
-    "descricao": "Auxiliar no cadastro de clientes; Digitação de pedidos; Acompanhamento de pedidos; Cadastro de produtos; Atendimento pelo WhatsApp; Digitação de e-mails.",
-    "cidade": "Taguatinga - Brasília",
-    "estado": "DF",
-    "bolsa": "R$ 650,00",
-    "beneficios": [],
-    "logo": "https://storage.empregare.com/empresas/thumb/sem-logo.png",
-    "pcd": false,
-    "modalidade": "Presencial",
-    "cursos": [
-      "Administração"
-    ],
-    "url": "https://www.empregare.com/pt-br/vaga-estagio-administrativo-taguatinga-aguas-_137846"
   },
   {
     "id": 137845,

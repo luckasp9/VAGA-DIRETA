@@ -10,6 +10,7 @@ import { VacancySkeleton } from "../components/vacancies/VacancySkeleton";
 import { Button } from "../components/ui/Button";
 import { useAuth } from "../context/AuthContext";
 
+const MAX_PAGE_BUTTONS = 5;
 const PAGE_SIZE = 6;
 const FILTERS_STORAGE_KEY = "vaga-direta:vacancy-filters";
 
@@ -37,21 +38,52 @@ export const HomePage: React.FC = () => {
     startIndex + PAGE_SIZE
   );
 
+  let startPage = 1;
+  let endPage = totalPages;
+
+  if (totalPages > MAX_PAGE_BUTTONS) {
+    // tenta centralizar a página atual na janela
+    startPage = currentPage - Math.floor(MAX_PAGE_BUTTONS / 2);
+    if (startPage < 1) {
+      startPage = 1;
+    }
+
+    endPage = startPage + MAX_PAGE_BUTTONS - 1;
+    if (endPage > totalPages) {
+      endPage = totalPages;
+      startPage = endPage - MAX_PAGE_BUTTONS + 1;
+      if (startPage < 1) startPage = 1;
+    }
+  }
+
+  const pageNumbers: number[] = [];
+  for (let p = startPage; p <= endPage; p++) {
+    pageNumbers.push(p);
+  }
+
   const loadVacancies = async (currentFilters: VacancyFilters) => {
-    setLoading(true);
-    setCurrentPage(1);
+    try {
+      setLoading(true);
+      setCurrentPage(1);
 
-    const { cities, ...rest } = currentFilters;
+      const { cities, ...rest } = currentFilters;
 
-    const [all, filtered] = await Promise.all([
-      getVacancies({ ...rest, cities: [] }),
-      getVacancies(currentFilters),
-    ]);
+      const [all, filtered] = await Promise.all([
+        getVacancies({ ...rest, cities: [] }),
+        getVacancies(currentFilters),
+      ]);
 
-    setAllVacancies(all);
-    setVacancies(filtered);
-    setLoading(false);
+      setAllVacancies(all);
+      setVacancies(filtered);
+    } catch (error) {
+      console.error("Erro ao carregar vagas:", error);
+      setAllVacancies([]);
+      setVacancies([]);
+    } finally {
+      setLoading(false);
+    }
   };
+
 
   // Ao montar (ou quando o user muda), restaura filtros salvos se existirem
   useEffect(() => {
@@ -184,8 +216,7 @@ export const HomePage: React.FC = () => {
                 Anterior
               </Button>
 
-              {Array.from({ length: totalPages }).map((_, index) => {
-                const page = index + 1;
+              {pageNumbers.map((page) => {
                 const isActive = page === currentPage;
                 return (
                   <button
@@ -201,6 +232,7 @@ export const HomePage: React.FC = () => {
                   </button>
                 );
               })}
+
 
               <Button
                 type="button"

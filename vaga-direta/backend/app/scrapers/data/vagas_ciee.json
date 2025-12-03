@@ -1,5 +1,1374 @@
 [
     {
+        "id": 5874249,
+        "titulo": "ESTAGIO",
+        "empresa": "BARBANTES OLIMPIA",
+        "descricao": "Fabricação de artefatos de cordoaria",
+        "cidade": "Olímpia",
+        "estado": "SP",
+        "bolsa": "R$ 800,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874249"
+    },
+    {
+        "id": 5874225,
+        "titulo": "ESTAGIO",
+        "empresa": "SAO PAULO CAMARA MUNICIPAL",
+        "descricao": "Administração pública em geral",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "bolsa": "R$ 1.146,47",
+        "beneficios": [
+            {
+                "codigo": 64,
+                "beneficio": "Auxílio alimentação mensal",
+                "valor": 1800
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874225"
+    },
+    {
+        "id": 5874221,
+        "titulo": "ESTAGIO",
+        "empresa": "BONATO SOCIEDADE INDIVIDUAL DE ADVOCACIA",
+        "descricao": "Serviços advocatícios",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "bolsa": "R$ 1.500,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874221"
+    },
+    {
+        "id": 5874214,
+        "titulo": "ESTAGIO",
+        "empresa": "CONDOMINIO DO AGUAS CLARAS SHOPPING E OFFICE",
+        "descricao": "Condomínios prediais",
+        "cidade": "Brasília",
+        "estado": "DF",
+        "bolsa": "R$ 750,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874214"
+    },
+    {
+        "id": 5874213,
+        "titulo": "ESTAGIO",
+        "empresa": "CIEE RIO - DIGITAL",
+        "descricao": "Atividades de estética e outros serviços de cuidados com a beleza",
+        "cidade": "São João de Meriti",
+        "estado": "RJ",
+        "bolsa": "R$ 1.195,00",
+        "beneficios": [
+            {
+                "codigo": 47,
+                "beneficio": "Assistência médica",
+                "valor": 0
+            },
+            {
+                "codigo": 49,
+                "beneficio": "Convênio com farmácia",
+                "valor": 0
+            },
+            {
+                "codigo": 57,
+                "beneficio": "Possibilidade efetivação",
+                "valor": 0
+            },
+            {
+                "codigo": 65,
+                "beneficio": "Recesso Remunerado",
+                "valor": 0
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874213"
+    },
+    {
+        "id": 5874192,
+        "titulo": "ESTAGIO",
+        "empresa": "APPLUS QUALITEC SERVICOS DE ENGENHARIA LTDA",
+        "descricao": "Serviços de engenharia",
+        "cidade": "Itapipoca",
+        "estado": "CE",
+        "bolsa": "R$ 650,00",
+        "beneficios": [
+            {
+                "codigo": 64,
+                "beneficio": "Auxílio alimentação mensal",
+                "valor": 480
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874192"
+    },
+    {
+        "id": 5874176,
+        "titulo": "ESTAGIO",
+        "empresa": "EVOLIVE ALPHAVILLE",
+        "descricao": "Treinamento em desenvolvimento profissional e gerencial",
+        "cidade": "Barueri",
+        "estado": "SP",
+        "bolsa": "R$ 1.600,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874176"
+    },
+    {
+        "id": 5874153,
+        "titulo": "ESTAGIO",
+        "empresa": "APPLUS QUALITEC SERVICOS DE ENGENHARIA LTDA",
+        "descricao": "",
+        "cidade": "Camocim",
+        "estado": "CE",
+        "bolsa": "R$ 650,00",
+        "beneficios": [
+            {
+                "codigo": 64,
+                "beneficio": "Auxílio alimentação mensal",
+                "valor": 480
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874153"
+    },
+    {
+        "id": 5874138,
+        "titulo": "ESTAGIO",
+        "empresa": "PAULO ROBERTO AMADEI FILHO ME",
+        "descricao": "Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios - minimercados, mercearias e armazéns",
+        "cidade": "Ourinhos",
+        "estado": "SP",
+        "bolsa": "R$ 700,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874138"
+    },
+    {
+        "id": 5874136,
+        "titulo": "ESTAGIO",
+        "empresa": "J P C LIMA SERVICOS DE LIMPEZA EM GERAL LIMITADA",
+        "descricao": "Limpeza em prédios e em domicílios",
+        "cidade": "Barra Mansa",
+        "estado": "RJ",
+        "bolsa": "R$ 900,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Psicologia"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874136"
+    },
+    {
+        "id": 5874132,
+        "titulo": "ESTAGIO",
+        "empresa": "ADUANA",
+        "descricao": "Comissaria de despachos",
+        "cidade": "Manaus",
+        "estado": "AM",
+        "bolsa": "R$ 1.100,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Engenharia Elétrica"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874132"
+    },
+    {
+        "id": 5874120,
+        "titulo": "ESTAGIO",
+        "empresa": "APPLUS QUALITEC SERVICOS DE ENGENHARIA LTDA",
+        "descricao": "Serviços de engenharia",
+        "cidade": "Acaraú",
+        "estado": "CE",
+        "bolsa": "R$ 650,00",
+        "beneficios": [
+            {
+                "codigo": 64,
+                "beneficio": "Auxílio alimentação mensal",
+                "valor": 480
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874120"
+    },
+    {
+        "id": 5874101,
+        "titulo": "ESTAGIO",
+        "empresa": "SDR GESTAO E ESTRATEGIA",
+        "descricao": "Treinamento em desenvolvimento profissional e gerencial",
+        "cidade": "Santos",
+        "estado": "SP",
+        "bolsa": "R$ 1.600,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874101"
+    },
+    {
+        "id": 5874099,
+        "titulo": "ESTAGIO",
+        "empresa": "Milmaq Papelaria",
+        "descricao": "Comércio varejista especializado de equipamentos e suprimentos de informática",
+        "cidade": "Bebedouro",
+        "estado": "SP",
+        "bolsa": "R$ 600,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874099"
+    },
+    {
+        "id": 5874090,
+        "titulo": "ESTAGIO",
+        "empresa": "VEM VIVER DE VIAJAR",
+        "descricao": "Treinamento em desenvolvimento profissional e gerencial",
+        "cidade": "Belém",
+        "estado": "PA",
+        "bolsa": "R$ 1.000,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Comunicação",
+            "Marketing",
+            "Publicidade e Propaganda"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874090"
+    },
+    {
+        "id": 5874089,
+        "titulo": "ESTAGIO",
+        "empresa": "34.478.436 CLAUDIO OSVALDO DE ALMEIDA JUNIOR",
+        "descricao": "Comércio varejista de cosméticos, produtos de perfumaria e de higiene pessoal",
+        "cidade": "Cotia",
+        "estado": "SP",
+        "bolsa": "R$ 650,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874089"
+    },
+    {
+        "id": 5874088,
+        "titulo": "ESTAGIO",
+        "empresa": "OTUR Ortopedia e Fisioterapia",
+        "descricao": "Atividade médica ambulatorial com recursos para realização de exames complementares",
+        "cidade": "Santo André",
+        "estado": "SP",
+        "bolsa": "R$ 703,38",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874088"
+    },
+    {
+        "id": 5874075,
+        "titulo": "ESTAGIO",
+        "empresa": "COMERCIAL E COPIADORA LAPEL LTDA ME",
+        "descricao": "Fotocópias",
+        "cidade": "Guarulhos",
+        "estado": "SP",
+        "bolsa": "R$ 1.000,00",
+        "beneficios": [
+            {
+                "codigo": 65,
+                "beneficio": "Recesso Remunerado",
+                "valor": 0
+            },
+            {
+                "codigo": 56,
+                "beneficio": "Possibilidade prorrogação",
+                "valor": 0
+            },
+            {
+                "codigo": 57,
+                "beneficio": "Possibilidade efetivação",
+                "valor": 0
+            },
+            {
+                "codigo": 44,
+                "beneficio": "Lanche na empresa",
+                "valor": 0
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874075"
+    },
+    {
+        "id": 5874070,
+        "titulo": "ESTAGIO",
+        "empresa": "HIPER SERVICOS DE CONTABILIDADE LTDA",
+        "descricao": "Atividades de contabilidade",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ",
+        "bolsa": "R$ 1.200,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração",
+            "Contabilidade",
+            "Finanças"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874070"
+    },
+    {
+        "id": 5874062,
+        "titulo": "ESTAGIO",
+        "empresa": "SECRETARIA DE ESTADO DE INFRAESTRUTURA E OBRAS PUBLICAS - SEIOP",
+        "descricao": "Administração pública em geral",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ",
+        "bolsa": "R$ 1.330,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Direito"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874062"
+    },
+    {
+        "id": 5874051,
+        "titulo": "ESTAGIO",
+        "empresa": "PIRA FIRE",
+        "descricao": "Instalações de sistema de prevenção contra incêndio",
+        "cidade": "Piracicaba",
+        "estado": "SP",
+        "bolsa": "R$ 970,32",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874051"
+    },
+    {
+        "id": 5874050,
+        "titulo": "ESTAGIO",
+        "empresa": "MUNDOO VIAGENS E TURISMO LTDA",
+        "descricao": "Agências de viagens",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "bolsa": "R$ 1.344,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874050"
+    },
+    {
+        "id": 5874047,
+        "titulo": "ESTAGIO",
+        "empresa": "PREFEITURA MUNICIPAL DE BARRA DO PIRAI",
+        "descricao": "Administração pública em geral",
+        "cidade": "Barra do Piraí",
+        "estado": "RJ",
+        "bolsa": "R$ 750,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Psicologia"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874047"
+    },
+    {
+        "id": 5874038,
+        "titulo": "ESTAGIO",
+        "empresa": "GRANENERGIA INVESTIMENTO S.A.",
+        "descricao": "Atividades de apoio à extração de petróleo e gás natural",
+        "cidade": "Macaé",
+        "estado": "RJ",
+        "bolsa": "R$ 1.518,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração",
+            "Contabilidade",
+            "Finanças"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874038"
+    },
+    {
+        "id": 5874037,
+        "titulo": "ESTAGIO",
+        "empresa": "MOGI CORES",
+        "descricao": "Comércio varejista de tintas e materiais para pintura",
+        "cidade": "Mogi das Cruzes",
+        "estado": "SP",
+        "bolsa": "R$ 750,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874037"
+    },
+    {
+        "id": 5874032,
+        "titulo": "ESTAGIO",
+        "empresa": "SAMEA REGINA HAIR CLINIC",
+        "descricao": "Atividades de estética e outros serviços de cuidados com a beleza",
+        "cidade": "Manaus",
+        "estado": "AM",
+        "bolsa": "R$ 750,00",
+        "beneficios": [
+            {
+                "codigo": 56,
+                "beneficio": "Possibilidade prorrogação",
+                "valor": 0
+            },
+            {
+                "codigo": 65,
+                "beneficio": "Recesso Remunerado",
+                "valor": 0
+            },
+            {
+                "codigo": 57,
+                "beneficio": "Possibilidade efetivação",
+                "valor": 0
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874032"
+    },
+    {
+        "id": 5874028,
+        "titulo": "ESTAGIO",
+        "empresa": " ",
+        "descricao": "Bancos múltiplos, com carteira comercial",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "bolsa": "R$ 1.000,00",
+        "beneficios": [
+            {
+                "codigo": 64,
+                "beneficio": "Auxílio alimentação mensal",
+                "valor": 1173.26
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Comunicação",
+            "Marketing",
+            "Publicidade e Propaganda"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874028"
+    },
+    {
+        "id": 5874026,
+        "titulo": "ESTAGIO",
+        "empresa": "LOURENCO E SOARES DE SOUZA SERVICOS",
+        "descricao": "Atividades de intermediação e agenciamento de serviços e negócios em geral, exceto imobiliários",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "bolsa": "R$ 1.200,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874026"
+    },
+    {
+        "id": 5874022,
+        "titulo": "ESTAGIO",
+        "empresa": "PREFEITURA MUNICIPAL DE BARRA DO PIRAI",
+        "descricao": "Administração pública em geral",
+        "cidade": "Barra do Piraí",
+        "estado": "RJ",
+        "bolsa": "R$ 750,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Educação Física",
+            "Letras",
+            "Pedagogia"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874022"
+    },
+    {
+        "id": 5874016,
+        "titulo": "ESTAGIO",
+        "empresa": "EQUIPE SIA HERVATIN SOLUCOES HIDRICAS LTDA",
+        "descricao": "Comércio varejista de materiais hidráulicos",
+        "cidade": "Campinas",
+        "estado": "SP",
+        "bolsa": "R$ 1.100,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874016"
+    },
+    {
+        "id": 5874007,
+        "titulo": "ESTAGIO",
+        "empresa": "PADARIA CABANA INOCENCIO",
+        "descricao": "Lanchonetes, casas de chá, de sucos e similares",
+        "cidade": "Ilhéus",
+        "estado": "BA",
+        "bolsa": "R$ 650,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5874007"
+    },
+    {
+        "id": 5873996,
+        "titulo": "ESTAGIO",
+        "empresa": "EXPRESSA CONTABILIDADE",
+        "descricao": "Atividades de contabilidade",
+        "cidade": "Cuiabá",
+        "estado": "MT",
+        "bolsa": "",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração",
+            "Contabilidade",
+            "Finanças"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873996"
+    },
+    {
+        "id": 5873971,
+        "titulo": "ESTAGIO",
+        "empresa": "B2T COMERCIO IMPORTACAO E EXPORTACAO LTDA - EPP",
+        "descricao": "Comércio varejista de material elétrico",
+        "cidade": "Petrópolis",
+        "estado": "RJ",
+        "bolsa": "R$ 700,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873971"
+    },
+    {
+        "id": 5873968,
+        "titulo": "ESTAGIO",
+        "empresa": "AUDIO SYSTEMS COMERCIO E REPRESENTACAO LTDA",
+        "descricao": "Comércio varejista especializado de eletrodomésticos e equipamentos de áudio e vídeo",
+        "cidade": "Barueri",
+        "estado": "SP",
+        "bolsa": "R$ 2.300,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Comunicação",
+            "Marketing",
+            "Publicidade e Propaganda"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873968"
+    },
+    {
+        "id": 5873947,
+        "titulo": "ESTAGIO",
+        "empresa": "MINISTERIO",
+        "descricao": "Administração pública em geral",
+        "cidade": "Duque de Caxias",
+        "estado": "RJ",
+        "bolsa": "R$ 750,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873947"
+    },
+    {
+        "id": 5873938,
+        "titulo": "ESTAGIO",
+        "empresa": "HYPOR BRASIL LTDA",
+        "descricao": "Criação de suínos",
+        "cidade": "Holambra",
+        "estado": "SP",
+        "bolsa": "R$ 1.600,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873938"
+    },
+    {
+        "id": 5873927,
+        "titulo": "ESTAGIO",
+        "empresa": "Confidencial",
+        "descricao": "Suporte técnico, manutenção e outros serviços em tecnologia da informação",
+        "cidade": "Campos dos Goytacazes",
+        "estado": "RJ",
+        "bolsa": "R$ 700,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873927"
+    },
+    {
+        "id": 5873916,
+        "titulo": "ESTAGIO",
+        "empresa": "TOP SERVICE SERVICOS TECNICOS ESPECIALIZADOS",
+        "descricao": "Promoção de vendas",
+        "cidade": "Volta Redonda",
+        "estado": "RJ",
+        "bolsa": "R$ 1.000,00",
+        "beneficios": [
+            {
+                "codigo": 49,
+                "beneficio": "Convênio com farmácia",
+                "valor": 0
+            },
+            {
+                "codigo": 47,
+                "beneficio": "Assistência médica",
+                "valor": 0
+            },
+            {
+                "codigo": 65,
+                "beneficio": "Recesso Remunerado",
+                "valor": 0
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Engenharia Civil"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873916"
+    },
+    {
+        "id": 5873911,
+        "titulo": "ESTAGIO",
+        "empresa": "V CELL PETROPOLIS",
+        "descricao": "Reparação e manutenção de computadores e de equipamentos periféricos",
+        "cidade": "Petrópolis",
+        "estado": "RJ",
+        "bolsa": "R$ 600,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873911"
+    },
+    {
+        "id": 5873904,
+        "titulo": "ESTAGIO",
+        "empresa": "CR E J COMERCIO E ATACADO LTDA",
+        "descricao": "Comércio varejista especializado de equipamentos e suprimentos de informática",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "bolsa": "R$ 1.100,00",
+        "beneficios": [
+            {
+                "codigo": 64,
+                "beneficio": "Auxílio alimentação mensal",
+                "valor": 300
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873904"
+    },
+    {
+        "id": 5873894,
+        "titulo": "ESTAGIO",
+        "empresa": "DEVILLE HOTEIS E TURISMO LTDA",
+        "descricao": "Hotéis",
+        "cidade": "Cuiabá",
+        "estado": "MT",
+        "bolsa": "R$ 1.200,00",
+        "beneficios": [
+            {
+                "codigo": 42,
+                "beneficio": "Restaurante no local",
+                "valor": null
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873894"
+    },
+    {
+        "id": 5873887,
+        "titulo": "ESTAGIO",
+        "empresa": "RESPECTA CENTRO DE SAUDE LTDA",
+        "descricao": "Atividade odontológica",
+        "cidade": "São Caetano do Sul",
+        "estado": "SP",
+        "bolsa": "R$ 850,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Educação Física",
+            "Fisioterapia",
+            "Medicina"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873887"
+    },
+    {
+        "id": 5873885,
+        "titulo": "ESTAGIO",
+        "empresa": "DISAGUA",
+        "descricao": "Comércio atacadista de água mineral",
+        "cidade": "Itabuna",
+        "estado": "BA",
+        "bolsa": "R$ 600,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873885"
+    },
+    {
+        "id": 5873881,
+        "titulo": "ESTAGIO",
+        "empresa": "CFA",
+        "descricao": "Administração pública em geral",
+        "cidade": "Brasília",
+        "estado": "DF",
+        "bolsa": "R$ 1.634,93",
+        "beneficios": [
+            {
+                "codigo": 64,
+                "beneficio": "Auxílio alimentação mensal",
+                "valor": 1649.6
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873881"
+    },
+    {
+        "id": 5873879,
+        "titulo": "ESTAGIO",
+        "empresa": "TRABALHE MEDICINA E SEGURANCA DO TRABALHO LTDA",
+        "descricao": "Atividade médica ambulatorial restrita a consultas",
+        "cidade": "São José dos Campos",
+        "estado": "SP",
+        "bolsa": "R$ 900,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Biomedicina",
+            "Enfermagem",
+            "Fisioterapia",
+            "Medicina",
+            "Nutrição"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873879"
+    },
+    {
+        "id": 5873868,
+        "titulo": "ESTAGIO",
+        "empresa": "BURITI REALIZANDO SONHOS",
+        "descricao": "Loteamento de imóveis próprios",
+        "cidade": "ALTA FLORESTA",
+        "estado": "MT",
+        "bolsa": "R$ 900,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873868"
+    },
+    {
+        "id": 5873856,
+        "titulo": "ESTAGIO",
+        "empresa": "BURITI REALIZANDO SONHOS",
+        "descricao": "Loteamento de imóveis próprios",
+        "cidade": "ALTA FLORESTA",
+        "estado": "MT",
+        "bolsa": "R$ 900,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873856"
+    },
+    {
+        "id": 5873853,
+        "titulo": "ESTAGIO",
+        "empresa": "CIEE RJ",
+        "descricao": "Serviços de assistência social sem alojamento",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ",
+        "bolsa": "R$ 874,00",
+        "beneficios": [
+            {
+                "codigo": 50,
+                "beneficio": "13º Bolsa-auxílio",
+                "valor": 0
+            },
+            {
+                "codigo": 64,
+                "beneficio": "Auxílio alimentação mensal",
+                "valor": 946
+            },
+            {
+                "codigo": 47,
+                "beneficio": "Assistência médica",
+                "valor": 0
+            },
+            {
+                "codigo": 57,
+                "beneficio": "Possibilidade efetivação",
+                "valor": 0
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873853"
+    },
+    {
+        "id": 5873831,
+        "titulo": "ESTAGIO",
+        "empresa": "CIEE RIO - DIGITAL",
+        "descricao": "Atividades de estética e outros serviços de cuidados com a beleza",
+        "cidade": "São Gonçalo",
+        "estado": "RJ",
+        "bolsa": "R$ 800,00",
+        "beneficios": [
+            {
+                "codigo": 47,
+                "beneficio": "Assistência médica",
+                "valor": 0
+            },
+            {
+                "codigo": 49,
+                "beneficio": "Convênio com farmácia",
+                "valor": 0
+            },
+            {
+                "codigo": 65,
+                "beneficio": "Recesso Remunerado",
+                "valor": 0
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873831"
+    },
+    {
+        "id": 5873810,
+        "titulo": "ESTAGIO",
+        "empresa": "EDLEIA MENDONCA SOCIEDADE INDIVIDUAL DE ADVOCACIA",
+        "descricao": "Serviços advocatícios",
+        "cidade": "Brasília",
+        "estado": "DF",
+        "bolsa": "R$ 800,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Direito"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873810"
+    },
+    {
+        "id": 5873808,
+        "titulo": "ESTAGIO",
+        "empresa": "WYNK SOLUCOES",
+        "descricao": "Desenvolvimento e licenciamento de programas de computador customizáveis",
+        "cidade": "Brasília",
+        "estado": "DF",
+        "bolsa": "R$ 750,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Comunicação",
+            "Marketing",
+            "Publicidade e Propaganda"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873808"
+    },
+    {
+        "id": 5873804,
+        "titulo": "ESTAGIO",
+        "empresa": "ARTE & PAPEL",
+        "descricao": "Comércio varejista de artigos de papelaria",
+        "cidade": "Salvador",
+        "estado": "BA",
+        "bolsa": "R$ 650,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873804"
+    },
+    {
+        "id": 5873794,
+        "titulo": "ESTAGIO",
+        "empresa": "Confidencial",
+        "descricao": "Atividades de contabilidade",
+        "cidade": "Santos",
+        "estado": "SP",
+        "bolsa": "R$ 703,38",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873794"
+    },
+    {
+        "id": 5873787,
+        "titulo": "ESTAGIO",
+        "empresa": "SAIBAI",
+        "descricao": "Horticultura, exceto morango",
+        "cidade": "Piedade",
+        "estado": "SP",
+        "bolsa": "R$ 703,38",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873787"
+    },
+    {
+        "id": 5873776,
+        "titulo": "ESTAGIO",
+        "empresa": "Confidencial",
+        "descricao": "Atividades de contabilidade",
+        "cidade": "Santos",
+        "estado": "SP",
+        "bolsa": "R$ 703,38",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873776"
+    },
+    {
+        "id": 5873760,
+        "titulo": "ESTAGIO",
+        "empresa": "PONTAL PAULISTA PIRAPOZINHO",
+        "descricao": "Atividades associativas não especificadas anteriormente",
+        "cidade": "Pirapozinho",
+        "estado": "SP",
+        "bolsa": "R$ 703,38",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873760"
+    },
+    {
+        "id": 5873758,
+        "titulo": "ESTAGIO",
+        "empresa": "PMSP",
+        "descricao": "Administração pública em geral",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "bolsa": "R$ 1.000,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873758"
+    },
+    {
+        "id": 5873736,
+        "titulo": "ESTAGIO",
+        "empresa": "J. M. V. MANUTENCAO EM INFORMATICA LTDA",
+        "descricao": "Reparação e manutenção de equipamentos de comunicação",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "bolsa": "R$ 700,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873736"
+    },
+    {
+        "id": 5873735,
+        "titulo": "ESTAGIO",
+        "empresa": "DIFFERENCIAL ENGENHARIA LTDA",
+        "descricao": "Construção de rodovias e ferrovias",
+        "cidade": "Cotia",
+        "estado": "SP",
+        "bolsa": "R$ 1.500,00",
+        "beneficios": [
+            {
+                "codigo": 53,
+                "beneficio": "Refeitório no local",
+                "valor": 0
+            },
+            {
+                "codigo": 56,
+                "beneficio": "Possibilidade prorrogação",
+                "valor": 0
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873735"
+    },
+    {
+        "id": 5873732,
+        "titulo": "ESTAGIO",
+        "empresa": "INSTITUTO NACIONAL DE COLONIZAÇÃO E REFORMA AGRÁRIA – INCRA",
+        "descricao": "Administração pública em geral",
+        "cidade": "Fortaleza",
+        "estado": "CE",
+        "bolsa": "R$ 787,98",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Direito"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873732"
+    },
+    {
+        "id": 5873723,
+        "titulo": "ESTAGIO",
+        "empresa": "GROUP CF SAUDE MATRIZ",
+        "descricao": "Atividade médica ambulatorial restrita a consultas",
+        "cidade": "Taubaté",
+        "estado": "SP",
+        "bolsa": "R$ 703,38",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873723"
+    },
+    {
+        "id": 5873703,
+        "titulo": "ESTAGIO",
+        "empresa": "MED LAB MEDICINA",
+        "descricao": "Atividade médica ambulatorial com recursos para realização de exames complementares",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ",
+        "bolsa": "R$ 800,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Biomedicina",
+            "Enfermagem",
+            "Fisioterapia",
+            "Medicina",
+            "Nutrição"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873703"
+    },
+    {
+        "id": 5873692,
+        "titulo": "ESTAGIO",
+        "empresa": "INSTITUTO NACIONAL DE COLONIZAÇÃO E REFORMA AGRÁRIA – INCRA",
+        "descricao": "Administração pública em geral",
+        "cidade": "Fortaleza",
+        "estado": "CE",
+        "bolsa": "R$ 787,98",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873692"
+    },
+    {
+        "id": 5873676,
+        "titulo": "ESTAGIO",
+        "empresa": "SEGUNDO OFICIO DE SAO SEBASTIAO DO PASSE",
+        "descricao": "Cartórios",
+        "cidade": "São Sebastião do Passé",
+        "estado": "BA",
+        "bolsa": "R$ 400,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873676"
+    },
+    {
+        "id": 5873675,
+        "titulo": "ESTAGIO",
+        "empresa": "LP TRACTOR MECANICA E LOCACAO DE MAQUINAS PESADAS LTDA",
+        "descricao": "Manutenção e reparação de máquinas-ferramenta",
+        "cidade": "Nova Iguaçu",
+        "estado": "RJ",
+        "bolsa": "R$ 800,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Engenharia Mecânica"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873675"
+    },
+    {
+        "id": 5873672,
+        "titulo": "ESTAGIO",
+        "empresa": "OCEANNIA TRANSPORTES DE AGUA LTDA",
+        "descricao": "Distribuição de água por caminhões",
+        "cidade": "Mogi das Cruzes",
+        "estado": "SP",
+        "bolsa": "R$ 1.000,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873672"
+    },
+    {
+        "id": 5873669,
+        "titulo": "ESTAGIO",
+        "empresa": "EBARA BOMBAS AMERICA DO SUL LTDA",
+        "descricao": "Fabricação de equipamentos hidráulicos e pneumáticos, peças e acessórios, exceto válvulas",
+        "cidade": "Vargem Grande do Sul",
+        "estado": "SP",
+        "bolsa": "R$ 1.600,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Direito"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873669"
+    },
+    {
+        "id": 5873656,
+        "titulo": "ESTAGIO",
+        "empresa": "ASSOCIACAO HIP HOP PIRAPOZINHO",
+        "descricao": "Atividades associativas não especificadas anteriormente",
+        "cidade": "Pirapozinho",
+        "estado": "SP",
+        "bolsa": "R$ 703,38",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873656"
+    },
+    {
+        "id": 5873608,
+        "titulo": "ESTAGIO",
+        "empresa": "PODDIUM NAUTICA PRODUTOS NAUTICOS",
+        "descricao": "Comércio varejista de embarcações e outros veículos recreativos; peças e acessórios",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "bolsa": "R$ 1.500,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873608"
+    },
+    {
         "id": 5873588,
         "titulo": "ESTAGIO",
         "empresa": "USIMETRICA",
@@ -15,6 +1384,31 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5873588"
+    },
+    {
+        "id": 5873581,
+        "titulo": "ESTAGIO",
+        "empresa": "Confidencial",
+        "descricao": "Atividades de contabilidade",
+        "cidade": "Duque de Caxias",
+        "estado": "RJ",
+        "bolsa": "R$ 759,00",
+        "beneficios": [
+            {
+                "codigo": 64,
+                "beneficio": "Auxílio alimentação mensal",
+                "valor": 200
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração",
+            "Contabilidade",
+            "Finanças"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873581"
     },
     {
         "id": 5873580,
@@ -38,23 +1432,6 @@
             "Direito"
         ],
         "url": "https://ciee.app/detalhes-vaga/5873580"
-    },
-    {
-        "id": 5873576,
-        "titulo": "ESTAGIO",
-        "empresa": "PET CAMP COMERCIO DE PRODUTOS AGROPECUARIOS SA",
-        "descricao": "Comércio varejista de animais vivos e de artigos e alimentos para animais de estimação",
-        "cidade": "Campinas",
-        "estado": "SP",
-        "bolsa": "R$ 703,38",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5873576"
     },
     {
         "id": 5873569,
@@ -252,23 +1629,6 @@
             "Administração"
         ],
         "url": "https://ciee.app/detalhes-vaga/5873505"
-    },
-    {
-        "id": 5873504,
-        "titulo": "ESTAGIO",
-        "empresa": "BRAL-MAX INDUSTRIA E COMERCIO DE PLASTICOS LTDA",
-        "descricao": "Fabricação de artefatos de material plástico para usos industriais",
-        "cidade": "Petrópolis",
-        "estado": "RJ",
-        "bolsa": "R$ 1.300,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5873504"
     },
     {
         "id": 5873492,
@@ -649,23 +2009,6 @@
         "url": "https://ciee.app/detalhes-vaga/5873405"
     },
     {
-        "id": 5873397,
-        "titulo": "ESTAGIO",
-        "empresa": "CENTRO DE EDUCACAO INFANTIL ESPACO ALFA",
-        "descricao": "Educação infantil - creche",
-        "cidade": "Petrópolis",
-        "estado": "RJ",
-        "bolsa": "R$ 700,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5873397"
-    },
-    {
         "id": 5873381,
         "titulo": "ESTAGIO",
         "empresa": "AMORSAUDE",
@@ -873,23 +2216,6 @@
         "url": "https://ciee.app/detalhes-vaga/5873319"
     },
     {
-        "id": 5873302,
-        "titulo": "ESTAGIO",
-        "empresa": "CENTRO DE EDUCACAO INFANTIL ESPACO ALFA",
-        "descricao": "Educação infantil - creche",
-        "cidade": "Petrópolis",
-        "estado": "RJ",
-        "bolsa": "R$ 700,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5873302"
-    },
-    {
         "id": 5873288,
         "titulo": "ESTAGIO",
         "empresa": "MINISTERIO DA JUSTICA E SEGURANCA PUBLICA",
@@ -1026,39 +2352,6 @@
             "Engenharia Civil"
         ],
         "url": "https://ciee.app/detalhes-vaga/5873223"
-    },
-    {
-        "id": 5873222,
-        "titulo": "ESTAGIO",
-        "empresa": "ELVIS ADRIANO PIMENTA DE OLIVEIRA",
-        "descricao": "Comércio varejista de artigos do vestuário e acessórios",
-        "cidade": "Franca",
-        "estado": "SP",
-        "bolsa": "R$ 800,00",
-        "beneficios": [
-            {
-                "codigo": 57,
-                "beneficio": "Possibilidade efetivação",
-                "valor": 0
-            },
-            {
-                "codigo": 65,
-                "beneficio": "Recesso Remunerado",
-                "valor": 0
-            },
-            {
-                "codigo": 56,
-                "beneficio": "Possibilidade prorrogação",
-                "valor": 0
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5873222"
     },
     {
         "id": 5873190,
@@ -1501,6 +2794,23 @@
         "url": "https://ciee.app/detalhes-vaga/5873010"
     },
     {
+        "id": 5873006,
+        "titulo": "ESTAGIO",
+        "empresa": "CARDIOCORP",
+        "descricao": "Atividade médica ambulatorial restrita a consultas",
+        "cidade": "Piracicaba",
+        "estado": "SP",
+        "bolsa": "R$ 800,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5873006"
+    },
+    {
         "id": 5873003,
         "titulo": "ESTAGIO",
         "empresa": "COORDENADORIA PEDAGOGICA",
@@ -1757,29 +3067,6 @@
             "Publicidade e Propaganda"
         ],
         "url": "https://ciee.app/detalhes-vaga/5872893"
-    },
-    {
-        "id": 5872878,
-        "titulo": "ESTAGIO",
-        "empresa": "AMPARO CLUBE DE ASSISTENCIA ",
-        "descricao": "Atividades associativas não especificadas anteriormente",
-        "cidade": "Nova Iguaçu",
-        "estado": "RJ",
-        "bolsa": "R$ 800,00",
-        "beneficios": [
-            {
-                "codigo": 64,
-                "beneficio": "Auxílio alimentação mensal",
-                "valor": 5
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5872878"
     },
     {
         "id": 5872870,
@@ -2200,23 +3487,6 @@
         "url": "https://ciee.app/detalhes-vaga/5872688"
     },
     {
-        "id": 5872680,
-        "titulo": "ESTAGIO",
-        "empresa": "ESSÊNCIA PET INDUSTRIA E COMERCIO DE COSMETICOS LTDA",
-        "descricao": "",
-        "cidade": "Salto",
-        "estado": "SP",
-        "bolsa": "R$ 1.200,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5872680"
-    },
-    {
         "id": 5872679,
         "titulo": "ESTAGIO",
         "empresa": "GH FITNESS LTDA",
@@ -2541,6 +3811,23 @@
         "url": "https://ciee.app/detalhes-vaga/5872561"
     },
     {
+        "id": 5872549,
+        "titulo": "ESTAGIO",
+        "empresa": "AUTO PECAS MACEDO LTDA",
+        "descricao": "Comércio a varejo de peças e acessórios novos para veículos automotores",
+        "cidade": "Aracaju",
+        "estado": "SE",
+        "bolsa": "R$ 800,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5872549"
+    },
+    {
         "id": 5872525,
         "titulo": "ESTAGIO",
         "empresa": "O DEPOSITO",
@@ -2691,23 +3978,6 @@
             "Engenharia Mecânica"
         ],
         "url": "https://ciee.app/detalhes-vaga/5872469"
-    },
-    {
-        "id": 5872456,
-        "titulo": "ESTAGIO",
-        "empresa": "MED PLUS ASSISTENCIA MEDICA LTDA",
-        "descricao": "Atividade médica ambulatorial restrita a consultas",
-        "cidade": "Belford Roxo",
-        "estado": "RJ",
-        "bolsa": "R$ 1.000,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5872456"
     },
     {
         "id": 5872455,
@@ -2992,31 +4262,6 @@
         "url": "https://ciee.app/detalhes-vaga/5872347"
     },
     {
-        "id": 5872338,
-        "titulo": "ESTAGIO",
-        "empresa": "FUNERARIA VITAL LTDA",
-        "descricao": "Serviços de funerárias",
-        "cidade": "Petrópolis",
-        "estado": "RJ",
-        "bolsa": "R$ 950,00",
-        "beneficios": [
-            {
-                "codigo": 64,
-                "beneficio": "Auxílio alimentação mensal",
-                "valor": 200
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração",
-            "Contabilidade",
-            "Finanças"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5872338"
-    },
-    {
         "id": 5872332,
         "titulo": "ESTAGIO",
         "empresa": "TERRAL CONSTRUTORA",
@@ -3119,23 +4364,6 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5872306"
-    },
-    {
-        "id": 5872301,
-        "titulo": "ESTAGIO",
-        "empresa": "Procuradoria Seccional Federal em Vitória da Conquista/BA",
-        "descricao": "Seguridade social obrigatória",
-        "cidade": "Vitória da Conquista",
-        "estado": "BA",
-        "bolsa": "R$ 787,98",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Direito"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5872301"
     },
     {
         "id": 5872269,
@@ -3368,23 +4596,6 @@
         "url": "https://ciee.app/detalhes-vaga/5872197"
     },
     {
-        "id": 5872195,
-        "titulo": "ESTAGIO",
-        "empresa": "Vaga confidencial",
-        "descricao": "",
-        "cidade": "Manaus",
-        "estado": "AM",
-        "bolsa": "R$ 700,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5872195"
-    },
-    {
         "id": 5872187,
         "titulo": "ESTAGIO",
         "empresa": "LOTUS MEDICINA DA DOR",
@@ -3416,29 +4627,6 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5872187"
-    },
-    {
-        "id": 5872180,
-        "titulo": "ESTAGIO",
-        "empresa": "HIBRIDO CORRETORA DE SEGUROS LTDA",
-        "descricao": "Corretores e agentes de seguros, de planos de previdência complementar e de saúde",
-        "cidade": "Duque de Caxias",
-        "estado": "RJ",
-        "bolsa": "R$ 759,00",
-        "beneficios": [
-            {
-                "codigo": 64,
-                "beneficio": "Auxílio alimentação mensal",
-                "valor": 200
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5872180"
     },
     {
         "id": 5872173,
@@ -3553,27 +4741,6 @@
         "url": "https://ciee.app/detalhes-vaga/5872146"
     },
     {
-        "id": 5872140,
-        "titulo": "ESTAGIO",
-        "empresa": "COHF CLINICA DE OLHOS HOLANDA DE FREITAS",
-        "descricao": "Atividade médica ambulatorial com recursos para realização de procedimentos cirúrgicos",
-        "cidade": "Campinas",
-        "estado": "SP",
-        "bolsa": "R$ 1.250,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Biomedicina",
-            "Enfermagem",
-            "Fisioterapia",
-            "Medicina",
-            "Nutrição"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5872140"
-    },
-    {
         "id": 5872135,
         "titulo": "ESTAGIO",
         "empresa": "VET DISTRIBUIDORA",
@@ -3644,44 +4811,6 @@
             "Nutrição"
         ],
         "url": "https://ciee.app/detalhes-vaga/5872038"
-    },
-    {
-        "id": 5872037,
-        "titulo": "ESTAGIO",
-        "empresa": "CHEIRIN BAO",
-        "descricao": "Lanchonetes, casas de chá, de sucos e similares",
-        "cidade": "Rio de Janeiro",
-        "estado": "RJ",
-        "bolsa": "R$ 700,00",
-        "beneficios": [
-            {
-                "codigo": 57,
-                "beneficio": "Possibilidade efetivação",
-                "valor": 0
-            },
-            {
-                "codigo": 50,
-                "beneficio": "13º Bolsa-auxílio",
-                "valor": 0
-            },
-            {
-                "codigo": 56,
-                "beneficio": "Possibilidade prorrogação",
-                "valor": 0
-            },
-            {
-                "codigo": 65,
-                "beneficio": "Recesso Remunerado",
-                "valor": 0
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5872037"
     },
     {
         "id": 5872036,
@@ -3769,23 +4898,6 @@
             "Química"
         ],
         "url": "https://ciee.app/detalhes-vaga/5871923"
-    },
-    {
-        "id": 5871922,
-        "titulo": "ESTAGIO",
-        "empresa": "COORDENADORIA PEDAGOGICA",
-        "descricao": "Condomínios prediais",
-        "cidade": "São Paulo",
-        "estado": "SP",
-        "bolsa": "R$ 703,38",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5871922"
     },
     {
         "id": 5871921,
@@ -3945,6 +5057,23 @@
             "Direito"
         ],
         "url": "https://ciee.app/detalhes-vaga/5871841"
+    },
+    {
+        "id": 5871833,
+        "titulo": "ESTAGIO",
+        "empresa": "MINISTERIO DA AGRICULTURA,PECUARIA E ABASTECIMENTO",
+        "descricao": "Administração pública em geral",
+        "cidade": "Brasília",
+        "estado": "DF",
+        "bolsa": "R$ 1.125,69",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Direito"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5871833"
     },
     {
         "id": 5871820,
@@ -4191,6 +5320,23 @@
         "url": "https://ciee.app/detalhes-vaga/5871739"
     },
     {
+        "id": 5871707,
+        "titulo": "ESTAGIO",
+        "empresa": "FP -CLINICA OFTALMOLOGICA LTDA",
+        "descricao": "Atividade médica ambulatorial restrita a consultas",
+        "cidade": "Santos",
+        "estado": "SP",
+        "bolsa": "R$ 600,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5871707"
+    },
+    {
         "id": 5871666,
         "titulo": "ESTAGIO",
         "empresa": "CIEE",
@@ -4252,15 +5398,19 @@
         "descricao": "Atividades de fisioterapia",
         "cidade": "Rio de Janeiro",
         "estado": "RJ",
-        "bolsa": "R$ 1.200,00",
-        "beneficios": [],
+        "bolsa": "R$ 1.000,00",
+        "beneficios": [
+            {
+                "codigo": 64,
+                "beneficio": "Auxílio alimentação mensal",
+                "valor": 200
+            }
+        ],
         "logo": "",
         "pcd": false,
         "modalidade": "Presencial",
         "cursos": [
-            "Educação Física",
-            "Fisioterapia",
-            "Medicina"
+            "Administração"
         ],
         "url": "https://ciee.app/detalhes-vaga/5871655"
     },
@@ -4436,23 +5586,6 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5871533"
-    },
-    {
-        "id": 5871530,
-        "titulo": "ESTAGIO",
-        "empresa": "INSTITUTO NACIONAL DO SEGURO SOCIAL-INSS",
-        "descricao": "Seguridade social obrigatória",
-        "cidade": "Petrópolis",
-        "estado": "RJ",
-        "bolsa": "R$ 787,98",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Direito"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5871530"
     },
     {
         "id": 5871521,
@@ -4705,6 +5838,23 @@
         "url": "https://ciee.app/detalhes-vaga/5871296"
     },
     {
+        "id": 5871294,
+        "titulo": "ESTAGIO",
+        "empresa": "INFRAERO",
+        "descricao": "Atividades auxiliares dos transportes aéreos, exceto operação dos aeroportos e campos de aterrissagem",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ",
+        "bolsa": "R$ 1.334,34",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5871294"
+    },
+    {
         "id": 5871280,
         "titulo": "ESTAGIO",
         "empresa": "SECULLOS APOIO ADMINISTRATIVO",
@@ -4831,23 +5981,6 @@
             "Administração"
         ],
         "url": "https://ciee.app/detalhes-vaga/5871178"
-    },
-    {
-        "id": 5871164,
-        "titulo": "ESTAGIO",
-        "empresa": "VS SISTEMAS DE INFORMAÇÃO LTDA",
-        "descricao": "Desenvolvimento e licenciamento de programas de computador customizáveis",
-        "cidade": "Rio de Janeiro",
-        "estado": "RJ",
-        "bolsa": "R$ 1.668,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5871164"
     },
     {
         "id": 5871157,
@@ -5038,23 +6171,6 @@
             "Administração"
         ],
         "url": "https://ciee.app/detalhes-vaga/5871112"
-    },
-    {
-        "id": 5871111,
-        "titulo": "ESTAGIO",
-        "empresa": "CRISBONI HORTIFRUTI",
-        "descricao": "Comércio varejista de hortifrutigranjeiros",
-        "cidade": "Salvador",
-        "estado": "BA",
-        "bolsa": "R$ 800,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5871111"
     },
     {
         "id": 5871108,
@@ -5488,25 +6604,6 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5870952"
-    },
-    {
-        "id": 5870950,
-        "titulo": "ESTAGIO",
-        "empresa": "SENADO FEDERAL - NÚCLEO DE MÍDIAS SOCIAIS - NMIDIAS",
-        "descricao": "Administração pública em geral",
-        "cidade": "Brasília",
-        "estado": "DF",
-        "bolsa": "R$ 1.572,47",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Comunicação",
-            "Marketing",
-            "Publicidade e Propaganda"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5870950"
     },
     {
         "id": 5870944,
@@ -5964,29 +7061,6 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5870727"
-    },
-    {
-        "id": 5870717,
-        "titulo": "ESTAGIO",
-        "empresa": "LANG E FILHOS MATERIAL HOSPITALAR LTDA",
-        "descricao": "Comércio atacadista de instrumentos e materiais para uso médico, cirúrgico, hospitalar e de laboratórios",
-        "cidade": "Rio de Janeiro",
-        "estado": "RJ",
-        "bolsa": "R$ 1.000,00",
-        "beneficios": [
-            {
-                "codigo": 67,
-                "beneficio": "Auxílio alimentação diario",
-                "valor": 30
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5870717"
     },
     {
         "id": 5870697,
@@ -6581,9 +7655,7 @@
         "pcd": false,
         "modalidade": "Presencial",
         "cursos": [
-            "Administração",
-            "Economia",
-            "Finanças"
+            "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5870374"
     },
@@ -6905,25 +7977,6 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5870204"
-    },
-    {
-        "id": 5870185,
-        "titulo": "ESTAGIO",
-        "empresa": "SKANDIA INDUSTRIA DE TINTAS E REVESTIMENTOS LTDA",
-        "descricao": "Fabricação de tintas, vernizes, esmaltes e lacas",
-        "cidade": "Duque de Caxias",
-        "estado": "RJ",
-        "bolsa": "R$ 1.000,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Engenharia Química",
-            "Farmácia",
-            "Química"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5870185"
     },
     {
         "id": 5870179,
@@ -7298,24 +8351,6 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5870045"
-    },
-    {
-        "id": 5870016,
-        "titulo": "ESTAGIO",
-        "empresa": "CRN 3",
-        "descricao": "Atividades de fiscalização profissional",
-        "cidade": "São Paulo",
-        "estado": "SP",
-        "bolsa": "R$ 2.277,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Alimentação e Nutrição",
-            "Nutrição"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5870016"
     },
     {
         "id": 5870014,
@@ -7901,34 +8936,6 @@
         "url": "https://ciee.app/detalhes-vaga/5869780"
     },
     {
-        "id": 5869777,
-        "titulo": "ESTAGIO",
-        "empresa": "G4",
-        "descricao": "Comércio atacadista de leite e laticínios",
-        "cidade": "São Paulo",
-        "estado": "SP",
-        "bolsa": "R$ 1.600,00",
-        "beneficios": [
-            {
-                "codigo": 44,
-                "beneficio": "Lanche na empresa",
-                "valor": 0
-            },
-            {
-                "codigo": 43,
-                "beneficio": "Cesta básica",
-                "valor": 0
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5869777"
-    },
-    {
         "id": 5869774,
         "titulo": "ESTAGIO",
         "empresa": "MARCOS REMI MATTE LTDA",
@@ -8362,7 +9369,7 @@
         "descricao": "Comércio varejista de materiais de construção em geral",
         "cidade": "São José da Tapera",
         "estado": "AL",
-        "bolsa": "R$ 750,00",
+        "bolsa": "R$ 700,00",
         "beneficios": [],
         "logo": "",
         "pcd": false,
@@ -8529,6 +9536,23 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5869590"
+    },
+    {
+        "id": 5869548,
+        "titulo": "ESTAGIO",
+        "empresa": "Vaga confidencial",
+        "descricao": "",
+        "cidade": "Campos dos Goytacazes",
+        "estado": "RJ",
+        "bolsa": "R$ 700,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5869548"
     },
     {
         "id": 5869545,
@@ -8850,23 +9874,6 @@
         "url": "https://ciee.app/detalhes-vaga/5869444"
     },
     {
-        "id": 5869439,
-        "titulo": "ESTAGIO",
-        "empresa": "RAVANNI MODA'S E ARTIGOS PARA O LAR",
-        "descricao": "Comercio varejista de artigos de cama, mesa e banho",
-        "cidade": "São Pedro da Aldeia",
-        "estado": "RJ",
-        "bolsa": "R$ 700,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5869439"
-    },
-    {
         "id": 5869437,
         "titulo": "ESTAGIO",
         "empresa": "SUPERMERCADO THAIS DE PIRAJU",
@@ -8882,23 +9889,6 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5869437"
-    },
-    {
-        "id": 5869432,
-        "titulo": "ESTAGIO",
-        "empresa": "ZEBRINHA - COMERCIO DE MATERIAIS DE CONSTRUCAO LTDA",
-        "descricao": "Comércio varejista de materiais de construção em geral",
-        "cidade": "São Vicente",
-        "estado": "SP",
-        "bolsa": "R$ 700,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5869432"
     },
     {
         "id": 5869429,
@@ -12910,6 +13900,23 @@
         "url": "https://ciee.app/detalhes-vaga/5867463"
     },
     {
+        "id": 5867449,
+        "titulo": "ESTAGIO",
+        "empresa": "SOUBELLAS CURSOS & CLINICA.",
+        "descricao": "Treinamento em desenvolvimento profissional e gerencial",
+        "cidade": "Goiânia",
+        "estado": "GO",
+        "bolsa": "R$ 750,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5867449"
+    },
+    {
         "id": 5867448,
         "titulo": "ESTAGIO",
         "empresa": "TOTALJUR LTDA",
@@ -13199,23 +14206,6 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5867293"
-    },
-    {
-        "id": 5867285,
-        "titulo": "ESTAGIO",
-        "empresa": "WSL SUPRIMENTOS",
-        "descricao": "Comércio varejista de artigos de papelaria",
-        "cidade": "Rio de Janeiro",
-        "estado": "RJ",
-        "bolsa": "R$ 1.000,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5867285"
     },
     {
         "id": 5867279,
@@ -13936,6 +14926,23 @@
         "url": "https://ciee.app/detalhes-vaga/5866844"
     },
     {
+        "id": 5866831,
+        "titulo": "ESTAGIO",
+        "empresa": "UNI COMPRA",
+        "descricao": "Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios - supermercados",
+        "cidade": "Maceió",
+        "estado": "AL",
+        "bolsa": "R$ 1.000,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5866831"
+    },
+    {
         "id": 5866820,
         "titulo": "ESTAGIO",
         "empresa": "J. M. V. MANUTENCAO EM INFORMATICA LTDA",
@@ -14354,23 +15361,6 @@
         "url": "https://ciee.app/detalhes-vaga/5866641"
     },
     {
-        "id": 5866638,
-        "titulo": "ESTAGIO",
-        "empresa": "TELEMENSAGENS",
-        "descricao": "Serviços de organização de feiras, congressos, exposições e festas",
-        "cidade": "Volta Redonda",
-        "estado": "RJ",
-        "bolsa": "R$ 550,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5866638"
-    },
-    {
         "id": 5866625,
         "titulo": "ESTAGIO",
         "empresa": "MACCAFERRI DO BRASIL LTDA",
@@ -14541,23 +15531,6 @@
             "Engenharia de Produção"
         ],
         "url": "https://ciee.app/detalhes-vaga/5866597"
-    },
-    {
-        "id": 5866595,
-        "titulo": "ESTAGIO",
-        "empresa": "EDUCAMAIS",
-        "descricao": "Formação de condutores",
-        "cidade": "São Paulo",
-        "estado": "SP",
-        "bolsa": "R$ 1.000,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5866595"
     },
     {
         "id": 5866585,
@@ -16390,29 +17363,6 @@
             "Administração"
         ],
         "url": "https://ciee.app/detalhes-vaga/5865586"
-    },
-    {
-        "id": 5865585,
-        "titulo": "ESTAGIO",
-        "empresa": "CLARA ASSESSORIA DE INVESTIMENTOS LTDA",
-        "descricao": "Agentes de investimentos em aplicações financeiras",
-        "cidade": "São Paulo",
-        "estado": "SP",
-        "bolsa": "R$ 1.800,00",
-        "beneficios": [
-            {
-                "codigo": 57,
-                "beneficio": "Possibilidade efetivação",
-                "valor": 0
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5865585"
     },
     {
         "id": 5865577,
@@ -18730,44 +19680,6 @@
         "url": "https://ciee.app/detalhes-vaga/5864692"
     },
     {
-        "id": 5864677,
-        "titulo": "ESTAGIO",
-        "empresa": "Cep Centro De Ensino Profissional",
-        "descricao": "Treinamento em informática",
-        "cidade": "Manaus",
-        "estado": "AM",
-        "bolsa": "R$ 800,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Educação Física",
-            "Letras",
-            "Pedagogia"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5864677"
-    },
-    {
-        "id": 5864657,
-        "titulo": "ESTAGIO",
-        "empresa": "Cep Centro De Ensino Profissional",
-        "descricao": "Treinamento em informática",
-        "cidade": "Manaus",
-        "estado": "AM",
-        "bolsa": "R$ 800,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Educação Física",
-            "Letras",
-            "Pedagogia"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5864657"
-    },
-    {
         "id": 5864656,
         "titulo": "ESTAGIO",
         "empresa": "CANTINHO DA SIRIA",
@@ -18817,6 +19729,23 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5864588"
+    },
+    {
+        "id": 5864525,
+        "titulo": "ESTAGIO",
+        "empresa": "MED SCAN",
+        "descricao": "Serviços de diagnóstico por imagem com uso de radiação ionizante, exceto tomografia",
+        "cidade": "Sobral",
+        "estado": "CE",
+        "bolsa": "R$ 650,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5864525"
     },
     {
         "id": 5864513,
@@ -19596,6 +20525,39 @@
         "url": "https://ciee.app/detalhes-vaga/5864111"
     },
     {
+        "id": 5864095,
+        "titulo": "ESTAGIO",
+        "empresa": "VIENA",
+        "descricao": "Comércio atacadista de produtos alimentícios em geral",
+        "cidade": "Salvador",
+        "estado": "BA",
+        "bolsa": "R$ 700,00",
+        "beneficios": [
+            {
+                "codigo": 56,
+                "beneficio": "Possibilidade prorrogação",
+                "valor": 0
+            },
+            {
+                "codigo": 65,
+                "beneficio": "Recesso Remunerado",
+                "valor": 0
+            },
+            {
+                "codigo": 57,
+                "beneficio": "Possibilidade efetivação",
+                "valor": 0
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5864095"
+    },
+    {
         "id": 5864051,
         "titulo": "ESTAGIO",
         "empresa": "FARMACIA SAO BENTO",
@@ -19611,6 +20573,39 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5864051"
+    },
+    {
+        "id": 5864050,
+        "titulo": "ESTAGIO",
+        "empresa": "VIENA",
+        "descricao": "Comércio atacadista de produtos alimentícios em geral",
+        "cidade": "Salvador",
+        "estado": "BA",
+        "bolsa": "R$ 700,00",
+        "beneficios": [
+            {
+                "codigo": 57,
+                "beneficio": "Possibilidade efetivação",
+                "valor": 0
+            },
+            {
+                "codigo": 65,
+                "beneficio": "Recesso Remunerado",
+                "valor": 0
+            },
+            {
+                "codigo": 56,
+                "beneficio": "Possibilidade prorrogação",
+                "valor": 0
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5864050"
     },
     {
         "id": 5864035,
@@ -19706,23 +20701,6 @@
         "url": "https://ciee.app/detalhes-vaga/5863979"
     },
     {
-        "id": 5863970,
-        "titulo": "ESTAGIO",
-        "empresa": "27.127.256 GUSTAVO HENRIQUE ROHLOFF",
-        "descricao": "Atividades de estética e outros serviços de cuidados com a beleza",
-        "cidade": "Brasília",
-        "estado": "DF",
-        "bolsa": "R$ 1.000,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5863970"
-    },
-    {
         "id": 5863955,
         "titulo": "ESTAGIO",
         "empresa": "GOMES E LOYOLA ADVOGADOS ASSOCIADOS",
@@ -19774,6 +20752,23 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5863920"
+    },
+    {
+        "id": 5863888,
+        "titulo": "ESTAGIO",
+        "empresa": "TARGET",
+        "descricao": "Comércio varejista especializado de eletrodomésticos e equipamentos de áudio e vídeo",
+        "cidade": "São José dos Campos",
+        "estado": "SP",
+        "bolsa": "R$ 900,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Engenharia Elétrica"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5863888"
     },
     {
         "id": 5863885,
@@ -19930,31 +20925,6 @@
             "Finanças"
         ],
         "url": "https://ciee.app/detalhes-vaga/5863765"
-    },
-    {
-        "id": 5863764,
-        "titulo": "ESTAGIO",
-        "empresa": "ACADEMIA ACTFLY",
-        "descricao": "Agências de publicidade",
-        "cidade": "Salvador",
-        "estado": "BA",
-        "bolsa": "R$ 900,00",
-        "beneficios": [
-            {
-                "codigo": 67,
-                "beneficio": "Auxílio alimentação diario",
-                "valor": 19.76
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Comunicação",
-            "Marketing",
-            "Publicidade e Propaganda"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5863764"
     },
     {
         "id": 5863760,
@@ -21233,39 +22203,6 @@
         "url": "https://ciee.app/detalhes-vaga/5862876"
     },
     {
-        "id": 5862861,
-        "titulo": "ESTAGIO",
-        "empresa": "MAUSER DO BRASIL EMBALAGENS INDUSTRIAIS S.A.",
-        "descricao": "Fabricação de embalagens metálicas",
-        "cidade": "LOUVEIRA",
-        "estado": "SP",
-        "bolsa": "R$ 1.500,00",
-        "beneficios": [
-            {
-                "codigo": 43,
-                "beneficio": "Cesta básica",
-                "valor": 0
-            },
-            {
-                "codigo": 47,
-                "beneficio": "Assistência médica",
-                "valor": 0
-            },
-            {
-                "codigo": 53,
-                "beneficio": "Refeitório no local",
-                "valor": 0
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5862861"
-    },
-    {
         "id": 5862852,
         "titulo": "ESTAGIO",
         "empresa": "CONDOMINIO BRASIL 21",
@@ -21278,9 +22215,9 @@
         "pcd": false,
         "modalidade": "Presencial",
         "cursos": [
-            "Gestão em Turismo",
-            "Hotelaria",
-            "Turismo"
+            "Educação Física",
+            "Letras",
+            "Pedagogia"
         ],
         "url": "https://ciee.app/detalhes-vaga/5862852"
     },
@@ -22063,6 +23000,23 @@
         "url": "https://ciee.app/detalhes-vaga/5862245"
     },
     {
+        "id": 5862236,
+        "titulo": "ESTAGIO",
+        "empresa": "MERCANTIL VITORIA",
+        "descricao": "Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios - minimercados, mercearias e armazéns",
+        "cidade": "Imperatriz",
+        "estado": "MA",
+        "bolsa": "R$ 700,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5862236"
+    },
+    {
         "id": 5862222,
         "titulo": "ESTAGIO",
         "empresa": "FACTORY 969 IMPORTACAO E EXPORTACAO DE MAQUINAS CNC LTDA",
@@ -22131,6 +23085,23 @@
             "Administração"
         ],
         "url": "https://ciee.app/detalhes-vaga/5862199"
+    },
+    {
+        "id": 5862197,
+        "titulo": "ESTAGIO",
+        "empresa": "MINISTERIO",
+        "descricao": "Administração pública em geral",
+        "cidade": "Teresópolis",
+        "estado": "RJ",
+        "bolsa": "R$ 1.215,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5862197"
     },
     {
         "id": 5862195,
@@ -22324,23 +23295,6 @@
         "url": "https://ciee.app/detalhes-vaga/5862072"
     },
     {
-        "id": 5862070,
-        "titulo": "ESTAGIO",
-        "empresa": "Vaga confidencial",
-        "descricao": "",
-        "cidade": "Botucatu",
-        "estado": "SP",
-        "bolsa": "R$ 700,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Odontologia"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5862070"
-    },
-    {
         "id": 5862060,
         "titulo": "ESTAGIO",
         "empresa": "INFINITY SOLUTION DO BRASIL LTDA",
@@ -22356,23 +23310,6 @@
             "Administração"
         ],
         "url": "https://ciee.app/detalhes-vaga/5862060"
-    },
-    {
-        "id": 5862055,
-        "titulo": "ESTAGIO",
-        "empresa": "MUNDO VERDE",
-        "descricao": "Comércio varejista de produtos alimentícios em geral ou especializado em produtos alimentícios não especificados anteriormente",
-        "cidade": "Volta Redonda",
-        "estado": "RJ",
-        "bolsa": "R$ 700,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5862055"
     },
     {
         "id": 5862042,
@@ -23385,23 +24322,6 @@
         "url": "https://ciee.app/detalhes-vaga/5861207"
     },
     {
-        "id": 5861188,
-        "titulo": "ESTAGIO",
-        "empresa": "RUBENS CILONE DE ANDRADE",
-        "descricao": "Comércio varejista de doces, balas, bombons e semelhantes",
-        "cidade": "São Paulo",
-        "estado": "SP",
-        "bolsa": "R$ 900,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5861188"
-    },
-    {
         "id": 5861171,
         "titulo": "ESTAGIO",
         "empresa": "JANAINA EUGENIA ESTETICA AVANCADA",
@@ -24348,23 +25268,6 @@
         "url": "https://ciee.app/detalhes-vaga/5860557"
     },
     {
-        "id": 5860552,
-        "titulo": "ESTAGIO",
-        "empresa": "PORO RESTAURANTE & BAR",
-        "descricao": "Restaurantes e similares",
-        "cidade": "Salvador",
-        "estado": "BA",
-        "bolsa": "R$ 850,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5860552"
-    },
-    {
         "id": 5860551,
         "titulo": "ESTAGIO",
         "empresa": "ONIX OPERADORA DE PLANOS DE SAUDE LTDA",
@@ -24873,6 +25776,23 @@
             "Administração"
         ],
         "url": "https://ciee.app/detalhes-vaga/5860219"
+    },
+    {
+        "id": 5860214,
+        "titulo": "ESTAGIO",
+        "empresa": "PRA GERENCIAMENTO E CONSTRUCAO LTDA",
+        "descricao": "Serviços de arquitetura",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "bolsa": "R$ 850,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5860214"
     },
     {
         "id": 5860204,
@@ -25587,29 +26507,6 @@
             "Design de Interiores"
         ],
         "url": "https://ciee.app/detalhes-vaga/5859754"
-    },
-    {
-        "id": 5859746,
-        "titulo": "ESTAGIO",
-        "empresa": "SANTOS PORT AUTHORITY",
-        "descricao": "Administração da infra-estrutura portuária",
-        "cidade": "Santos",
-        "estado": "SP",
-        "bolsa": "R$ 9,27",
-        "beneficios": [
-            {
-                "codigo": 67,
-                "beneficio": "Auxílio alimentação diario",
-                "valor": 24.68
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5859746"
     },
     {
         "id": 5859716,
@@ -26459,23 +27356,6 @@
             "Pedagogia"
         ],
         "url": "https://ciee.app/detalhes-vaga/5859168"
-    },
-    {
-        "id": 5859166,
-        "titulo": "ESTAGIO",
-        "empresa": "FORTALEZA LOG",
-        "descricao": "Serviços de entrega rápida",
-        "cidade": "Fortaleza",
-        "estado": "CE",
-        "bolsa": "R$ 650,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5859166"
     },
     {
         "id": 5859120,
@@ -27355,34 +28235,6 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5858567"
-    },
-    {
-        "id": 5858564,
-        "titulo": "ESTAGIO",
-        "empresa": "CARMONA & RINALDI LTDA",
-        "descricao": "Atividades de cobranças e informações cadastrais",
-        "cidade": "Praia Grande",
-        "estado": "SP",
-        "bolsa": "R$ 700,00",
-        "beneficios": [
-            {
-                "codigo": 57,
-                "beneficio": "Possibilidade efetivação",
-                "valor": 0
-            },
-            {
-                "codigo": 56,
-                "beneficio": "Possibilidade prorrogação",
-                "valor": 0
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5858564"
     },
     {
         "id": 5858563,
@@ -29134,6 +29986,23 @@
         "url": "https://ciee.app/detalhes-vaga/5857126"
     },
     {
+        "id": 5857125,
+        "titulo": "ESTAGIO",
+        "empresa": "GURIZAO PARTS LEDS & ACESSORIOS",
+        "descricao": "Comércio por atacado de peças e acessórios novos para veículos automotores",
+        "cidade": "Cuiabá",
+        "estado": "MT",
+        "bolsa": "R$ 1.100,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5857125"
+    },
+    {
         "id": 5857120,
         "titulo": "ESTAGIO",
         "empresa": "FIC",
@@ -29889,6 +30758,23 @@
         "url": "https://ciee.app/detalhes-vaga/5856503"
     },
     {
+        "id": 5856489,
+        "titulo": "ESTAGIO",
+        "empresa": "SENADO FEDERAL - SERVIÇO DE PESQUISA E ATENÇÃO AO USUÁRIO DA BIBLIOTECA - SEUBIB",
+        "descricao": "Administração pública em geral",
+        "cidade": "Brasília",
+        "estado": "DF",
+        "bolsa": "R$ 1.572,47",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5856489"
+    },
+    {
         "id": 5856471,
         "titulo": "ESTAGIO",
         "empresa": "SIND DOS TRAB EM CORREIOS E TELEG NO EST DA BAHIA",
@@ -29906,21 +30792,23 @@
         "url": "https://ciee.app/detalhes-vaga/5856471"
     },
     {
-        "id": 5856447,
+        "id": 5856443,
         "titulo": "ESTAGIO",
-        "empresa": "WORLD TENNIS",
-        "descricao": "Comércio varejista de artigos do vestuário e acessórios",
-        "cidade": "Cariacica",
-        "estado": "ES",
-        "bolsa": "R$ 1.000,00",
+        "empresa": "SENADO FEDERAL - GABINETE DA SENADORA SORAYA THRONICKE - GSSTHRON",
+        "descricao": "Administração pública em geral",
+        "cidade": "BRASÍLIA",
+        "estado": "DF",
+        "bolsa": "R$ 1.572,47",
         "beneficios": [],
         "logo": "",
         "pcd": false,
         "modalidade": "Presencial",
         "cursos": [
-            "Outros"
+            "Comunicação",
+            "Marketing",
+            "Publicidade e Propaganda"
         ],
-        "url": "https://ciee.app/detalhes-vaga/5856447"
+        "url": "https://ciee.app/detalhes-vaga/5856443"
     },
     {
         "id": 5856426,
@@ -30678,25 +31566,6 @@
         "url": "https://ciee.app/detalhes-vaga/5855599"
     },
     {
-        "id": 5855586,
-        "titulo": "ESTAGIO",
-        "empresa": "ROSA MANIPULACAO",
-        "descricao": "Comércio varejista de produtos farmacêuticos, com manipulação de fórmulas",
-        "cidade": "Porto Velho",
-        "estado": "RO",
-        "bolsa": "R$ 800,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Biomedicina",
-            "Farmácia",
-            "Química"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5855586"
-    },
-    {
         "id": 5855584,
         "titulo": "ESTAGIO",
         "empresa": "SQLINK",
@@ -31370,6 +32239,23 @@
         "url": "https://ciee.app/detalhes-vaga/5855198"
     },
     {
+        "id": 5855181,
+        "titulo": "ESTAGIO",
+        "empresa": "ADAPTA T.O",
+        "descricao": "Atividades de terapia ocupacional",
+        "cidade": "Cuiabá",
+        "estado": "MT",
+        "bolsa": "R$ 713,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5855181"
+    },
+    {
         "id": 5855160,
         "titulo": "ESTAGIO",
         "empresa": "LBRK CONSULTORIA AUDITORIA ASSES LTDA",
@@ -31823,6 +32709,23 @@
             "Nutrição"
         ],
         "url": "https://ciee.app/detalhes-vaga/5854935"
+    },
+    {
+        "id": 5854922,
+        "titulo": "ESTAGIO",
+        "empresa": "LABODENTAL",
+        "descricao": "Comércio atacadista de produtos odontológicos",
+        "cidade": "Belém",
+        "estado": "PA",
+        "bolsa": "R$ 800,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Outros"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5854922"
     },
     {
         "id": 5854920,
@@ -32547,29 +33450,6 @@
         "url": "https://ciee.app/detalhes-vaga/5854031"
     },
     {
-        "id": 5854003,
-        "titulo": "ESTAGIO",
-        "empresa": "JNL IMPORTADORA E DISTRIBUIDORA LTDA",
-        "descricao": "Comércio atacadista especializado em outros produtos intermediários não especificados anteriormente",
-        "cidade": "Osasco",
-        "estado": "SP",
-        "bolsa": "R$ 1.500,00",
-        "beneficios": [
-            {
-                "codigo": 64,
-                "beneficio": "Auxílio alimentação mensal",
-                "valor": 200
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5854003"
-    },
-    {
         "id": 5853994,
         "titulo": "ESTAGIO",
         "empresa": "Concred",
@@ -33029,6 +33909,23 @@
         "url": "https://ciee.app/detalhes-vaga/5853756"
     },
     {
+        "id": 5853755,
+        "titulo": "ESTAGIO",
+        "empresa": "ABRASEL",
+        "descricao": "Atividades de associações de defesa de direitos sociais",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ",
+        "bolsa": "R$ 1.000,00",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5853755"
+    },
+    {
         "id": 5853729,
         "titulo": "ESTAGIO",
         "empresa": "CARDIO CENTRO",
@@ -33242,34 +34139,6 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5853546"
-    },
-    {
-        "id": 5853537,
-        "titulo": "ESTAGIO",
-        "empresa": "Confidencial",
-        "descricao": "Aluguel de imóveis próprios",
-        "cidade": "Cotia",
-        "estado": "SP",
-        "bolsa": "R$ 1.400,00",
-        "beneficios": [
-            {
-                "codigo": 64,
-                "beneficio": "Auxílio alimentação mensal",
-                "valor": 400
-            },
-            {
-                "codigo": 43,
-                "beneficio": "Cesta básica",
-                "valor": 0
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5853537"
     },
     {
         "id": 5853520,
@@ -35690,6 +36559,23 @@
         "url": "https://ciee.app/detalhes-vaga/5851050"
     },
     {
+        "id": 5851048,
+        "titulo": "ESTAGIO",
+        "empresa": "PREFEITURA MUNICIPAL DE JACAREI",
+        "descricao": "Administração pública em geral",
+        "cidade": "Jacareí",
+        "estado": "SP",
+        "bolsa": "R$ 1.055,63",
+        "beneficios": [],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5851048"
+    },
+    {
         "id": 5851019,
         "titulo": "ESTAGIO",
         "empresa": "YUSEN LOGISTICS DO BRASIL LTDA.",
@@ -35885,23 +36771,6 @@
         "url": "https://ciee.app/detalhes-vaga/5850862"
     },
     {
-        "id": 5850799,
-        "titulo": "ESTAGIO",
-        "empresa": "MOTO VIX SERRA",
-        "descricao": "Comércio a varejo de motocicletas e motonetas novas",
-        "cidade": "Serra",
-        "estado": "ES",
-        "bolsa": "R$ 700,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5850799"
-    },
-    {
         "id": 5850796,
         "titulo": "ESTAGIO",
         "empresa": "INSS",
@@ -36029,7 +36898,7 @@
         "descricao": "",
         "cidade": "Sobral",
         "estado": "CE",
-        "bolsa": "R$ 500,00",
+        "bolsa": "R$ 250,00",
         "beneficios": [],
         "logo": "",
         "pcd": false,
@@ -36815,6 +37684,31 @@
         "url": "https://ciee.app/detalhes-vaga/5849904"
     },
     {
+        "id": 5849897,
+        "titulo": "ESTAGIO",
+        "empresa": "SERVICO NACIONAL DE APRENDIZAGEM RURAL SENAR-AR/RJ",
+        "descricao": "Treinamento em desenvolvimento profissional e gerencial",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ",
+        "bolsa": "R$ 1.669,00",
+        "beneficios": [
+            {
+                "codigo": 64,
+                "beneficio": "Auxílio alimentação mensal",
+                "valor": 521
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Comunicação",
+            "Marketing",
+            "Publicidade e Propaganda"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5849897"
+    },
+    {
         "id": 5849828,
         "titulo": "ESTAGIO",
         "empresa": "A. P .P. R DOS SANTOS CAMPOS",
@@ -37070,6 +37964,29 @@
         "url": "https://ciee.app/detalhes-vaga/5849435"
     },
     {
+        "id": 5849390,
+        "titulo": "ESTAGIO",
+        "empresa": "Confidencial",
+        "descricao": "Atividades de fiscalização profissional",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "bolsa": "R$ 2.311,65",
+        "beneficios": [
+            {
+                "codigo": 67,
+                "beneficio": "Auxílio alimentação diario",
+                "valor": 29
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Direito"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5849390"
+    },
+    {
         "id": 5849386,
         "titulo": "ESTAGIO",
         "empresa": "HIROTA SUPERMERCADOS - LOJA 03",
@@ -37085,6 +38002,29 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5849386"
+    },
+    {
+        "id": 5849333,
+        "titulo": "ESTAGIO",
+        "empresa": "Confidencial",
+        "descricao": "Atividades de fiscalização profissional",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "bolsa": "R$ 2.311,65",
+        "beneficios": [
+            {
+                "codigo": 67,
+                "beneficio": "Auxílio alimentação diario",
+                "valor": 29
+            }
+        ],
+        "logo": "",
+        "pcd": false,
+        "modalidade": "Presencial",
+        "cursos": [
+            "Administração"
+        ],
+        "url": "https://ciee.app/detalhes-vaga/5849333"
     },
     {
         "id": 5849319,
@@ -37342,938 +38282,5 @@
             "Outros"
         ],
         "url": "https://ciee.app/detalhes-vaga/5849066"
-    },
-    {
-        "id": 5849054,
-        "titulo": "ESTAGIO",
-        "empresa": "SERRAF DISTRIBUIDORA DE PECAS PARA MOTORES LTDA",
-        "descricao": "Comércio a varejo de peças e acessórios novos para veículos automotores",
-        "cidade": "Osasco",
-        "estado": "SP",
-        "bolsa": "R$ 703,38",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5849054"
-    },
-    {
-        "id": 5849045,
-        "titulo": "ESTAGIO",
-        "empresa": "SERRAF DISTRIBUIDORA DE PECAS PARA MOTORES LTDA",
-        "descricao": "Comércio a varejo de peças e acessórios novos para veículos automotores",
-        "cidade": "Sorocaba",
-        "estado": "SP",
-        "bolsa": "R$ 703,38",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5849045"
-    },
-    {
-        "id": 5849023,
-        "titulo": "ESTAGIO",
-        "empresa": "VS SOLUCOES, SERVICOS EM TECNOLOGIA DA INFORMACAO",
-        "descricao": "Consultoria em tecnologia da informação",
-        "cidade": "Brasília",
-        "estado": "DF",
-        "bolsa": "R$ 1.000,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5849023"
-    },
-    {
-        "id": 5848994,
-        "titulo": "ESTAGIO",
-        "empresa": "Confidencial",
-        "descricao": "",
-        "cidade": "Carira",
-        "estado": "SE",
-        "bolsa": "R$ 780,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Direito"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848994"
-    },
-    {
-        "id": 5848990,
-        "titulo": "ESTAGIO",
-        "empresa": "UNIPLAN",
-        "descricao": "Educação superior - graduação",
-        "cidade": "Fortaleza",
-        "estado": "CE",
-        "bolsa": "R$ 1.000,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848990"
-    },
-    {
-        "id": 5848975,
-        "titulo": "ESTAGIO",
-        "empresa": "ACADEMIA RUN WAY",
-        "descricao": "Atividades de condicionamento físico",
-        "cidade": "Brasília",
-        "estado": "DF",
-        "bolsa": "R$ 800,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848975"
-    },
-    {
-        "id": 5848973,
-        "titulo": "ESTAGIO",
-        "empresa": "Confidencial",
-        "descricao": "Atividade médica ambulatorial com recursos para realização de procedimentos cirúrgicos",
-        "cidade": "Nova Friburgo",
-        "estado": "RJ",
-        "bolsa": "R$ 800,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848973"
-    },
-    {
-        "id": 5848970,
-        "titulo": "ESTAGIO",
-        "empresa": "OTIMIZZE CONTABILIDADE",
-        "descricao": "Atividades de contabilidade",
-        "cidade": "SALTO DE PIRAPORA",
-        "estado": "SP",
-        "bolsa": "R$ 1.200,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração",
-            "Contabilidade",
-            "Finanças"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848970"
-    },
-    {
-        "id": 5848963,
-        "titulo": "ESTAGIO",
-        "empresa": "DANIELLE FRANCINE ALVES RIBEIRO 21888186879",
-        "descricao": "Comércio varejista de artigos do vestuário e acessórios",
-        "cidade": "São José dos Campos",
-        "estado": "SP",
-        "bolsa": "R$ 800,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848963"
-    },
-    {
-        "id": 5848951,
-        "titulo": "ESTAGIO",
-        "empresa": "ACADEMIA RUN WAY",
-        "descricao": "Atividades de condicionamento físico",
-        "cidade": "Brasília",
-        "estado": "DF",
-        "bolsa": "R$ 800,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848951"
-    },
-    {
-        "id": 5848934,
-        "titulo": "ESTAGIO",
-        "empresa": "Confidencial",
-        "descricao": "Atividade médica ambulatorial com recursos para realização de procedimentos cirúrgicos",
-        "cidade": "Nova Friburgo",
-        "estado": "RJ",
-        "bolsa": "R$ 800,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Biomedicina",
-            "Enfermagem",
-            "Fisioterapia",
-            "Medicina",
-            "Nutrição"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848934"
-    },
-    {
-        "id": 5848923,
-        "titulo": "ESTAGIO",
-        "empresa": "ESPORTE NUTRI LTDA",
-        "descricao": "Comércio varejista de produtos alimentícios em geral ou especializado em produtos alimentícios não especificados anteriormente",
-        "cidade": "Brasília",
-        "estado": "DF",
-        "bolsa": "R$ 1.677,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848923"
-    },
-    {
-        "id": 5848918,
-        "titulo": "ESTAGIO",
-        "empresa": "SAO FRANCISCO VIDA",
-        "descricao": "Planos de saúde",
-        "cidade": "Jacareí",
-        "estado": "SP",
-        "bolsa": "R$ 1.300,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848918"
-    },
-    {
-        "id": 5848891,
-        "titulo": "ESTAGIO",
-        "empresa": "GEEK PLUS",
-        "descricao": "Comércio varejista de brinquedos e artigos recreativos",
-        "cidade": "São Paulo",
-        "estado": "SP",
-        "bolsa": "R$ 1.100,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Comunicação",
-            "Marketing",
-            "Publicidade e Propaganda"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848891"
-    },
-    {
-        "id": 5848886,
-        "titulo": "ESTAGIO",
-        "empresa": "ASSYM DISTRIBUIDORA EIRELI",
-        "descricao": "Comércio varejista de outros artigos de uso pessoal e doméstico não especificados anteriormente",
-        "cidade": "São Paulo",
-        "estado": "SP",
-        "bolsa": "R$ 1.500,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848886"
-    },
-    {
-        "id": 5848842,
-        "titulo": "ESTAGIO",
-        "empresa": "ELAINE CRISTINA DA SILVA 32461145873",
-        "descricao": "Ensino de arte e cultura não especificado anteriormente",
-        "cidade": "São Paulo",
-        "estado": "SP",
-        "bolsa": "R$ 1.200,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Comunicação",
-            "Marketing",
-            "Publicidade e Propaganda"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848842"
-    },
-    {
-        "id": 5848817,
-        "titulo": "ESTAGIO",
-        "empresa": "Confidencial",
-        "descricao": "Condomínios prediais",
-        "cidade": "Lauro de Freitas",
-        "estado": "BA",
-        "bolsa": "R$ 800,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848817"
-    },
-    {
-        "id": 5848798,
-        "titulo": "ESTAGIO",
-        "empresa": "AGILE WRL ASSESSORIA E CONSULTORIA CONTABIL LTDA",
-        "descricao": "Atividades de contabilidade",
-        "cidade": "São Paulo",
-        "estado": "SP",
-        "bolsa": "R$ 1.500,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração",
-            "Contabilidade",
-            "Finanças"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848798"
-    },
-    {
-        "id": 5848796,
-        "titulo": "ESTAGIO",
-        "empresa": "MESS LAB CALIBRACAO, ASSESSORIA E CONSULTORIA EIRELI",
-        "descricao": "Manutenção e reparação de aparelhos e instrumentos de medida, teste e controle",
-        "cidade": "São Paulo",
-        "estado": "SP",
-        "bolsa": "R$ 1.400,00",
-        "beneficios": [
-            {
-                "codigo": 56,
-                "beneficio": "Possibilidade prorrogação",
-                "valor": 0
-            },
-            {
-                "codigo": 65,
-                "beneficio": "Recesso Remunerado",
-                "valor": 0
-            },
-            {
-                "codigo": 57,
-                "beneficio": "Possibilidade efetivação",
-                "valor": 0
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Engenharia Elétrica"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848796"
-    },
-    {
-        "id": 5848791,
-        "titulo": "ESTAGIO",
-        "empresa": "BRUNA MONTALVAO PRIOSTI",
-        "descricao": "Comércio varejista de artigos de óptica",
-        "cidade": "Suzano",
-        "estado": "SP",
-        "bolsa": "R$ 700,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848791"
-    },
-    {
-        "id": 5848769,
-        "titulo": "ESTAGIO",
-        "empresa": "CETURB - ES",
-        "descricao": "Outras atividades auxiliares dos transportes terrestres não especificadas anteriormente",
-        "cidade": "Vitória",
-        "estado": "ES",
-        "bolsa": "R$ 896,94",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848769"
-    },
-    {
-        "id": 5848671,
-        "titulo": "ESTAGIO",
-        "empresa": "3A MINING S.A.",
-        "descricao": "Atividades de estudos geológicos",
-        "cidade": "São Paulo",
-        "estado": "SP",
-        "bolsa": "R$ 1.800,00",
-        "beneficios": [
-            {
-                "codigo": 64,
-                "beneficio": "Auxílio alimentação mensal",
-                "valor": 660
-            },
-            {
-                "codigo": 67,
-                "beneficio": "Auxílio alimentação diario",
-                "valor": 700
-            },
-            {
-                "codigo": 56,
-                "beneficio": "Possibilidade prorrogação",
-                "valor": 0
-            },
-            {
-                "codigo": 65,
-                "beneficio": "Recesso Remunerado",
-                "valor": 0
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Direito"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848671"
-    },
-    {
-        "id": 5848655,
-        "titulo": "ESTAGIO",
-        "empresa": "CURTI SUPORTE ADMINISTRATIVO EIRELI",
-        "descricao": "Aluguel de imóveis próprios",
-        "cidade": "Cotia",
-        "estado": "SP",
-        "bolsa": "R$ 1.400,00",
-        "beneficios": [
-            {
-                "codigo": 43,
-                "beneficio": "Cesta básica",
-                "valor": 0
-            },
-            {
-                "codigo": 64,
-                "beneficio": "Auxílio alimentação mensal",
-                "valor": 400
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração",
-            "Contabilidade",
-            "Finanças"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848655"
-    },
-    {
-        "id": 5848652,
-        "titulo": "ESTAGIO",
-        "empresa": "LK CLINIC",
-        "descricao": "Atividade odontológica",
-        "cidade": "São Paulo",
-        "estado": "SP",
-        "bolsa": "R$ 1.200,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Odontologia"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848652"
-    },
-    {
-        "id": 5848623,
-        "titulo": "ESTAGIO",
-        "empresa": "PRIME RUN LTDA",
-        "descricao": "Atividades de condicionamento físico",
-        "cidade": "São José dos Campos",
-        "estado": "SP",
-        "bolsa": "",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848623"
-    },
-    {
-        "id": 5848594,
-        "titulo": "ESTAGIO",
-        "empresa": "G MATOS EMPREENDIMENTOS IMOBILIARIOS",
-        "descricao": "Aluguel de imóveis próprios",
-        "cidade": "Maceió",
-        "estado": "AL",
-        "bolsa": "R$ 700,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Comunicação",
-            "Marketing",
-            "Publicidade e Propaganda"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848594"
-    },
-    {
-        "id": 5848575,
-        "titulo": "ESTAGIO",
-        "empresa": "INSTITUTO NACIONAL DO SEGURO SOCIAL-INSS",
-        "descricao": "Seguridade social obrigatória",
-        "cidade": "Lucas do Rio Verde",
-        "estado": "MT",
-        "bolsa": "R$ 1.125,69",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848575"
-    },
-    {
-        "id": 5848540,
-        "titulo": "ESTAGIO",
-        "empresa": "GENTE MIUDA BERCARIO E EDUCACAO INFANTIL",
-        "descricao": "Educação infantil - creche",
-        "cidade": "Cuiabá",
-        "estado": "MT",
-        "bolsa": "R$ 1.100,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Educação Física",
-            "Letras",
-            "Pedagogia"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848540"
-    },
-    {
-        "id": 5848508,
-        "titulo": "ESTAGIO",
-        "empresa": "INSTITUTO NACIONAL DO SEGURO SOCIAL-INSS",
-        "descricao": "Seguridade social obrigatória",
-        "cidade": "Pimenta Bueno",
-        "estado": "RO",
-        "bolsa": "R$ 1.125,69",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848508"
-    },
-    {
-        "id": 5848486,
-        "titulo": "ESTAGIO",
-        "empresa": "INSTITUTO NACIONAL DO SEGURO SOCIAL-INSS",
-        "descricao": "Seguridade social obrigatória",
-        "cidade": "Rio Verde",
-        "estado": "GO",
-        "bolsa": "R$ 1.125,69",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848486"
-    },
-    {
-        "id": 5848379,
-        "titulo": "ESTAGIO",
-        "empresa": "YARA COURO",
-        "descricao": "Curtimento e outras preparações de couro",
-        "cidade": "Macapá",
-        "estado": "AP",
-        "bolsa": "R$ 600,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848379"
-    },
-    {
-        "id": 5848369,
-        "titulo": "ESTAGIO",
-        "empresa": "COORDENADORIA PEDAGOGICA",
-        "descricao": "Atividades de atendimento hospitalar, exceto pronto-socorro e unidades para atendimento a urgências",
-        "cidade": "São Paulo",
-        "estado": "SP",
-        "bolsa": "R$ 703,38",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848369"
-    },
-    {
-        "id": 5848358,
-        "titulo": "ESTAGIO",
-        "empresa": "EXCLUSIVE ESCRITORIO VIRTUAL LTDA",
-        "descricao": "Serviços combinados de escritório e apoio administrativo",
-        "cidade": "Aracaju",
-        "estado": "SE",
-        "bolsa": "R$ 800,00",
-        "beneficios": [
-            {
-                "codigo": 55,
-                "beneficio": "Assistência odontológica",
-                "valor": 0
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração",
-            "Contabilidade",
-            "Finanças"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848358"
-    },
-    {
-        "id": 5848314,
-        "titulo": "ESTAGIO",
-        "empresa": "ACM",
-        "descricao": "Serviços de assistência social sem alojamento",
-        "cidade": "Guarulhos",
-        "estado": "SP",
-        "bolsa": "R$ 14,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848314"
-    },
-    {
-        "id": 5848258,
-        "titulo": "ESTAGIO",
-        "empresa": "WEDO",
-        "descricao": "Aplicação de revestimentos e de resinas em interiores e exteriores",
-        "cidade": "Salvador",
-        "estado": "BA",
-        "bolsa": "R$ 800,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848258"
-    },
-    {
-        "id": 5848205,
-        "titulo": "ESTAGIO",
-        "empresa": "PORAO DO ALEMAO BOA VISTA",
-        "descricao": "Casas de festas e eventos",
-        "cidade": "Boa Vista",
-        "estado": "RR",
-        "bolsa": "R$ 1.000,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848205"
-    },
-    {
-        "id": 5848157,
-        "titulo": "ESTAGIO",
-        "empresa": "WEDO",
-        "descricao": "Aplicação de revestimentos e de resinas em interiores e exteriores",
-        "cidade": "Salvador",
-        "estado": "BA",
-        "bolsa": "R$ 1.200,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Arquitetura",
-            "Design de Interiores"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848157"
-    },
-    {
-        "id": 5848151,
-        "titulo": "ESTAGIO",
-        "empresa": "SUB 04 GASTRONOMIA EIRELI",
-        "descricao": "Restaurantes e similares",
-        "cidade": "Teresópolis",
-        "estado": "RJ",
-        "bolsa": "R$ 1.132,90",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848151"
-    },
-    {
-        "id": 5848147,
-        "titulo": "ESTAGIO",
-        "empresa": "GRANFORTE CONSTRUTORA LTDA ",
-        "descricao": "Construção de edifícios",
-        "cidade": "Arapiraca",
-        "estado": "AL",
-        "bolsa": "R$ 500,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Engenharia Civil"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848147"
-    },
-    {
-        "id": 5848126,
-        "titulo": "ESTAGIO",
-        "empresa": "SBI INCORPORADORA",
-        "descricao": "Incorporação de empreendimentos imobiliários",
-        "cidade": "ARUJÁ",
-        "estado": "SP",
-        "bolsa": "R$ 1.300,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração",
-            "Contabilidade",
-            "Finanças"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848126"
-    },
-    {
-        "id": 5848114,
-        "titulo": "ESTAGIO",
-        "empresa": "GRAU TECNICO - UNIDADE OSASCO",
-        "descricao": "Educação profissional de nível técnico",
-        "cidade": "Osasco",
-        "estado": "SP",
-        "bolsa": "R$ 703,38",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848114"
-    },
-    {
-        "id": 5848087,
-        "titulo": "ESTAGIO",
-        "empresa": "CEUDESP- CENTRO DE EDUCACAO UN",
-        "descricao": "Educação superior - graduação",
-        "cidade": "Uberaba",
-        "estado": "MG",
-        "bolsa": "R$ 800,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848087"
-    },
-    {
-        "id": 5848057,
-        "titulo": "ESTAGIO",
-        "empresa": "DIGITAL GUARULHOS ASSESSORIA LTDA",
-        "descricao": "Atividades de teleatendimento",
-        "cidade": "Guarulhos",
-        "estado": "SP",
-        "bolsa": "R$ 900,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848057"
-    },
-    {
-        "id": 5848050,
-        "titulo": "ESTAGIO",
-        "empresa": "SPEED NET REDES SERVICOS COMUNICACAO LTDA",
-        "descricao": "Serviços de comunicação multimídia - SCM",
-        "cidade": "Salvador",
-        "estado": "BA",
-        "bolsa": "R$ 706,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5848050"
-    },
-    {
-        "id": 5847996,
-        "titulo": "ESTAGIO",
-        "empresa": "SOLUCOES FINANCEIRAS ALENCAR LTDA",
-        "descricao": "Atividades de teleatendimento",
-        "cidade": "Guarulhos",
-        "estado": "SP",
-        "bolsa": "R$ 1.100,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Administração"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5847996"
-    },
-    {
-        "id": 5847969,
-        "titulo": "ESTAGIO",
-        "empresa": "SOLUCOES FINANCEIRAS ALENCAR LTDA",
-        "descricao": "Atividades de teleatendimento",
-        "cidade": "Guarulhos",
-        "estado": "SP",
-        "bolsa": "R$ 1.100,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5847969"
-    },
-    {
-        "id": 5847967,
-        "titulo": "ESTAGIO",
-        "empresa": "PH AQUA FIT ",
-        "descricao": "Atividades de condicionamento físico",
-        "cidade": "Campinas",
-        "estado": "SP",
-        "bolsa": "R$ 900,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Outros"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5847967"
-    },
-    {
-        "id": 5847947,
-        "titulo": "ESTAGIO",
-        "empresa": "LUMIAR LTDA",
-        "descricao": "Atividades de apoio à educação, exceto caixas escolares",
-        "cidade": "Natal",
-        "estado": "RN",
-        "bolsa": "R$ 800,00",
-        "beneficios": [],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Educação Física",
-            "Letras",
-            "Pedagogia"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5847947"
-    },
-    {
-        "id": 5847937,
-        "titulo": "ESTAGIO",
-        "empresa": "Vaga confidencial",
-        "descricao": "",
-        "cidade": "Ribeirão Preto",
-        "estado": "SP",
-        "bolsa": "R$ 1.320,00",
-        "beneficios": [
-            {
-                "codigo": 59,
-                "beneficio": "Ajuda de custo",
-                "valor": 0
-            },
-            {
-                "codigo": 57,
-                "beneficio": "Possibilidade efetivação",
-                "valor": 0
-            },
-            {
-                "codigo": 56,
-                "beneficio": "Possibilidade prorrogação",
-                "valor": 0
-            },
-            {
-                "codigo": 65,
-                "beneficio": "Recesso Remunerado",
-                "valor": 0
-            }
-        ],
-        "logo": "",
-        "pcd": false,
-        "modalidade": "Presencial",
-        "cursos": [
-            "Direito"
-        ],
-        "url": "https://ciee.app/detalhes-vaga/5847937"
     }
 ]

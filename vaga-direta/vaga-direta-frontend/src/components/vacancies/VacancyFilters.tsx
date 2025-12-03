@@ -1,20 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Input } from "../ui/Input";
 import { Select, type Option } from "../ui/Select";
 import { Button } from "../ui/Button";
 import { MultiSelect } from "../ui/MultiSelect";
 import type { VacancyFilters } from "../../services/vacancyService";
-
-const courseOptions: Option[] = [
-  { value: "Ciência da Computação", label: "Ciência da Computação" },
-  { value: "Sistemas de Informação", label: "Sistemas de Informação" },
-  { value: "Engenharia de Software", label: "Engenharia de Software" },
-  { value: "Engenharia da Computação", label: "Engenharia da Computação" },
-  {
-    value: "Análise e Desenvolvimento de Sistemas",
-    label: "Análise e Desenvolvimento de Sistemas",
-  },
-];
+import { fetchCourseOptions } from "../../services/catalogService"; // <-- NOVO
 
 const modalityOptions: Option[] = [
   { value: "Presencial", label: "Presencial" },
@@ -65,7 +55,6 @@ type Props = {
   onApply: () => void;
   onClear: () => void;
   loading?: boolean;
-
   cityOptions: string[];
 };
 
@@ -77,6 +66,22 @@ export const VacancyFiltersBar: React.FC<Props> = ({
   loading,
   cityOptions,
 }) => {
+  const [courseOptions, setCourseOptions] = useState<Option[]>([]); // <-- NOVO
+
+  // Carrega cursos do backend
+  useEffect(() => {
+    async function loadCourses() {
+      try {
+        const options = await fetchCourseOptions();
+        setCourseOptions(options);
+      } catch (error) {
+        console.error("Erro ao carregar cursos:", error);
+      }
+    }
+
+    loadCourses();
+  }, []);
+
   const setField = (field: keyof VacancyFilters, value: any) => {
     const updated: VacancyFilters = { ...filters, [field]: value };
 
@@ -127,7 +132,11 @@ export const VacancyFiltersBar: React.FC<Props> = ({
             options={courseOptions}
             selectedValues={filters.courses ?? []}
             onChange={handleCoursesChange}
-            placeholder="Todos os cursos"
+            placeholder={
+              courseOptions.length === 0
+                ? "Carregando cursos..."
+                : "Todos os cursos"
+            }
           />
         </div>
 
