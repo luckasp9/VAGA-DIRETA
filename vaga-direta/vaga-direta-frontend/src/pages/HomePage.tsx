@@ -12,10 +12,18 @@ import { Button } from "../components/ui/Button";
 import { useAuth } from "../context/AuthContext";
 
 const PAGE_SIZE = 6;
-const FILTERS_STORAGE_KEY = "vaga-direta:vacancy-filters";
+
+// gera uma chave de filtros por usuário
+const getFiltersStorageKey = (userId?: number) =>
+  `vaga-direta:vacancy-filters:${userId ?? "anon"}`;
 
 export const HomePage: React.FC = () => {
   const { user } = useAuth();
+
+  const filtersStorageKey = React.useMemo(
+    () => getFiltersStorageKey(user?.id),
+    [user?.id]
+  );
 
   const [filters, setFilters] = useState<VacancyFilters>({
     keyword: "",
@@ -57,26 +65,21 @@ export const HomePage: React.FC = () => {
   // monta filtros iniciais a partir do usuário + localStorage
   // monta filtros iniciais a partir do usuário + localStorage
   useEffect(() => {
-    // defaults vindos do usuário logado
-    const fromUser: VacancyFilters = {
-      keyword: "",
-      courses: user?.course ? [user.course] : [],
-      modality: "",
-      pcd: "",
-      state: user?.state ?? "",
-      cities: [],
-    };
+    if (!user) return; // Home é privada, mas por segurança
 
-    const stored = localStorage.getItem(FILTERS_STORAGE_KEY);
+    const stored = localStorage.getItem(filtersStorageKey);
 
     if (stored) {
       try {
         const parsed = JSON.parse(stored) as VacancyFilters;
 
-        // o que estiver salvo no localStorage SEMPRE ganha do default do usuário
         const effective: VacancyFilters = {
-          ...fromUser, // fallback (se algum campo não existir no storage)
-          ...parsed,   // último filtro usado pelo usuário
+          keyword: parsed.keyword ?? "",
+          courses: parsed.courses ?? (user.course ? [user.course] : []),
+          modality: parsed.modality ?? "",
+          pcd: parsed.pcd ?? "",
+          state: parsed.state ?? user.state ?? "",
+          cities: parsed.cities ?? [],
         };
 
         setFilters(effective);
@@ -87,29 +90,37 @@ export const HomePage: React.FC = () => {
       }
     }
 
-    // primeira vez (sem nada salvo): usa dados do usuário e já salva
-    setFilters(fromUser);
-    localStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify(fromUser));
-    loadVacancies(fromUser);
+    // se não tinha filtros salvos para ESTE usuário, monta padrão a partir do cadastro
+    const defaultFilters: VacancyFilters = {
+      keyword: "",
+      courses: user.course ? [user.course] : [],
+      modality: "",
+      pcd: "",
+      state: user.state ?? "",
+      cities: [],
+    };
+
+    setFilters(defaultFilters);
+    loadVacancies(defaultFilters);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user]);
+  }, [user, filtersStorageKey]);
 
 
   // sempre que filtros mudarem via UI, atualiza state + localStorage
   const handleFiltersChange = (next: VacancyFilters) => {
     setFilters(next);
-    localStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify(next));
+    localStorage.setItem(filtersStorageKey, JSON.stringify(next));
   };
 
   const handleApplyFilters = () => {
-    localStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify(filters));
+    localStorage.setItem(filtersStorageKey, JSON.stringify(filters));
     loadVacancies(filters);
   };
 
   const handleClearFilters = () => {
     const cleared: VacancyFilters = {
       keyword: "",
-      courses: filters.courses ?? [], // mantém curso
+      courses: filters.courses ?? [], // mantém curso selecionado
       modality: "",
       pcd: "",
       state: filters.state ?? "", // mantém estado
@@ -117,7 +128,7 @@ export const HomePage: React.FC = () => {
     };
 
     setFilters(cleared);
-    localStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify(cleared));
+    localStorage.setItem(filtersStorageKey, JSON.stringify(cleared));
     loadVacancies(cleared);
   };
 
