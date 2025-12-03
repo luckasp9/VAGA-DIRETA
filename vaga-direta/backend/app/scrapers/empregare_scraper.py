@@ -148,8 +148,6 @@ def normalize(v: Dict[str, Any]) -> Dict[str, Any]:
 
     texto_curso = " ".join([
         v.get("titulo", ""),
-        v.get("chamada", ""),
-        v.get("descricao", "")
     ])
 
     cursos = detectar_cursos(texto_curso)
@@ -158,7 +156,7 @@ def normalize(v: Dict[str, Any]) -> Dict[str, Any]:
         "id": v.get("id"),
         "titulo": v.get("titulo") or "",
         "empresa": v.get("empresa") or "",
-        "descricao": v.get("chamada") or "",
+        "descricao": (v.get("chamada") or "").strip() + "...",
         "cidade": cidade,
         "estado": estado,
         "bolsa": v.get("salario") or "",

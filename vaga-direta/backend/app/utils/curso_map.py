@@ -29,14 +29,14 @@ CURSO_MAP = {
     "produção": ["Engenharia de Produção"],
     "química": ["Engenharia Química", "Química", "Farmácia"],
     "ambiental": ["Engenharia Ambiental", "Engenharia Química", "Biologia"],
-    "software": ["Engenharia de Software", "Desenvolvimento de Sistemas"],
+    "software": ["Engenharia de Software", "Desenvolvimento de Sistemas", "Ciência da Computação"],
 
     # Ciências Exatas
     "matemática": ["Matemática", "Estatística", "Ciência de Dados", "Engenharia"],
     "estatística": ["Estatística", "Ciência de Dados", "Matemática"],
-    "física": ["Física", "Engenharia", "Ciência da Computação"],
+    "física": ["Física", "Engenharia"],
     "química": ["Química", "Farmácia", "Engenharia Química"],
-    "biologia": ["Biologia", "Enfermagem", "Biomedicina"],
+    "biologia": ["Biologia", "Biomedicina"],
 
     # Saúde
     "enfermagem": ["Enfermagem"],
@@ -54,7 +54,7 @@ CURSO_MAP = {
     "letras": ["Letras", "Comunicação", "Educação"],
 
     # Artes e Design
-    "design": ["Design Gráfico", "Design de Interiores", "Comunicação Visual", "Moda"],
+    "design": ["Design Gráfico", "Design de Interiores", "Comunicação Visual", ],
     "arte": ["Artes Visuais", "Design", "Comunicação"],
     "arquitetura": ["Arquitetura", "Design de Interiores"],
     "moda": ["Moda", "Design"],
