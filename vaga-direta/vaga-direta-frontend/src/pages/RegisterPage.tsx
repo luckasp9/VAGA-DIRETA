@@ -1,18 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Input } from "../components/ui/Input";
 import { Select } from "../components/ui/Select";
+import type { Option } from "../components/ui/Select";
 import { Button } from "../components/ui/Button";
 import {
   register as registerService,
   type RegisterPayload,
 } from "../services/authService";
+import { fetchCourseOptions } from "../services/catalogService";
 
-const courseOptions = [
-  { value: "Ciência da Computação", label: "Ciência da Computação" },
-  { value: "Sistemas de Informação", label: "Sistemas de Informação" },
-  { value: "Engenharia de Software", label: "Engenharia de Software" },
-];
+// REMOVIDO o courseOptions fixo aqui
 
 const semesterOptions = Array.from({ length: 10 }).map((_, index) => ({
   value: String(index + 1),
@@ -52,6 +50,8 @@ const stateOptions = [
 export const RegisterPage: React.FC = () => {
   const navigate = useNavigate();
 
+  const [courseOptions, setCourseOptions] = useState<Option[]>([]); // NOVO
+
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -62,6 +62,20 @@ export const RegisterPage: React.FC = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Carregar cursos do backend
+  useEffect(() => {
+    async function loadCourses() {
+      try {
+        const options = await fetchCourseOptions();
+        setCourseOptions(options);
+      } catch (err) {
+        console.error("Erro ao carregar cursos:", err);
+      }
+    }
+
+    loadCourses();
+  }, []);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -144,7 +158,11 @@ export const RegisterPage: React.FC = () => {
         onChange={(e) => setCourse(e.target.value)}
         options={courseOptions}
         required
-        placeholder="Selecione um curso"
+        placeholder={
+          courseOptions.length === 0
+            ? "Carregando cursos..."
+            : "Selecione um curso"
+        }
       />
 
       <Select
