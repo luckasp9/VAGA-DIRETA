@@ -1,19 +1,16 @@
+// src/pages/HomePage.tsx
 import React, { useEffect, useState } from "react";
 import type { Vacancy } from "../types/vacancy";
-
 import {
-  getAllVacancies,
-  filterVacancies,
+  getVacancies,
   type VacancyFilters,
 } from "../services/vacancyService";
-
 import VacancyFiltersBar from "../components/vacancies/VacancyFilters";
 import { VacancyCard } from "../components/vacancies/VacancyCard";
 import { VacancySkeleton } from "../components/vacancies/VacancySkeleton";
 import { Button } from "../components/ui/Button";
 import { useAuth } from "../context/AuthContext";
 
-const MAX_PAGE_BUTTONS = 5;
 const PAGE_SIZE = 6;
 const FILTERS_STORAGE_KEY = "vaga-direta:vacancy-filters";
 
@@ -26,7 +23,7 @@ export const HomePage: React.FC = () => {
     modality: "",
     pcd: "",
     state: user?.state ?? "",
-    cities: [], // multi cidade
+    cities: [],
   });
 
   const [allVacancies, setAllVacancies] = useState<Vacancy[]>([]);
@@ -41,62 +38,45 @@ export const HomePage: React.FC = () => {
     startIndex + PAGE_SIZE
   );
 
-  let startPage = 1;
-  let endPage = totalPages;
+  const loadVacancies = async (currentFilters: VacancyFilters) => {
+    setLoading(true);
+    setCurrentPage(1);
 
-  if (totalPages > MAX_PAGE_BUTTONS) {
-    // tenta centralizar a página atual na janela
-    startPage = currentPage - Math.floor(MAX_PAGE_BUTTONS / 2);
-    if (startPage < 1) {
-      startPage = 1;
-    }
+    const { cities, ...rest } = currentFilters;
 
-    endPage = startPage + MAX_PAGE_BUTTONS - 1;
-    if (endPage > totalPages) {
-      endPage = totalPages;
-      startPage = endPage - MAX_PAGE_BUTTONS + 1;
-      if (startPage < 1) startPage = 1;
-    }
-  }
+    const [all, filtered] = await Promise.all([
+      getVacancies({ ...rest, cities: [] }),
+      getVacancies(currentFilters),
+    ]);
 
-  const pageNumbers: number[] = [];
-  for (let p = startPage; p <= endPage; p++) {
-    pageNumbers.push(p);
-  }
+    setAllVacancies(all);
+    setVacancies(filtered);
+    setLoading(false);
+  };
 
-    const loadVacancies = async (currentFilters: VacancyFilters) => {
-      setLoading(true);
-      setCurrentPage(1);
-
-      try {
-        const all = await getAllVacancies();        // 1 chamada só
-        const filtered = filterVacancies(all, currentFilters);
-
-        setAllVacancies(all);
-        setVacancies(filtered);
-      } finally {
-        setLoading(false);
-      }
+  // monta filtros iniciais a partir do usuário + localStorage
+  // monta filtros iniciais a partir do usuário + localStorage
+  useEffect(() => {
+    // defaults vindos do usuário logado
+    const fromUser: VacancyFilters = {
+      keyword: "",
+      courses: user?.course ? [user.course] : [],
+      modality: "",
+      pcd: "",
+      state: user?.state ?? "",
+      cities: [],
     };
 
-
-
-  // Ao montar (ou quando o user muda), restaura filtros salvos se existirem
-  useEffect(() => {
     const stored = localStorage.getItem(FILTERS_STORAGE_KEY);
 
     if (stored) {
       try {
         const parsed = JSON.parse(stored) as VacancyFilters;
 
+        // o que estiver salvo no localStorage SEMPRE ganha do default do usuário
         const effective: VacancyFilters = {
-          keyword: parsed.keyword ?? "",
-          courses:
-            parsed.courses ?? (user?.course ? [user.course] : []),
-          modality: parsed.modality ?? "",
-          pcd: parsed.pcd ?? "",
-          state: parsed.state ?? user?.state ?? "",
-          cities: parsed.cities ?? [],
+          ...fromUser, // fallback (se algum campo não existir no storage)
+          ...parsed,   // último filtro usado pelo usuário
         };
 
         setFilters(effective);
@@ -107,23 +87,15 @@ export const HomePage: React.FC = () => {
       }
     }
 
-    // Se não tem nada salvo, usa curso/estado do usuário como default
-    const defaultFilters: VacancyFilters = {
-      keyword: "",
-      courses: user?.course ? [user.course] : [],
-      modality: "",
-      pcd: "",
-      state: user?.state ?? "",
-      cities: [],
-    };
-
-    setFilters(defaultFilters);
-    loadVacancies(defaultFilters);
+    // primeira vez (sem nada salvo): usa dados do usuário e já salva
+    setFilters(fromUser);
+    localStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify(fromUser));
+    loadVacancies(fromUser);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
-  // Toda vez que os filtros mudam (por qualquer interação),
-  // salvamos no localStorage também.
+
+  // sempre que filtros mudarem via UI, atualiza state + localStorage
   const handleFiltersChange = (next: VacancyFilters) => {
     setFilters(next);
     localStorage.setItem(FILTERS_STORAGE_KEY, JSON.stringify(next));
@@ -137,10 +109,10 @@ export const HomePage: React.FC = () => {
   const handleClearFilters = () => {
     const cleared: VacancyFilters = {
       keyword: "",
-      courses: filters.courses ?? [], // mantém curso como está
+      courses: filters.courses ?? [], // mantém curso
       modality: "",
       pcd: "",
-      state: filters.state ?? "", // mantém estado atual
+      state: filters.state ?? "", // mantém estado
       cities: [], // limpa cidades
     };
 
@@ -166,6 +138,26 @@ export const HomePage: React.FC = () => {
         .filter((c): c is string => !!c)
     )
   ).sort();
+
+  // ====== janela de paginação com até 5 páginas ======
+  const visiblePages = (() => {
+    if (totalPages <= 5) {
+      return Array.from({ length: totalPages }, (_, i) => i + 1);
+    }
+
+    let start = currentPage - 2;
+    let end = currentPage + 2;
+
+    if (start < 1) {
+      start = 1;
+      end = 5;
+    } else if (end > totalPages) {
+      end = totalPages;
+      start = totalPages - 4;
+    }
+
+    return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+  })();
 
   return (
     <div className="flex flex-col gap-4">
@@ -200,6 +192,7 @@ export const HomePage: React.FC = () => {
             ))}
           </div>
 
+          {/* Paginação com janela de 5 páginas */}
           <div className="flex flex-col items-center gap-2 mt-6 text-xs text-slate-600">
             <div className="flex items-center gap-2">
               <Button
@@ -212,7 +205,7 @@ export const HomePage: React.FC = () => {
                 Anterior
               </Button>
 
-              {pageNumbers.map((page) => {
+              {visiblePages.map((page) => {
                 const isActive = page === currentPage;
                 return (
                   <button
@@ -228,7 +221,6 @@ export const HomePage: React.FC = () => {
                   </button>
                 );
               })}
-
 
               <Button
                 type="button"

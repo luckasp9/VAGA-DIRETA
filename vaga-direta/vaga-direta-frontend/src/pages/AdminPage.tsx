@@ -1,3 +1,4 @@
+// src/pages/AdminPage.tsx
 import React, { useEffect, useState } from "react";
 import {
   createVacancy,
@@ -10,24 +11,19 @@ import {
 import type { Vacancy } from "../types/vacancy";
 import { Button } from "../components/ui/Button";
 import { Input } from "../components/ui/Input";
-import { Select } from "../components/ui/Select";
+import { Select, type Option } from "../components/ui/Select";
 import { MultiSelect } from "../components/ui/MultiSelect";
 import { Badge } from "../components/ui/Badge";
 import { useAuth } from "../context/AuthContext";
+import { fetchCourseOptions } from "../services/catalogService";
 
-const courseOptions = [
-  { value: "Ciência da Computação", label: "Ciência da Computação" },
-  { value: "Sistemas de Informação", label: "Sistemas de Informação" },
-  { value: "Engenharia de Software", label: "Engenharia de Software" },
-];
-
-const modalityOptions = [
+const modalityOptions: Option[] = [
   { value: "Presencial", label: "Presencial" },
   { value: "Remoto", label: "Remoto" },
   { value: "Híbrido", label: "Híbrido" },
 ];
 
-const stateOptions = [
+const stateOptions: Option[] = [
   { value: "AC", label: "Acre (AC)" },
   { value: "AL", label: "Alagoas (AL)" },
   { value: "AP", label: "Amapá (AP)" },
@@ -77,8 +73,14 @@ const PAGE_SIZE = 10;
 
 export const AdminPage: React.FC = () => {
   const { user } = useAuth();
+
   const [vacancies, setVacancies] = useState<Vacancy[]>([]);
   const [loading, setLoading] = useState(false);
+
+  // catálogo de cursos vindos do backend
+  const [courseOptions, setCourseOptions] = useState<Option[]>([]);
+  const [loadingCourses, setLoadingCourses] = useState(false);
+  const [coursesError, setCoursesError] = useState<string | null>(null);
 
   const [mode, setMode] = useState<Mode>("create");
   const [editingId, setEditingId] = useState<number | null>(null);
@@ -105,7 +107,7 @@ export const AdminPage: React.FC = () => {
     );
   }
 
-  const load = async () => {
+  const loadVacancies = async () => {
     setLoading(true);
     const data = await getVacancies({} as VacancyFilters);
     setVacancies(data);
@@ -113,8 +115,23 @@ export const AdminPage: React.FC = () => {
     setCurrentPage(1);
   };
 
+  const loadCourses = async () => {
+    try {
+      setLoadingCourses(true);
+      setCoursesError(null);
+      const options = await fetchCourseOptions();
+      setCourseOptions(options);
+    } catch (err) {
+      console.error(err);
+      setCoursesError("Não foi possível carregar a lista de cursos.");
+    } finally {
+      setLoadingCourses(false);
+    }
+  };
+
   useEffect(() => {
-    load();
+    loadVacancies();
+    loadCourses();
   }, []);
 
   const resetForm = () => {
@@ -161,7 +178,7 @@ export const AdminPage: React.FC = () => {
       setError(null);
       await deleteVacancy(vac.id);
       setSuccess("Vaga excluída com sucesso.");
-      await load();
+      await loadVacancies();
     } catch (err) {
       console.error(err);
       setError("Erro ao excluir vaga.");
@@ -192,7 +209,7 @@ export const AdminPage: React.FC = () => {
         setSuccess("Vaga atualizada com sucesso.");
       }
       resetForm();
-      await load();
+      await loadVacancies();
     } catch (err) {
       console.error(err);
       setError("Erro ao salvar vaga. Verifique o backend.");
@@ -319,8 +336,17 @@ export const AdminPage: React.FC = () => {
             options={courseOptions}
             selectedValues={form.cursos}
             onChange={(values) => handleChange("cursos", values)}
-            placeholder="Selecione cursos"
+            placeholder={
+              loadingCourses
+                ? "Carregando cursos..."
+                : courseOptions.length === 0
+                ? "Nenhum curso disponível"
+                : "Selecione cursos"
+            }
           />
+          {coursesError && (
+            <p className="mt-1 text-xs text-red-500">{coursesError}</p>
+          )}
 
           <div className="flex items-center gap-2">
             <input
@@ -389,7 +415,6 @@ export const AdminPage: React.FC = () => {
           </h3>
           <div className="flex-1">
             <Input
-              label="Buscar vagas (título, empresa, local, código)"
               value={searchTerm}
               onChange={handleSearchChange}
               placeholder="Ex.: desenvolvimento, banco de dados..."

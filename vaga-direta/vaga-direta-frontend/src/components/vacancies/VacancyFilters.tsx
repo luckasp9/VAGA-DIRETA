@@ -4,7 +4,7 @@ import { Select, type Option } from "../ui/Select";
 import { Button } from "../ui/Button";
 import { MultiSelect } from "../ui/MultiSelect";
 import type { VacancyFilters } from "../../services/vacancyService";
-import { fetchCourseOptions } from "../../services/catalogService"; // <-- NOVO
+import { fetchCourseOptions } from "../../services/catalogService";
 
 const modalityOptions: Option[] = [
   { value: "Presencial", label: "Presencial" },
@@ -66,18 +66,25 @@ export const VacancyFiltersBar: React.FC<Props> = ({
   loading,
   cityOptions,
 }) => {
-  const [courseOptions, setCourseOptions] = useState<Option[]>([]); // <-- NOVO
+  // cursos vindos do backend
+  const [courseOptions, setCourseOptions] = useState<Option[]>([]);
+  const [coursesLoading, setCoursesLoading] = useState(false);
+  const [coursesError, setCoursesError] = useState<string | null>(null);
 
-  // Carrega cursos do backend
   useEffect(() => {
-    async function loadCourses() {
+    const loadCourses = async () => {
       try {
+        setCoursesLoading(true);
+        setCoursesError(null);
         const options = await fetchCourseOptions();
         setCourseOptions(options);
-      } catch (error) {
-        console.error("Erro ao carregar cursos:", error);
+      } catch (err) {
+        console.error(err);
+        setCoursesError("Não foi possível carregar a lista de cursos.");
+      } finally {
+        setCoursesLoading(false);
       }
-    }
+    };
 
     loadCourses();
   }, []);
@@ -125,7 +132,7 @@ export const VacancyFiltersBar: React.FC<Props> = ({
           />
         </div>
 
-        {/* Cursos - MultiSelect */}
+        {/* Cursos - MultiSelect (agora do banco) */}
         <div className="w-[260px]">
           <MultiSelect
             label="Cursos"
@@ -133,11 +140,16 @@ export const VacancyFiltersBar: React.FC<Props> = ({
             selectedValues={filters.courses ?? []}
             onChange={handleCoursesChange}
             placeholder={
-              courseOptions.length === 0
+              coursesLoading
                 ? "Carregando cursos..."
+                : courseOptions.length === 0
+                ? "Nenhum curso disponível"
                 : "Todos os cursos"
             }
           />
+          {coursesError && (
+            <p className="mt-1 text-xs text-red-500">{coursesError}</p>
+          )}
         </div>
 
         {/* Estado */}
