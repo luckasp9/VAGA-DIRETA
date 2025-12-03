@@ -34,8 +34,8 @@ CREATE TABLE tcc.usuario (
     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     nome VARCHAR NOT NULL,
     email VARCHAR NOT NULL,
-    tipo_usuario BOOLEAN NOT NULL DEFAULT false,
-    telefone VARCHAR NOT NULL,
+    tipo_usuario VARCHAR NOT NULL,
+    telefone VARCHAR,
     curso VARCHAR NOT NULL,
     semestre SMALLINT NOT NULL,
     estado VARCHAR NOT NULL,
@@ -50,4 +50,12 @@ CREATE TABLE tcc.curso (
     id SERIAL PRIMARY KEY,
     vaga_id INT REFERENCES tcc.vaga(id) ON DELETE CASCADE,
     curso TEXT 
+);
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE tcc.plataforma (
+	id int4 DEFAULT nextval('tcc.curso_id_seq'::regclass) NOT NULL,
+	plataforma text NOT NULL,
+	CONSTRAINT curso_pkey PRIMARY KEY (id)
 );

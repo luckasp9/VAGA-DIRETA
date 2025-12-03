@@ -73,3 +73,10 @@ VALUES
 (3, 'Gympass'),
 (3, 'Vale-transporte'),
 (3, 'Vale-alimentação')
+
+
+INSERT INTO tcc.plataforma (plataforma) VALUES
+('CIEE'),
+('Nube'),
+('Catho'),
+('Empregare');
