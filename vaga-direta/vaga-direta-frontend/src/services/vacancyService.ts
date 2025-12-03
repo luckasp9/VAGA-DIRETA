@@ -43,6 +43,8 @@ export type VacancyInput = {
   beneficios: string[]; // um benefício por linha no formulário
 };
 
+let vacanciesCache: Vacancy[] | null = null;
+
 function mapApiVagaToVacancy(api: ApiVaga): Vacancy {
   const courses = api.cursos ?? [];
   const city = api.cidade_vaga ?? "";
@@ -84,8 +86,15 @@ function mapApiVagaToVacancy(api: ApiVaga): Vacancy {
  * Busca TODAS as vagas da API e converte para o modelo do front.
  */
 export async function getAllVacancies(): Promise<Vacancy[]> {
+  // Se já carregou uma vez, reaproveita
+  if (vacanciesCache) {
+    return vacanciesCache;
+  }
+
+  // Primeira vez: busca da API e mapeia
   const apiData = (await getVagas()) as ApiVaga[];
-  return apiData.map(mapApiVagaToVacancy);
+  vacanciesCache = apiData.map(mapApiVagaToVacancy);
+  return vacanciesCache;
 }
 
 /**
@@ -182,6 +191,10 @@ async function sendVacancy(
   }
 
   const data = (await res.json()) as ApiVaga;
+
+  // invalida o cache, já que o conjunto de vagas mudou
+  vacanciesCache = null;
+
   return mapApiVagaToVacancy(data);
 }
 
@@ -201,4 +214,7 @@ export async function deleteVacancy(id: number): Promise<void> {
   if (!res.ok) {
     throw new Error("Erro ao excluir vaga");
   }
+
+  // também invalida o cache
+  vacanciesCache = null;
 }
